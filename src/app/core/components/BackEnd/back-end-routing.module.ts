@@ -1,0 +1,54 @@
+import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router';
+
+import { MainBackEndComponent } from './main-back-end/main-back-end.component';
+import { GoComponent } from './go/go.component';
+import { CsharpComponent } from './csharp/csharp.component';
+import { JavaComponent } from './java/java.component';
+import { PhpComponent } from './php/php.component';
+import { NodejsComponent } from './nodejs/nodejs.component';
+import { TypecsriptComponent } from './typecsript/typecsript.component';
+import { JavaSpringComponent } from './java-spring/java-spring.component';
+
+
+const routes: Routes = [
+    {
+        path: '',
+        component: MainBackEndComponent
+    },
+    {
+        path: 'Go',
+        component: GoComponent
+    },
+    {
+        path: 'Csharp',
+        component: CsharpComponent
+    },
+    {
+        path: 'Java',
+        component: JavaComponent
+    },
+    {
+        path: 'Php',
+        component: PhpComponent
+    },
+    {
+        path: 'Nodejs',
+        component: NodejsComponent
+    },
+    {
+        path: 'TypeScript',
+        component: TypecsriptComponent
+    },
+    {
+        path: 'JavaSpring',
+        component: JavaSpringComponent
+    }
+]
+
+@NgModule({
+    imports:[ RouterModule.forChild(routes)],
+    exports:[ RouterModule ]
+})
+
+export class BackEndRoutingModule {}
