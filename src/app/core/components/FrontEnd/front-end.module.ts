@@ -7,13 +7,19 @@ import { JavaScriptComponent } from './java-script/java-script.component';
 
 import { FrontEndRoutingModule } from './front-end-rounting.module';
 import { MainFrontEndComponent } from './main-front-end/main-front-end.component';
+import { VbComponent } from './vb/vb.component';
+import { CsharpComponent } from './csharp/csharp.component';
+import { FsharpComponent } from './fsharp/fsharp.component';
 
 @NgModule({
   declarations: [
     HtmlComponent,
     CssComponent,
     JavaScriptComponent,
-    MainFrontEndComponent
+    MainFrontEndComponent,
+    VbComponent,
+    CsharpComponent,
+    FsharpComponent
   ],
   imports: [
     CommonModule,
