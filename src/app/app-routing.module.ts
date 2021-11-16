@@ -36,6 +36,10 @@ const routes: Routes = [
       {
         path : "Arquitecturas",
         loadChildren: () => import ('./core/components/arquitectura/arquitectura.module').then(m=>m.ArquitecturaModule)
+      },
+      {
+        path: "Transversales",
+        loadChildren: () => import ('./core/components/transversales/transversales.module').then(m=>m.TransversalesModule)
       }
     ]
   }

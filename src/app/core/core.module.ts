@@ -7,6 +7,7 @@ import { BdModule } from './components/BD/bd.module';
 import { LibreriasModule } from './components/librerias/librerias.module';
 import { FrameworksModule } from './components/framewoks/frameworks.module';
 import { ArquitecturaModule } from './components/arquitectura/arquitectura.module';
+import { TransversalesModule } from './components/transversales/transversales.module';
 
 @NgModule({
   declarations: [ ],
@@ -17,7 +18,8 @@ import { ArquitecturaModule } from './components/arquitectura/arquitectura.modul
     BdModule,
     LibreriasModule,
     FrameworksModule,
-    ArquitecturaModule
+    ArquitecturaModule,
+    TransversalesModule
   ]
 })
 export class CoreModule { }
