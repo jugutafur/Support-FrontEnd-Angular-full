@@ -5,10 +5,10 @@ import { MysqlComponent } from './mysql/mysql.component';
 import { MainBdComponent } from './main-bd/main-bd.component';
 import { MongoDBComponent } from './mongo-db/mongo-db.component';
 import { SqlserverComponent } from './sqlserver/sqlserver.component';
+import { OracleComponent } from './oracle/oracle.component';
 
 import { CommonModule } from '@angular/common';
 import { BdRoutingModule } from './sql-routing.module';
-import { OracleComponent } from './oracle/oracle.component';
 
 
 
