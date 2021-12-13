@@ -60,8 +60,11 @@
                     ng build --prod //crear un entorno de una aplicacion lista para subir a un entorno de produccion <br>
                     ng lint //Comprueba error en todos los archivos del proyecto <strong>si no funciona ng add @angular-eslint/schematics</strong><br>
                     ng add @angular-eslint/schematics  // por si no esta en node_module <br>
-                    npm install -g @angular/cli@latest //actualizar angular <br><br>   
-                    ng add @angular/material <br><br>     
+                    npm install -g @angular/cli@latest //actualizar angular <br><br>
+                    ng add @angular/material <br><br>
+                    $ npm uninstall -g @angular/cli <br>
+                    $ npm cache clean <br>
+                    $ npm install -g @angular/cli <br>
                 </td>
                 <td></td>
             </tr>
@@ -74,12 +77,12 @@
                 </td>
                 <td></td>
             </tr>
-            
+
             <tr>
                 <td>versiones </td>
                 <td>
                     node= node -v <br>
-                    npm -v node - <br>  
+                    npm -v node - <br>
                     </td>
                 <td></td>
             </tr>
@@ -140,8 +143,8 @@
                     ambientes de desarrollo <a href="https://platzi.com/clases/1670-angular-2019/23274-ambientes-en-angular/">Ver el video</a><br><br>
                 </td>
                 <td></td>
-            </tr>    
-            
+            </tr>
+
             <tr>
                 <td>variables sin inicializar</td>
                 <td>al usar la ultima version de TypeScriptse cuenta con una verificacion de inicializacion de variables se puede definir y en el constructor inicializar la varaible o desactivar esta funcion en el tsconfig.json ver este <a href="https://qastack.mx/programming/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc">link 1</a> o este otro <a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html">link 2</a></td>
@@ -152,7 +155,7 @@
                 <td>interar </td>
                 <td>
                     Objeto {{abrellave}} {{cierrallave}} no se puede <br>
-                    Array [ ] si se puede 
+                    Array [ ] si se puede
                 </td>
                 <td></td>
             </tr>
@@ -165,7 +168,7 @@
                     3. <strong>ngOnInit: </strong>Este se ejecuta una sola vez cada que el componente es llamado. <br><br>
                     4. <strong>ngDoCheck: Forma Personalizada</strong>Este detecta los cambios de los componetes hijos (cuando son creados, modificados o llamados a renderizar) <br><br>
                     5. <strong>ngOnDestroy: </strong>Detecta cuando el elementoes quitado de la interfaz. <br><br>
-                    
+
                     import {{abrellave}} OnChanges, SimpleChanges {{cierrallave}} '@angular/core'; <br><br>
                     export class ProductComponent implements OnChanges {{abrellave}} <br>
                     <strong>ngOnchanges</strong>(changes: SimpleChanges) {{abrellave}} <br>
@@ -186,7 +189,7 @@
                     <img src="../../../../../assets/framework/angular/ciclo de vida.png" alt="">
                 </td>
             </tr>
-                
+
             <tr>
                 <td>ciclo de vida 2</td>
                 <td>
@@ -220,19 +223,19 @@
                     2. Property biding [ ]= templete a TypeScript <br>
                     3. Data/Event biding ( )= templet a TypeScript <br>
                     4. Two way data biding [( )]= comunicacion de dos vias <br><br>
-        
+
                     la diferencia entre 2 y 3 es property esta orientada a escuchar los elementos del templete eje <br>{{abreDiamante}}button [disabled]="!habilitar"{{cierraDiamante}}click me!! {{abreDiamante}}/button{{cierraDiamante}} <br><br>
                     y event binding  esta orientada a los eventos del templete eje <br> (click) <br><br><br>
-        
+
                     <a href=" https://gustavodohara.com/blogangular/banana-in-box-banana-la-caja/ ">revisar 1</a> <br>
                     <a href="http://blog.enriqueoriol.com/2016/07/introduccion-angular-2-parte-ii-binding-directivas.html">revisar 2</a> <br><br>
-        
+
                     {{abreDiamante}} todo-detail [todo]="selectedTodo" {{cierraDiamante}} {{abreDiamante}}/todo-detail{{cierraDiamante}} <br><br>
                     {{abreDiamante}} div {{abreParentesis}}click{{cierraParentesis}}="selectTodo{{abreParentesis}}todo{{cierraParentesis}}"{{cierraDiamante}} {{abreDiamante}}/div{{cierraDiamante}} <br><br>
-        
+
                     <strong>Property binding:</strong> {{abreParentesis}}Hacia el DOM{{cierraParentesis}} <br>
                     Al hacer {{abreCuadro}}todo{{cierraCuadro}}="selectedTodo", Angular está pasando el objeto selectedTodo del Componente padre a la propiedad todo del Componente hijo, en este caso de TodoDetailComponent. Recordemos de la sección Componentes que para esto el componente TodoDetailComponent habrá definido una propiedad todo con el decorador @Input{{abreParentesis}} {{cierraParentesis}}. <br><br>
-        
+
                     <strong>Event binding:</strong> {{abreParentesis}}Desde el DOM{{cierraParentesis}} <br>
                     Al hacer {{abreParentesis}}click{{cierraParentesis}}="selectTodo{{abreParentesis}}todo{{cierraParentesis}}", le indicamos a Angular que cuando se produzca un evento click sobre esa etiqueta {{abreDiamante}}div{{cierraDiamante}}, llame al método selectTodo del Componente, pasando como atributo el objeto todo presente en ese contexto. (Aunque hemos simplificado el ejemplo, esto venía de un bucle que itera el array todos obteniendo la variable todo{{cierraParentesis}}.
                 </td>
@@ -241,7 +244,7 @@
                 </td>
             </tr>
 
-            
+
             <tr>
                 <td>ngModel</td>
                 <td>
@@ -339,7 +342,7 @@
                     Hay diferencia entre usar class o interface para modelar una variable. <br><br> crear interface: ng g i nombreInterface</td>
                 <td>https://desarrolloweb.com/articulos/clases-interfaces-servicios-angular.html</td>
             </tr>
-            
+
             <tr>
                 <td><strong>Decoradores o Anotaciones</strong></td>
                 <td>En un proyecto de Angular el decorador es de TypeScript y no de angular o JavaScript</td>
@@ -367,7 +370,7 @@
                     <a href="https://angular.io/cli/generate#web-worker-command">web-worker</a><br>
                 </td>
                 <td>
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/ngGenerate.png"
                     alt="ngGenerate"
                     title="ngGenerate"><br><br>
@@ -429,15 +432,15 @@
                     3.1 [ngStyle]
                 </td>
             </tr>
-                
+
             <tr>
                 <td>
-                    <a href="https://platzi.com/clases/1153-angular-4/8281-directivas-ngstyle-y-ngclass/">Directivas de componente</a> 
+                    <a href="https://platzi.com/clases/1153-angular-4/8281-directivas-ngstyle-y-ngclass/">Directivas de componente</a>
                 </td>
                 <td>
                     [ngstyle] <br>
                     [ngClass] , se debe declarar reglas css en .scss de la clase <br>
-                    van enter [ ] porque van a modificar un atributo del componente <br> 
+                    van enter [ ] porque van a modificar un atributo del componente <br>
                     <strong>Estructurales</strong>: comienzan por asterisco y sirven para crear elementos en el DOM
                     <strong>Atributo</strong>: alteran la apariencia o comportamiento de un elemento del DOM ya existente
                 </td>
@@ -533,7 +536,7 @@
                 <td></td>
                 <td></td>
             </tr>
-                
+
             <tr>
                 <td><a href="https://aristotekean.medium.com/tipos-de-pipes-en-angular-d736079491b1">Trabajo con PIPES</a></td>
                 <td>
@@ -553,7 +556,7 @@
                     <a href="https://angular.io/api/common/UpperCasePipe">| uppercase </a>// Transforma a mayusculas la variable <br>
                     <a href="https://angular.io/api/common/CurrencyPipe">| currency : 'EUR' </a>//Setea a euros la variable number <br>
                     <a href="https://angular.io/api/common/SlicePipe">| slice:0:6 </a>// Recorta un string <br>
-                    <a href="https://angular.io/api/common/DatePipe">| date</a> //formnato a la fecha 
+                    <a href="https://angular.io/api/common/DatePipe">| date</a> //formnato a la fecha
                 </td>
                 <td>
                     para ver mas pipes <br><br>
@@ -585,7 +588,7 @@
                 </td>
                 <td>
                     Es una tecnica para reducir el peso de la apliacion por concepto de modularizacion <strong>Fragmentar main.js</strong><br>
-                    Pasos de renderizacion 
+                    Pasos de renderizacion
                     1. Realiza un <strong>Request</strong> lee todo el html, css, JavaScript cuando llega a este ultimo debe: <br>
                     1. Descargarlo <br>
                     2. Parsearlo <br>
@@ -632,11 +635,11 @@
                 <td>
                     se puede instalar mocha para visualizar el servidor de las pruebas unitarias no por un reporte de html como normalmente lo hace karma sino en consola <br><br><strong>npm i karma-mocha-reporter --save-dev</strong> y se instala en las depedencias del ambiente de desarrollo y no de produccion. <br><br>cuando lo instalamos en package.json agrega una depencia en dev <strong>karma-mocha-reporter</strong> y esta se debe agregar en el archivo <strong>karma.conf.js</strong> en la zona de puglins ver <a href="https://www.youtube.com/watch?v=-y58-AgLyo4">video </a> y se cambia en la parte de reporte <strong>progress a mocha</strong><br><br>
                     <strong>protacto y karma</strong><br><br>
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/pruebasUnitarias.png"
                     alt="InicioSqlServer"
                     title="InicioSqlServer"><br><br>
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/pruebasUnitarias3.png"
                     alt="InicioSqlServer"
                     title="InicioSqlServer"><br><br><br>
@@ -645,7 +648,7 @@
                     Son test runner pero protacto es un set de pruebas para ser pruebas <strong>end to end</strong><br><br>
                     Angular nos ofrece por defecto <strong>Jasmine</strong> <br><br>
                     Cuando ejecutamos <strong>ng test /npm test : con estos comando corre permanentemente</strong>busca todos los archivos .spect.ts y abre el debugger de karma
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/pruebasUnitarias2.png"
                     alt="InicioSqlServer"
                     title="InicioSqlServer">
@@ -660,11 +663,11 @@
                     <strong>3. Inspect: </strong> Planteo el escenario a resolver <br><br>
                 </td>
                 <td>
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/structTest.png"
                     alt="InicioSqlServer"
                     title="InicioSqlServer"><br><br>
-                    <img               
+                    <img
                     src="../../../../../assets/framework/angular/expect.png"
                     alt="InicioSqlServer"
                     title="InicioSqlServer">
