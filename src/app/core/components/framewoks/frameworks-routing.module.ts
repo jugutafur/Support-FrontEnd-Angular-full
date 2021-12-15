@@ -5,6 +5,7 @@ import {MainFrameworksComponent } from './main-frameworks/main-frameworks.compon
 import { AngularComponent } from './angular/angular.component';
 import { ReactComponent } from './react/react.component';
 import { VueJsComponent } from './vue-js/vue-js.component';
+import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.component';
 
 const routes : Routes =[
     {
@@ -23,6 +24,10 @@ const routes : Routes =[
         path: 'vue-js',
         component: VueJsComponent
     },
+    {
+      path: 'JavaServerFaces',
+      component: JavaServerFacesComponent
+    }
 ]
 
 @NgModule({

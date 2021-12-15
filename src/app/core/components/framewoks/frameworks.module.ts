@@ -4,6 +4,7 @@ import { MainFrameworksComponent } from './main-frameworks/main-frameworks.compo
 import { AngularComponent } from './angular/angular.component';
 import { ReactComponent } from './react/react.component';
 import { VueJsComponent } from './vue-js/vue-js.component';
+import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.component';
 
 import { CommonModule } from '@angular/common';
 import { FrameworksRoutingModule } from './frameworks-routing.module';
@@ -13,7 +14,8 @@ import { FrameworksRoutingModule } from './frameworks-routing.module';
         MainFrameworksComponent,
         AngularComponent,
         ReactComponent,
-        VueJsComponent
+        VueJsComponent,
+        JavaServerFacesComponent
     ],
     imports:[
         CommonModule,
