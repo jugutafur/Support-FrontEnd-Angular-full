@@ -8,6 +8,7 @@ import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.
 
 import { CommonModule } from '@angular/common';
 import { FrameworksRoutingModule } from './frameworks-routing.module';
+import { JavaSwingComponent } from './java-swing/java-swing.component';
 
 @NgModule({
     declarations:[
@@ -15,7 +16,8 @@ import { FrameworksRoutingModule } from './frameworks-routing.module';
         AngularComponent,
         ReactComponent,
         VueJsComponent,
-        JavaServerFacesComponent
+        JavaServerFacesComponent,
+        JavaSwingComponent
     ],
     imports:[
         CommonModule,
