@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core'; 
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainBackEndComponent } from './main-back-end/main-back-end.component';
 import { GoComponent } from './go/go.component';
 import { CsharpComponent } from './csharp/csharp.component';
-import { JavaComponent } from './java/java.component';
 import { PhpComponent } from './php/php.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
 import { TypecsriptComponent } from './typecsript/typecsript.component';
@@ -23,10 +22,6 @@ const routes: Routes = [
     {
         path: 'Csharp',
         component: CsharpComponent
-    },
-    {
-        path: 'Java',
-        component: JavaComponent
     },
     {
         path: 'Php',

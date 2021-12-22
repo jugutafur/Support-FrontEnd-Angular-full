@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MainBackEndComponent {
 
-  lista = ["Go","Csharp","Java","Php","Nodejs","TypeScript","JavaSpring"];
+  lista = ["Go","Csharp","Php","Nodejs","TypeScript","JavaSpring"];
 
   constructor() { }
 }

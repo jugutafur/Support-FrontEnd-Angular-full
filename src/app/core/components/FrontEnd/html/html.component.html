@@ -12,7 +12,7 @@
         <td>Buscar etiqueta map </td>
         <td>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map</td>
         <td>
-          <img               
+          <img
           src="../../../../../assets/FrontEnd/html/mapEtiqueta.png"
           alt="mapEtiqueta"
           title="mapEtiqueta">
@@ -34,9 +34,21 @@
       </tr>
 
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><a href="">Etiqueta Select </a></td>
+        <td>
+          para usarla debes <br>
+          * tener la estructura <br>
+          * usar ngModel para sacar el dato en una variable <br>
+          * importar el FormsModule en module <br><br>
+          <select name="select" [(ngModel)]="busqueda">
+            <option value="value1">Value 1</option>
+            <option value="value2" selected>Value 2</option>
+            <option value="value3">Value 3</option>
+          </select>
+        </td>
+        <td>
+          <p>haz seleccionado la opcion {{busqueda}}</p>
+        </td>
       </tr>
 
       <tr>

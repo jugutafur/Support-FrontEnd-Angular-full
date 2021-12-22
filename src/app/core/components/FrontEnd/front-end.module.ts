@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FormsModule } from '@angular/forms';
+
 import { MainFrontEndComponent } from './main-front-end/main-front-end.component';
 
 import { HtmlComponent } from './html/html.component';
@@ -18,6 +20,7 @@ import { FrontEndRoutingModule } from './front-end-rounting.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     FrontEndRoutingModule
   ]
 })

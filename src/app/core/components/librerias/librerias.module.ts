@@ -7,13 +7,15 @@ import { CommonModule } from '@angular/common';
 import { LibreriasRoutingModule } from './librerias-routing.module';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { SwaggerComponent } from './swagger/swagger.component';
+import { GitComponent } from './git/git.component';
 
 @NgModule({
     declarations:[
         GormComponent,
         MainLibreriasComponent,
         BootstrapComponent,
-        SwaggerComponent
+        SwaggerComponent,
+        GitComponent
     ],
     imports:[
         CommonModule,

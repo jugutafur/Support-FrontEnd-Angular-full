@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HtmlComponent {
 
+  busqueda: number = 0;
+
   public abrellave: string;
-  public cierrallave: string; 
+  public cierrallave: string;
   public abreDiamante: string;
   public cierraDiamante: string;
   public abreParentesis: string;

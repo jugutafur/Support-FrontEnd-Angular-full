@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MainLibreriasComponent  {
 
-  lista = ["gorm", "bootstrap","swagger"]
+  lista = ["gorm", "bootstrap","swagger", "git"]
 
 
 
