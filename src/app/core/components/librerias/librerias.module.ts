@@ -8,6 +8,7 @@ import { LibreriasRoutingModule } from './librerias-routing.module';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { SwaggerComponent } from './swagger/swagger.component';
 import { GitComponent } from './git/git.component';
+import { PrimefacesComponent } from './primefaces/primefaces.component';
 
 @NgModule({
     declarations:[
@@ -15,7 +16,8 @@ import { GitComponent } from './git/git.component';
         MainLibreriasComponent,
         BootstrapComponent,
         SwaggerComponent,
-        GitComponent
+        GitComponent,
+        PrimefacesComponent
     ],
     imports:[
         CommonModule,

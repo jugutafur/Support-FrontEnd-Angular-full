@@ -6,6 +6,7 @@ import { GormComponent } from './gorm/gorm.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { SwaggerComponent } from './swagger/swagger.component';
 import { GitComponent } from './git/git.component';
+import { PrimefacesComponent } from './primefaces/primefaces.component';
 
 const routes : Routes = [
     {
@@ -25,8 +26,12 @@ const routes : Routes = [
       component: SwaggerComponent
     },
     {
-      path: 'git',
+      path: 'git y heroku',
       component: GitComponent
+    },
+    {
+      path: 'primeFces',
+      component: PrimefacesComponent
     }
 ]
 
