@@ -11,13 +11,17 @@
           <tr>
               <td>This is a table to Java Server Faces</td>
               <td>
-                Dentro de las caracteristicas descritas en la segunda imagen se menciona una capa superior Java API los servlet esto quiere decir que todo lo que hagamos con Java para la web va a emplear servlets lo que hagamos con Spring, JSF etc.. <br><br>
+                Java server faces es un framework de aplicaciones web basado en java, permite simplificar la construcción de interfaces de usuario para aplicaciones web mediante el uso de componentes gráficos y la vinculación del patrón MVC <br><br>
+                Dentro de las caracteristicas descritas en la segunda imagen se menciona una capa superior <strong>Java API los servlet</strong> esto quiere decir que todo lo que hagamos con Java para la web va a emplear servlets en segundo plano, lo que hagamos con Spring, JSF etc.. <br><br>
                 <strong>
                 JSF es una especificación o framework que hace parte de JEE que define un marco de trabajo MVC para el desarrollo de aplicaciones web basado en un modelo de componentes de interzas de usuario del lado del servidor <br><br></strong>
                 <strong>JSF</strong>: Java Server Faces usa JSP, una de las diferencias entre JSP y JSF es que JSF todo son formularios y JSP son link <strong>para el redireccionamiento</strong><br>
                 <strong>JSP</strong>: Java Server Pages = Es una tecnologia orientada a crear paginas web con programacion Java en el Servidor, estas estan compuetas con HTML/XML mezclado con etiquetas especiales para programar scripts de servidor en sintaxis java <br><br>
                 <strong>ASP</strong>: Active Server Pages = Es una plataforma de desarrollo creada por Microsoft <strong>usado para el desarrollo de las tecnologias de servidor</strong> lo anterior significa que lo que desarrollemos en PHP, ASP, JSF, JSP son paginas que estan dentro del servidor y que son dinamicas es decir solo van a generar HTML para que el navegador interprete y renderize <strong>Solo con la informacion necesaria</strong> <br><br>
                 <strong>ASP.NET</strong>: no es lo mismo ASP que ASP.NET, lo segundo es la evolucion de lo primero ademas ASP solo permite programar en Visual Basic en cambio ASP.NET permite varios lenguajes como C# <br><br>
+                Tal y como veíamos en la sesión anterior, y definiéndolo de una forma muy simple, JSF es un framework orientado a recoger datos del usuario, pasarlos a la capa del modelo de la aplicación, realizar las acciones correspondientes en la aplicación y pintar los datos resultantes. Todo ello en un entorno web, con peticiones HTTP y páginas HTML.
+                <br><br>
+                Los datos se introducen y se muestran en forma de texto, y se almacenan en un formato dependiente de la aplicación. Por ejemplo, una fecha se puede representar con un formato dd-mm-aaaa mientras que su representación interna puede ser un objeto de la clase java.util.Date . Para realizar esta conversión entre el texto y el formato interno, se asocian al componente validadores y conversores .
                 ver info <a href="https://desarrolloweb.com/articulos/831.php">Link 1</a>
               </td>
               <td>
@@ -31,6 +35,68 @@
                 title="JSF1"><br><br>
               </td>
           </tr>
+
+          <tr>
+              <td>Arquitectura</td>
+              <td>
+                los clientes hacen request estas entran a los controladores(los Managed Beans) estos delegan roles a los modelos, un modelo detecta y devuelve el controlador el controlador genera una vista y esta vista va a estar amarrada al modelo para dar finalmente un response al cliente <br><br>
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFArquitectura.png"
+                alt="JSFArquitectura"
+                title="JSFArquitectura"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td>Ciclo de vida</td>
+              <td>
+                Empieza desde el request hasta el response <br><br>
+                Restore view en esta etapa se restaura el arbol de componentes botones, inputs , form etc.. una vez obtenido el arbol de componetes se procesan todos los valores a sociados a los mismos, se validan datos actualiza los modelos este paso pasa primero por los controladores finalmente invoka la aplicacion llamando al gestor que es el <strong>Java Bean </strong>Este se encarga de traer todos los componentes asociados en conjunto con la informacion que viene los objetos para renderizarla en un navagador por medio de un servidor que para nuestro caso es Tomcat <br><br>
+                Primero dectecta el evento de la persona que esta interactuando en la pagina y por medio del protocolo HTTP crea el FacesRequest llega al motor JSF recupera la informacion atraves de los Beans, crea el arbol de componentes genera el archivo xml con los datos lo lleva a nuestra pagina a nuestro navegador y atraves del DOM y con ayuda de JavaScript y JavaServerFaces pinta la informacion <br><br>
+                <strong>Un servlet de la clase javax.faces.webapp.FacesServlet es el motor de cualquier aplicación JSF</strong>
+              </td>
+              <td>
+                1.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida.png"
+                alt="JSFCicloVida"
+                title="JSFCicloVida"><br><br>
+                2.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida2.png"
+                alt="JSFCicloVida2"
+                title="JSFCicloVida2"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Facelets Context</td>
+            <td>
+              <strong>P.E Process Event parametros del Envarioment </strong> los facelets son templates de html con xml = xhtml que tiene tags de contenido dinamico quien llena este contenido es el cliente
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFFacesContext.png"
+              alt="JSFFacesContext"
+              title="JSFFacesContext"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Funcionamiento General</td>
+            <td>
+              Empieza por el faces request luego se crea el FacesServlet <strong>declarado en el archivo web.xml </strong>se genera su FacesContext este crea una instancia unica por cada request luego FacesServlet delega el procesamiento al ciclo de vida luego cada fase puede acceder y modificar su contenido en el FacesContext luego envia la respesta al FacesServlet y este ultimo solicita al FacesContext ejecutar la fase de render response para finalmente generar el Faces response <br><br>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFGeneral.png"
+              alt="JSFGeneral"
+              title="JSFGeneral"><br><br>
+            </td>
+          </tr>
+
           <tr>
               <td>Settings</td>
               <td>
@@ -49,11 +115,66 @@
           </tr>
 
           <tr>
+            <td>Managed Bean <strong>Modelo</strong></td>
+            <td>
+              Hay dos maneras de configurar los Managed Bean <br><br>
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFManagedBean.png"
+              alt="JSFManagedBean"
+              title="JSFManagedBean"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFManagedBean2.png"
+              alt="JSFManagedBean2"
+              title="JSFManagedBean2"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Scope</td>
+            <td>El alcance</td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFScope.png"
+              alt="JSFScope"
+              title="JSFScope"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Navegacion</td>
+            <td>
+              hay dos formas de navegar entre las vistas del proyecto de manera explicita e implicita
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFNavegacionExplicito.png"
+              alt="JSFNavegacionExplicito"
+              title="JSFNavegacionExplicito"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFNavegacionImplicito.png"
+              alt="JSFNavegacionImplicito"
+              title="JSFNavegacionImplicito"><br><br>
+            </td>
+          </tr>
+
+          <tr>
               <td>Librerias</td>
               <td>
                 para usar de mejor manera podemos emplear diferentes librerias como las mencionadas en la imagen puedes encontrar un poco mas de informacion dentro de este proyecto en el apartada de librerias
               </td>
               <td>
+                1.
+                <img
+                src="../../../../../assets/librerias/primefaces/libreriasParaJSF.png"
+                alt="libreriasParaJSF"
+                title="libreriasParaJSF"><br><br>
+                2.
                 <img
                 src="../../../../../assets/framework/JavaServerFaces/libreriasJSF.png"
                 alt="libreriasJSF"
@@ -61,7 +182,7 @@
               </td>
           </tr>
           <tr>
-              <td>Etiquetas</td>
+              <td><a href="http://codejavu.blogspot.com/2017/12/componentes-basicos-java-server-pages.html">Etiquetas</a></td>
               <td>
                 * h:commandLink action="la pagina a la cual debe redireccionar" value="el texto a mostrar"// link <br>
 
@@ -70,10 +191,221 @@
           </tr>
 
           <tr>
+              <td><a href="https://www.adictosaltrabajo.com/2016/06/10/facelets-entendiendo-los-templates-de-jsf/"></a>Facelets</td>
+              <td>
+                El template será para nosotros una hoja de papel ya escrita, con una serie de agujeros que nos permiten ver lo que hay debajo. El cliente será otra hoja que pondremos debajo y del que solo veremos el contenido que no tape el template.
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/facelets.png"
+                alt="facelets"
+                title="facelets"><br><br>
+              </td>
+          </tr>
+
+          <tr>
               <td></td>
               <td></td>
               <td></td>
           </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
           <tr>
               <td></td>
               <td></td>
