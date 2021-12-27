@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-rest',
   templateUrl: './rest.component.html',
   styleUrls: ['./rest.component.scss']
 })
-export class RestComponent implements OnInit {
+export class RestComponent  {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
