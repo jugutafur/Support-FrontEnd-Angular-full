@@ -7,6 +7,7 @@ import { ReactComponent } from './react/react.component';
 import { VueJsComponent } from './vue-js/vue-js.component';
 import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.component';
 import { JavaSwingComponent } from './java-swing/java-swing.component';
+import { JavaSpringComponent } from './java-spring/java-spring.component';
 
 const routes : Routes =[
     {
@@ -32,6 +33,10 @@ const routes : Routes =[
     {
       path: 'JavaSwing',
       component: JavaSwingComponent
+    },
+    {
+        path: 'JavaSpring',
+        component: JavaSpringComponent
     }
 ]
 

@@ -10,11 +10,13 @@
         <tbody>
             <tr>
             <tr>
-                <td><strong>Hay dos tipos de Java</strong></td>
+                <td><strong>Hay varios tipos de Java</strong></td>
                 <td>
                     Actualmente hay dos tipos de Java: <br><br>
-                    1. Java de Oracle <br>
-                    2. openJava de empresas independientes <br><br>
+                    1. Java de Oracle es la version de pago <br><br>
+                    2. OpenJDK que es la version openJava que ofrece Oracle free de empresas independientes <br><br>
+                    3. <a href="https://docs.aws.amazon.com/es_es/corretto/latest/corretto-11-ug/what-is-corretto-11.html"> Correto </a>: que es la version que ofrece Amazon free, dispone de una certificacion de Java SE y con soporte a larga plazo <br><br>
+                    4. <a href="https://www.redhat.com/es/topics/cloud-native-apps/what-is-a-Java-runtime-environment">RedHat</a> que tambien tiene openJDK <br><br>
                     Esto es debido a que oracle al ser de pago compañias independientes como <strong>Red hat con OpenJDK, Amazon Correto... entre otros </strong>ofrecen un Java que tecnicamente es igual al de oracle <br>
                 </td>
                 <td></td>
@@ -67,7 +69,7 @@
                     <br><br>
                     <strong>@Entity</strong> para indicar que una clase java representa una tabla en la base de datos<br>
                     <strong>@Table</strong> recible el nombre de la tabla<br>
-                    <strong>@Column</strong> se le pone a los atributos de la clase y se usa cuando los nombres entre la tabla y la entidad no coinciden<br>
+                    <strong>@Column</strong> se le pone a los atributos de la clase y se usa cuando los nombres entre la tabla y la entidad no coinciden <strong>@Column(unique = true, nullable= false) //para los campos Id o campos que son unicos y no permite valores nulos</strong> <br>
                     <strong>@Id y @EmbededId</strong> representan la clave primaria, id para sencilla y embeded para compuesta<br>
                     <strong>@GeneratedValue</strong> genera valores automaticos para las llaves de las tablas<br>
                     <strong>@OneToMany @ManyToOne</strong> permite representar relaciones<br><br>
@@ -207,9 +209,17 @@
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><a href="https://www.youtube.com/watch?v=vTu2HQrXtyw">Base de datos</a></td>
+                <td>
+                  Cuando en nuestro codigo estamos configurando la base de datos podemos indicar que al ejecutar el codigo este el back quien crea la BD o si la BD ya existe que la actualice <br><br>De la manera como lo indica la imagen <br><br>
+                  <strong>spring.jpa.hibernate.ddl-auto=update/none</strong>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/backend/JavaSpring/CreateObjectDBEntity.png"
+                  alt="CreateObjectDBEntity"
+                  title="CreateObjectDBEntity">
+                </td>
             </tr>
 
             <tr>

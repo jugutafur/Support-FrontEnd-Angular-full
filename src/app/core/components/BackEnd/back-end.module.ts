@@ -6,7 +6,6 @@ import { PhpComponent } from './php/php.component';
 import { MainBackEndComponent } from './main-back-end/main-back-end.component';
 import { TypecsriptComponent } from './typecsript/typecsript.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
-import { JavaSpringComponent } from './java-spring/java-spring.component';
 
 import { CommonModule } from '@angular/common';
 import { BackEndRoutingModule } from './back-end-routing.module';
@@ -19,8 +18,7 @@ import { BackEndRoutingModule } from './back-end-routing.module';
         PhpComponent,
         MainBackEndComponent,
         TypecsriptComponent,
-        NodejsComponent,
-        JavaSpringComponent
+        NodejsComponent
     ],
     imports:[
         CommonModule,

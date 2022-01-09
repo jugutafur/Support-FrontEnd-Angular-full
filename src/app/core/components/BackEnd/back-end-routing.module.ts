@@ -7,8 +7,6 @@ import { CsharpComponent } from './csharp/csharp.component';
 import { PhpComponent } from './php/php.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
 import { TypecsriptComponent } from './typecsript/typecsript.component';
-import { JavaSpringComponent } from './java-spring/java-spring.component';
-
 
 const routes: Routes = [
     {
@@ -34,10 +32,6 @@ const routes: Routes = [
     {
         path: 'TypeScript',
         component: TypecsriptComponent
-    },
-    {
-        path: 'JavaSpring',
-        component: JavaSpringComponent
     }
 ]
 
