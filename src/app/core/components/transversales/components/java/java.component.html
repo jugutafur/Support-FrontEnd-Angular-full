@@ -36,7 +36,7 @@
                   3. Variables estáticas o variables de clase<br><br><br>
                   1. Existen dentro de un bloque de codigo por ejemplo dentro de un metodo se crean cuando el metodo arranca y se destruyen cuando el metodo finaliza <br><br>
                   2. Se declaran en una clase fuera de cualquier método, constructor o bloque, estas variables se crean cuando un objeto de la clase se crea y se destruye cuando se destruye el objeto. En caso de que tengamos varios objetos en la clase cada uno tendra una copia de independiente de las variables de instancia. <br><br>
-                  3.Son definidadas al inicio con <strong>"public static"</strong>. A diferencia de las variables de instancia, solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. Para acceder a variables estáticas, no necesitamos crear ningún objeto de esa clase, simplemente podemos acceder a la variable
+                  3. Son definidadas al inicio con <strong>"public static"</strong>. A diferencia de las variables de instancia, solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. Para acceder a variables estáticas, no necesitamos crear ningún objeto de esa clase, simplemente podemos acceder a la variable
               </td>
               <td>
                   * Cada objeto tendrá su propia copia de la variable de instancia, mientras que solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. <br><br>
@@ -48,26 +48,40 @@
               <td><a href="http://www.manualweb.net/java/tipos-datos-primitivos-java/">tipo de datos primitivos</a></td>
               <td>
                   byte <br>
-                  short <br>
-                  int <br>
-                  long <br>
-                  float <br>
-                  double <br>
-                  boolean <br>
-                  char <br>
+                  short varShort= 8; <br>
+                  int varInt = 99;<br>
+                  long varLong = 99L; <br>
+                  float numFloat = 53F;<br>
+                  double varDouble = 6.23;<br>
+                  boolean = true;<br>
+                  char varChar = 'J';<br>
               </td>
               <td></td>
           </tr>
 
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>Incremento y decremento</td>
+              <td>
+                tener en cuenta lo siguiente se va hacer lo primero que encuentre si encuentra primero la variable y despues la accion se va a asignar primero la variable y luego se va a incrementar la variable si se encuentre al reves pues realiza lo contrario
+              </td>
+              <td>
+                <img
+                src="../../../../../../assets/transversales/Java/Incremento-Decremento.png"
+                alt="Incremento-Decremento"
+                title="Incremento-Decremento"><br><br>
+              </td>
           </tr>
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>Promotion</td>
+              <td>
+                Como es posible evidenciar en el ejemplo si se tiene son int y la multiplicacion de estos dos int sobrepasa la capacidad de int no solo basta con declarar el resultado como long <strong>SE DEBE DECLARAR POR LO MENOS UNA VARIABLE DE TIPO LONG ADEMAS DEL LA VARIABLE RESULTADO</strong>
+              </td>
+              <td>
+                <img
+                src="../../../../../../assets/transversales/Java/Promotion.png"
+                alt="Promotion"
+                title="Promotion"><br><br>
+              </td>
           </tr>
 
           <tr>
@@ -232,6 +246,19 @@
               src="../../../../../../assets/transversales/Java/MethodAbstract.png"
               alt="MethodAbstract"
               title="MethodAbstract"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Static</td>
+            <td>
+              un metodo static no puede acceder a variables normales, ni modificar constantes, solo puede acceder a variables tambien static
+            </td>
+            <td>
+              <img
+              src="../../../../../../assets/transversales/Java/Static.png"
+              alt="Static"
+              title="Static"><br><br>
             </td>
           </tr>
 
@@ -411,7 +438,6 @@
               </td>
               <td></td>
           </tr>
-
 
           <tr>
             <td></td>
