@@ -10,6 +10,35 @@
       <tbody>
 
             <tr>
+                <td>Java</td>
+                <td>
+                  1. tiene una programacion orienta a los objetos <br><br>
+                  2. tiene un enfoque o filosofia de programacion funcional <br><br>
+                  3. fue de <strong>version 7 hacia atras</strong> Programacion Imperativa (El paso a paso para realizar una tarea <strong>El comó</strong> ) <br><br>
+                  4. Es de <strong>version 8 hacia adelante</strong> con enfoque a programacion declarativa (El como hago las cosas <strong>El Qué</strong> ) <br><br>
+                  5. java es con finalidad <strong>WORA write once run anywhere</strong><br><br>
+                  6. En una aplicacion Java los Jar tienes realciones = los programas son <strong>clases</strong> luego los programas son <strong>paquetes</strong> luego los programas son <strong>Modulos</strong> <br><br>
+                  7. Los 4 primeros digitos del cualquier archivo.class es el numero magico <strong>CA-FE-BA-BE</strong> <br><br>
+                  8. String <strong>NO ES UNA PALABRA RESERVADA</strong> la clase String es final por lo cual no se puede <strong>heredar de ella </strong>al ser una clase final es inmutable y toda instancia que se hace de ella cada vez que se desea modificar lo que da como resultado es la creacion de nuevas instancias <strong>(Estas alteraciones que se hacen a las variables String queda en un espacio de la HEAP MEMORY Especial el pool de String )</strong> ya que apuntan a direcciones de memoria diferentes es por ello que se debe usar StringBuilder <br><br>
+                  9. desde la version 8 la merory heap es dinamica <br><br>
+                  10. el garbash collector marca la variable u objeto que no tiene referencia es decir que nadie apunta a el primero <strong>Lo marca, lo elimina y adjunta o pega los demas objetos o varaibles para que las demas instanciaciones sean secuencial </strong><br><br>
+                  11. <strong>TODO NUMERO LITERAL ENTERO QUE SE USE EN EL CODIGO FUENTE SERA INTERPRETADO POR EL COMPILADOR COMO DE TIPO INT</strong><br><br>
+                  12. <strong>TODO NUMERO LITERAL DECIMAL O DE COMA FLOTANTE QUE SE USE EN EL CODIGO FUENTE SERA INTERPRETADO POR EL COMPILADOR COMO DE TIPO DOUBLE--> POR ELLO SE DEBE INIDCAR LA (F)DESUES DEL NUMERO DECIMAL X.XX PARA INIDCAR QUE ES FLOAT </strong><br><br>
+                  13. Los constructores <strong>No se heredan se invocan</strong> En una cadena de herencia empieza a invocar todos los constructores hacia arriba y luego los va ejectando hacia abajo hacia los hijos inicializandolos en orden hacia abajo <strong>Es por ello que la primera linea que tiene el constructor es la invocacion hacia el constructor padre</strong><br><br>
+                  14. Dentro de un arreglo de objetos <strong>YO NO TENGO OBJETOS LO QUE TENGO SON VALORES DE REFENCIA DONDE ESTAN GUARDADOS ESOS OBJETOS </strong> los metodos no retornan objetos <strong> RETORNAN VALORES DE REFERENCIA DONDE ESTA GUARDADO ESOS OBJETOS</strong> Ahora bien los metodos normales o los constructores dentro de sus zona de parametros no reciben objetos o variables<strong> RECIBEN VALORES DE REFERENCIA DONDE ESTAN ESTOS GUARDADOS ESOS OBJETOS Y ESAS VARIABLES </strong><br><br>
+                  15. product.setAmount(35_000); //Caracteristica desde java 9 <br><br>
+                  16. En el stack memory se guarda la pila de llamado por eso se llama stack(pila) cuando el metodo main llama un metodo y este metodo llama a otro metodo o en una apliacion con hilos cada hilo tiene su pila dentro del stack memory para que de esta manera el programa se pueda devolver puede caber dentro de la invocacion de los constructores cuando hay herencia <br><br>
+                </td>
+                <td>
+                  7. lo descrito en el punto es posible identificarlo tambien en los metodos toda literal entera es decir numero quedado sera de tipo int
+                  <img
+                  src="../../../../../../assets/transversales/Java/LiteralesInt.png"
+                  alt="LiteralesInt"
+                  title="LiteralesInt"><br><br>
+                </td>
+            </tr>
+
+            <tr>
               <td>Atajos con teclado</td>
               <td>
                   sout + tab  --> System.out.println("") <br>
@@ -47,16 +76,71 @@
           <tr>
               <td><a href="http://www.manualweb.net/java/tipos-datos-primitivos-java/">tipo de datos primitivos</a></td>
               <td>
-                  byte <br>
-                  short varShort= 8; <br>
-                  int varInt = 99;<br>
-                  long varLong = 99L; <br>
-                  float numFloat = 53F;<br>
-                  double varDouble = 6.23;<br>
-                  boolean = true;<br>
-                  char varChar = 'J';<br>
+                  Datos Primitivos - <strong>Clases Envolventes(Wrapper)</strong> <br><br>
+                  byte --> <strong>Byte</strong> <br>
+                  short varShort= 8; --> <strong>Short</strong> <br>
+                  int varInt = 99; --> <strong>Integer</strong><br>
+                  long varLong = 99L; --> <strong>Long</strong> L puede ser mayuscula o minuscula pero si es minuscula se podria confundir con 1<br>
+                  float numFloat = 53F; --> <strong>Float</strong> F podria ser mayuscula o minuscula<br>
+                  double varDouble = 6.23; --> <strong>Double</strong><br>
+                  boolean = true; --> <strong>Boolean</strong><br>
+                  char varChar = 'J'; --> <strong>Character</strong> '' comilla simple<br><br><br>
+                  Las clases envolventes surgen como respuesta ya que los datos primitivos al tener valores por defecto y al no tener referencia en memoria como las clases envolventes que si son objetos, Cuando en una api usuamos clases envolventes devuelven null y no un 0 como en el caso de los primitivos y esto resulta ideal
               </td>
-              <td></td>
+              <td>
+                Rango <br>
+                Byte.MIN_VALUE y Byte.MAX_VALUE <br>
+                Short.MIN_VALUE y Short.MAX_VALUE <br>
+                Integer.MIN_VALUE y Integer.MAX_VALUE <br>
+                Long.MIN_VALUE y Long.MAX_VALUE <br><br>
+
+                <strong>Tipos de variables</strong><br><br>
+                <strong>variables de tipo primitivo : </strong>Son usadas para tipos primitivo, y ya tiene un valor por defecto<br><br>
+                <strong>variables de referencia :</strong>Al igual que las varaibles de tipo primitivo son apuntadores o valores de referencia que apuntan a la direccion de memory heap en donde realidad estan el objeto
+              </td>
+          </tr>
+
+          <tr>
+            <td>Argumentos vs Parametros</td>
+            <td>
+              caller(Argumento...) <br><br>
+              worker(Parametro...) <br><br>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Excepciones</td>
+            <td>
+              hay dos tipos de excepciones <br><br>
+              1. las gestionadas (Son de las cuales el programador se puede recuperar) <br>
+              2. las No gestionadas (Son de tipo Runtime ocurren en tiempo de ejecucion y se deben de presentar ya que no se trata de maquillar errores) <br>
+              3. <strong>Nosotros podemos crear exceptiones de tipo runtime y exception</strong> una cosa es lanzar y otra cosa es atrapar la exception <strong> throw y catch</strong> <br>
+              <br><br>
+              para crear una exceptione es posible de la forma como lo es una clase nombre camelCase y tambien puede tener atributos y metodos y con la palabra reservada throws <strong>se puede lanzar y de esta manera se vuelve una exception gestionada</strong> dentro de esta clase generalmente se hace el llamado a dos constructores de la clase padre o superclase <br><br>
+              Ahora bien esta exception puede ser lanzada por cualquier metodo que pueda generar el error que se defina dentro de esta clase en una arquitectura orientada a las interfaces <strong>Si el metodo que esta en la implementacion lanza la exception tambien la interfaz debe implementar el lanzamiento de la exception esto se debe a que las firmas deben de ser iguales </strong>
+            </td>
+            <td>
+              <img
+              src="../../../../../../assets/transversales/Java/Exceptiones.png"
+              alt="Exceptiones"
+              title="Exceptiones"><br><br>
+              2. Declarar una Exception en una clase aparte
+              <img
+              src="../../../../../../assets/transversales/Java/DeclararExceptiones.png"
+              alt="DeclararExceptiones"
+              title="DeclararExceptiones"><br><br>
+              3. lanzar una exception gestionada <strong>Throw</strong>
+              <img
+              src="../../../../../../assets/transversales/Java/LanzarExceptiones.png"
+              alt="LanzarExceptiones"
+              title="LanzarExceptiones"><br><br>
+              3. Atrapar una exception gestionada <strong>catch</strong>
+              <img
+              src="../../../../../../assets/transversales/Java/AtraparExceptiones.png"
+              alt="AtraparExceptiones"
+              title="AtraparExceptiones"><br><br>
+            </td>
           </tr>
 
           <tr>
@@ -65,10 +149,16 @@
                 tener en cuenta lo siguiente se va hacer lo primero que encuentre si encuentra primero la variable y despues la accion se va a asignar primero la variable y luego se va a incrementar la variable si se encuentre al reves pues realiza lo contrario
               </td>
               <td>
+                1.
                 <img
                 src="../../../../../../assets/transversales/Java/Incremento-Decremento.png"
                 alt="Incremento-Decremento"
                 title="Incremento-Decremento"><br><br>
+                2.
+                <img
+                src="../../../../../../assets/transversales/Java/Incremento-Decremento2.png"
+                alt="Incremento-Decremento2"
+                title="Incremento-Decremento2"><br><br>
               </td>
           </tr>
           <tr>
@@ -132,7 +222,7 @@
 
           <tr>
               <td></td>
-              <td>Para hacer lo anterior requerimos el runtime y el compilar estos los encontramos en la ubicacion donde fue instalado el java</td>
+              <td>Para hacer lo anterior requerimos el compilador <strong>(java c)</strong> y el runtime <strong> JRE</strong> y el  estos los encontramos en la ubicacion donde fue instalado el java</td>
               <td>
                 <img
                 src="../../../../../../assets/transversales/Java/java5.png"
@@ -143,12 +233,22 @@
 
           <tr>
               <td>Compilar desde consola</td>
-              <td>1. se crea el archivo.java y luego con estos dos comandos se compila y se ejecuta</td>
               <td>
+                <strong>java -version //conocer la version de java</strong>
+                1. se crea el archivo.java y luego con estos dos comandos se compila y se ejecuta <br>
+                2. Con javap podemos ver las caracteristicas que tiene un archivo.java <br>
+              </td>
+              <td>
+                1.
                 <img
                 src="../../../../../../assets/transversales/Java/java6.png"
                 alt="java6"
                 title="java6"><br><br>
+                2.
+                <img
+                src="../../../../../../assets/transversales/Java/Javap.png"
+                alt="Javap"
+                title="Javap"><br><br>
               </td>
           </tr>
           <tr>
@@ -197,7 +297,41 @@
           </tr>
 
           <tr>
-              <td><strong>Variable Objeto</strong></td>
+            <td>Polimorfismo</td>
+            <td colspan="2">
+
+              En la siguient imagen podemos evidenciar el como hacer 3 variables objetos desde una abstacta, una clase normal y una interfaz ademas podemos identificar el alcance para llamar metodos <br><br>
+              1. hacer un objeto c1 que pertenece a la clase Trouser la cual hace referencia a la clase abstracta <br>
+              1. hacer un objeto t1 que pertenece a la clase Trouser la cual hace referencia a la clase Trouser <br>
+              1. hacer un objeto r1 que pertenece a la clase Trouser la cual hace referencia a la interfaz <br><br>
+
+              <strong>PERO RECUERDE QUE AUN PUEDE HACER UN CASTING PARA ACCEDER A LOS DEMAS METODOS Y ATRIBUTOS</strong><br><br>
+              <img
+              src="../../../../../../assets/transversales/Java/Polimorfismo2.png"
+              alt="Polimorfismo2"
+              title="Polimorfismo2"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Inferencia de Var <br>Local Variable</strong></td>
+            <td></td>
+            <td>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/InferenciaDeVar.png"
+              alt="InferenciaDeVar"
+              title="InferenciaDeVar"><br><br>
+              2.
+              <img
+              src="../../../../../../assets/transversales/Java/InferenciaDeVar2.png"
+              alt="InferenciaDeVar2"
+              title="InferenciaDeVar2"><br><br>
+            </td>
+        </tr>
+
+          <tr>
+              <td><strong>Variable Objeto / Variable de Referencia</strong></td>
               <td></td>
               <td>
                 <img
@@ -255,10 +389,16 @@
               un metodo static no puede acceder a variables normales, ni modificar constantes, solo puede acceder a variables tambien static
             </td>
             <td>
+              1.
               <img
               src="../../../../../../assets/transversales/Java/Static.png"
               alt="Static"
               title="Static"><br><br>
+              2.
+              <img
+              src="../../../../../../assets/transversales/Java/Static2.png"
+              alt="Static2"
+              title="Static2"><br><br>
             </td>
           </tr>
 
@@ -276,9 +416,10 @@
 
           <tr>
               <td><strong><a href="https://www.youtube.com/watch?v=DwriSApbm50&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=48">Enum </a></strong><br><br>
-                variable que contenga valores que no se puedan MODIFICAR NI ADICIONAR <br><br> esto surge como necesidad de que si tenemos una variable para no sobreescribir con las opciones que estan disponibles y tambien que solo me permita almacenar X´s elementos de la manera como lo ilusttra la imagen 2 <br><br>
+                variable que contiene valores que no se puedan MODIFICAR NI ADICIONAR <br><br> esto surge como necesidad de que si tenemos una variable para no sobreescribir con las opciones que estan disponibles y tambien que solo me permita almacenar X´s elementos de la manera como lo ilusttra la imagen 2 <br><br>
                 Debe ser por fuera del metodo main <br><br>
                 NO permiten instanciar un ejemplarizar un enum, entonces cuando se diseñe el enum el constructor debe ser privado para que desde afuera no lo puedan ejemplarizar <br><br>
+                Para hacerla se hace una clase por fuera del main una clase que puede tener atributos y metodos y su constructor es privado para no instanciar
               </td>
               <td colspan="2">
                 1.
@@ -286,11 +427,21 @@
                 src="../../../../../../assets/transversales/Java/Enum.png"
                 alt="Enum"
                 title="Enum"><br><br>
-                2.
+                2. Ejemplo de lo que inicialmente fue el problema de sobre-escribir uan variable y que es probable errar en algun momento
                 <img
                 src="../../../../../../assets/transversales/Java/Enum2.png"
                 alt="Enum2"
                 title="Enum2"><br><br>
+                3 main quien llama a todos los enum
+                <img
+                src="../../../../../../assets/transversales/Java/Enum3.png"
+                alt="Enum3"
+                title="Enum3"><br><br>
+                4 clase declarada por afuera
+                <img
+                src="../../../../../../assets/transversales/Java/Enum4.png"
+                alt="Enum4"
+                title="Enum4"><br><br>
               </td>
           </tr>
 
@@ -432,12 +583,139 @@
           </tr>
 
           <tr>
+            <td><a href="https://www.youtube.com/watch?v=bTu-fz1JmWQ">Collections</a></td>
+            <td></td>
+            <td>
+              <img
+              src="../../../../../../assets/transversales/Java/Collections.png"
+              alt="Collections"
+              title="Collections"><br><br>
+            </td>
+          </tr>
+
+          <tr>
               <td>List{{abreDiamante}}{{cierraDiamante}}</td>
               <td>
                 <a href="https://www.campusmvp.es/recursos/post/3-formas-de-inicializar-colecciones-java-a-la-hora-de-declararlas.aspx">Declarar e inicializar</a>
               </td>
+              <td>
+                1.
+                <img
+                src="../../../../../../assets/transversales/Java/List1.png"
+                alt="List1"
+                title="List1"><br><br>
+                2.
+                <img
+                src="../../../../../../assets/transversales/Java/List2.png"
+                alt="List2"
+                title="List2"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Set{{abreDiamante}}{{cierraDiamante}}</td>
+            <td></td>
+            <td>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/Set1.png"
+              alt="Set1"
+              title="Set1"><br><br>
+              2.
+              <img
+              src="../../../../../../assets/transversales/Java/Set2.png"
+              alt="Set2"
+              title="Set2"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Queue{{abreDiamante}}{{cierraDiamante}}</td>
+            <td>
+              Son colas solo son accesibles la primera y la ultima
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/Queue1.png"
+              alt="Queue1"
+              title="Queue1"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>LinkedList{{abreDiamante}}{{cierraDiamante}}</td>
+            <td>
+              Son nodos es decir estan compuestos por tres partes <br>
+              1. link que apunta al anterior nodo <br>
+              2. dato <br>
+              3. link que apunta al siguiente nodo <br>
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/LinkedList.png"
+              alt="LinkedList"
+              title="LinkedList"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Expresiones Lambda</td>
+            <td>
+              el modifier y el type <strong>un tipo lambda especifica el tipo de expresion que un metodo espera</strong>
+              Ahora bien a modo de ejemplo vamos a ver el metodo replaceAll el cual espera un operador unario <br><br>
+              5.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions5.png"
+              alt="lambdaExpresions5"
+              title="lambdaExpresions5"><br><br>
+              6.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions6.png"
+              alt="lambdaExpresions6"
+              title="lambdaExpresions6"><br><br>
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions.png"
+              alt="lambdaExpresions"
+              title="lambdaExpresions"><br><br>
+              2.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions2.png"
+              alt="lambdaExpresions2"
+              title="lambdaExpresions2"><br><br>
+              3.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions3.png"
+              alt="lambdaExpresions3"
+              title="lambdaExpresions3"><br><br>
+              4.
+              <img
+              src="../../../../../../assets/transversales/Java/lambdaExpresions4.png"
+              alt="lambdaExpresions4"
+              title="lambdaExpresions4"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td><a href="">Diagramas UMl </a>En los metodos se debe declarar el comportamiento del obejto en estos metodos el obejtivo es <strong>El NO PEDIR COMO PARAMETRO UNA VARIABLE QUE YA TIENE EL OBJETO ESTO ES REDUNDANTE Y ESTOS METODOS PUEDEN SER PRIVADOS Y PROTECTED</strong> </td>
+              <td colspan="2">
+                <img
+                src="../../../../../../assets/transversales/Java/DiagramaUml.png"
+                alt="DiagramaUml"
+                title="DiagramaUml"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
               <td></td>
           </tr>
+
 
           <tr>
             <td></td>
@@ -513,7 +791,6 @@
               <td></td>
           </tr>
 
-
           <tr>
             <td></td>
             <td></td>
@@ -537,31 +814,6 @@
               <td></td>
               <td></td>
           </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
 
           <tr>
             <td></td>
