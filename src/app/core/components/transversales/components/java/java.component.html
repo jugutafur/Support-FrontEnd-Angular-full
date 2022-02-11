@@ -13,9 +13,9 @@
                 <td>Java</td>
                 <td>
                   1. tiene una programacion orienta a los objetos <br><br>
-                  2. tiene un enfoque o filosofia de programacion funcional <br><br>
-                  3. fue de <strong>version 7 hacia atras</strong> Programacion Imperativa (El paso a paso para realizar una tarea <strong>El comó</strong> ) <br><br>
-                  4. Es de <strong>version 8 hacia adelante</strong> con enfoque a programacion declarativa (El como hago las cosas <strong>El Qué</strong> ) <br><br>
+                  2. tiene un enfoque o filosofia de <strong>programacion funcional</strong> Java No es 100% funcional lo que pasa es que para ser competitivo en el mercado frente a otros lenguajes que son mucho mas compactos como kotlin, scala, strass.. (lenguajes que al igual que Java usan la VM) entre otros, usa la programacion funcional ya que los mencionados usando menos lineas de codigo hacen lo mismo que Java  <br><br>
+                  3. fue de <strong>version 7 hacia atras</strong> Programacion Imperativa (El paso a paso para realizar una tarea <strong>El comó hay que hacer las cosas</strong> ) <br><br>
+                  4. Es de <strong>version 8 hacia adelante</strong> con enfoque a programacion declarativa (El como hago las cosas <strong>El Qué hay que hacer</strong> ) <br><br>
                   5. java es con finalidad <strong>WORA write once run anywhere</strong><br><br>
                   6. En una aplicacion Java los Jar tienes realciones = los programas son <strong>clases</strong> luego los programas son <strong>paquetes</strong> luego los programas son <strong>Modulos</strong> <br><br>
                   7. Los 4 primeros digitos del cualquier archivo.class es el numero magico <strong>CA-FE-BA-BE</strong> <br><br>
@@ -28,6 +28,10 @@
                   14. Dentro de un arreglo de objetos <strong>YO NO TENGO OBJETOS LO QUE TENGO SON VALORES DE REFENCIA DONDE ESTAN GUARDADOS ESOS OBJETOS </strong> los metodos no retornan objetos <strong> RETORNAN VALORES DE REFERENCIA DONDE ESTA GUARDADO ESOS OBJETOS</strong> Ahora bien los metodos normales o los constructores dentro de sus zona de parametros no reciben objetos o variables<strong> RECIBEN VALORES DE REFERENCIA DONDE ESTAN ESTOS GUARDADOS ESOS OBJETOS Y ESAS VARIABLES </strong><br><br>
                   15. product.setAmount(35_000); //Caracteristica desde java 9 <br><br>
                   16. En el stack memory se guarda la pila de llamado por eso se llama stack(pila) cuando el metodo main llama un metodo y este metodo llama a otro metodo o en una apliacion con hilos cada hilo tiene su pila dentro del stack memory para que de esta manera el programa se pueda devolver puede caber dentro de la invocacion de los constructores cuando hay herencia <br><br>
+                  17. Apartir de Java 10 Oracle es posible la Inferencia de tipos de datos <strong>var (SOLO PARA VARIABLES LOCALES) y de Java 8 que las interfaces implementen metodos </strong> <br><br>
+                  18. Jar = Java Archives <br><br>
+                  19. <strong>MANISFEST =</strong> describe el contenido del JAR es una metadata que define la clase principal o punto de entrada de la aplicacion, tambien el classPath es la ruta donde encuentra todos los archivos compilados para que funcione la aplicacion  <br><br>
+
                 </td>
                 <td>
                   7. lo descrito en el punto es posible identificarlo tambien en los metodos toda literal entera es decir numero quedado sera de tipo int
@@ -61,11 +65,11 @@
               <td>
                   Hay tres tipos de variables en Java: <br><br>
                   1. Variables locales <br>
-                  2. Variables de instancia<br>
-                  3. Variables estáticas o variables de clase<br><br><br>
+                  2. Variables de instancia o variables de clase<br>
+                  3. Variables estáticas<br><br><br>
                   1. Existen dentro de un bloque de codigo por ejemplo dentro de un metodo se crean cuando el metodo arranca y se destruyen cuando el metodo finaliza <br><br>
                   2. Se declaran en una clase fuera de cualquier método, constructor o bloque, estas variables se crean cuando un objeto de la clase se crea y se destruye cuando se destruye el objeto. En caso de que tengamos varios objetos en la clase cada uno tendra una copia de independiente de las variables de instancia. <br><br>
-                  3. Son definidadas al inicio con <strong>"public static"</strong>. A diferencia de las variables de instancia, solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. Para acceder a variables estáticas, no necesitamos crear ningún objeto de esa clase, simplemente podemos acceder a la variable
+                  3. Son definidadas al inicio con <strong>"public static"</strong>. A diferencia de las variables de instancia, solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. Para acceder a variables estáticas, no necesitamos crear ningún objeto de esa clase, simplemente podemos acceder a la variable por medio de la clase ejemplo = NombreClase.variableStatic
               </td>
               <td>
                   * Cada objeto tendrá su propia copia de la variable de instancia, mientras que solo podemos tener una copia de una variable estática por clase, independientemente de cuántos objetos creemos. <br><br>
@@ -110,6 +114,19 @@
           </tr>
 
           <tr>
+            <td><strong>Varargs o Parametros infinitos</strong></td>
+            <td>
+              Es declarar en el los Parametros worker que esta a la espera de una indeterminada cantidad de parametros de la forma como lo es posible evidenciar en la imagen el valor de referencia es tratado por el compilador como un Array <br>
+            </td>
+            <td>
+              <img
+              src="../../../../../../assets/transversales/Java/varargs.png"
+              alt="varargs"
+              title="varargs"><br><br>
+            </td>
+          </tr>
+
+          <tr>
             <td>Excepciones</td>
             <td>
               hay dos tipos de excepciones <br><br>
@@ -117,29 +134,58 @@
               2. las No gestionadas (Son de tipo Runtime ocurren en tiempo de ejecucion y se deben de presentar ya que no se trata de maquillar errores) <br>
               3. <strong>Nosotros podemos crear exceptiones de tipo runtime y exception</strong> una cosa es lanzar y otra cosa es atrapar la exception <strong> throw y catch</strong> <br>
               <br><br>
-              para crear una exceptione es posible de la forma como lo es una clase nombre camelCase y tambien puede tener atributos y metodos y con la palabra reservada throws <strong>se puede lanzar y de esta manera se vuelve una exception gestionada</strong> dentro de esta clase generalmente se hace el llamado a dos constructores de la clase padre o superclase <br><br>
-              Ahora bien esta exception puede ser lanzada por cualquier metodo que pueda generar el error que se defina dentro de esta clase en una arquitectura orientada a las interfaces <strong>Si el metodo que esta en la implementacion lanza la exception tambien la interfaz debe implementar el lanzamiento de la exception esto se debe a que las firmas deben de ser iguales </strong>
+              para crear una exception lo logramos generando una clase nombre camelCase la cual tambien puede tener atributos y metodos y con la palabra reservada throws se indica al compilador que esta clase va a ser invocada en caso de una exception gestionada <strong>se puede lanzar y de esta manera se vuelve una exception gestionada</strong> dentro de esta clase generalmente se hace el llamado a dos constructores de la clase padre o superclase <br><br>
+              Ahora bien esta exception puede ser lanzada por cualquier metodo que pueda generar el error que se defina dentro de esta clase en una arquitectura orientada a las interfaces <strong>Si el metodo que esta en la implementacion lanza la exception tambien la interfaz debe implementar el lanzamiento de la exception esto se debe a que las firmas deben de ser iguales </strong><br><br>
+              <strong>4. El Stack Trace </strong> Es la traza de una excepcion que se propaga por diversas clases o metodos y para realizar el segimiento de que se produjo y en donde esta el error ademas el mensaje adecuado de que fue lo que ocurrio <br><br>
+              <strong>El multi-catch </strong> es para manejar varias excepciones en la mismo linea gracias al | "pipe" <br><br>
+              Si podria existir un try sin un catch pero siempre y cuando el try no genere una exception lo cual no tiene sentido, funcionara pero no hace nada en especial <br><br>
             </td>
             <td>
               <img
               src="../../../../../../assets/transversales/Java/Exceptiones.png"
               alt="Exceptiones"
               title="Exceptiones"><br><br>
-              2. Declarar una Exception en una clase aparte
+              2. Declarar una Exception en una clase aparte <br>
               <img
               src="../../../../../../assets/transversales/Java/DeclararExceptiones.png"
               alt="DeclararExceptiones"
               title="DeclararExceptiones"><br><br>
-              3. lanzar una exception gestionada <strong>Throw</strong>
+              3. lanzar una exception gestionada <strong>Throw</strong><br>
               <img
               src="../../../../../../assets/transversales/Java/LanzarExceptiones.png"
               alt="LanzarExceptiones"
               title="LanzarExceptiones"><br><br>
-              3. Atrapar una exception gestionada <strong>catch</strong>
+              3. Atrapar una exception gestionada <strong>catch</strong><br>
               <img
               src="../../../../../../assets/transversales/Java/AtraparExceptiones.png"
               alt="AtraparExceptiones"
               title="AtraparExceptiones"><br><br>
+              3. <strong>Stack Trace</strong><br>
+              <img
+              src="../../../../../../assets/transversales/Java/ExceptionesStackTrace.png"
+              alt="ExceptionesStackTrace"
+              title="ExceptionesStackTrace"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="https://www.youtube.com/watch?v=POj5owpInuY">Serializar = convertir en bytes</a> </td>
+            <td>
+              Es el convertir un objeto a una sucesion de bytes con el objetivo de poder almacenar ese objeto en un medio de almacenamiento (Disco duro, usb entre otros) para despues en un futuro restaurar ese objeto al estado antes de serializar, pensado para almacenar o distribuir un objeto a otros ordenadores o servidores fuera del proyecto java ya despues estos restableceran o reconstruiran ese objeto a su estado inicial <br><br>
+
+              para esto: <br><br>
+              1. la clase debe implementar la interfaz serializable esta inferfaz no tiene ningun metodo por lo cual la clase que implemente esta interfaz no debe implementar ningun metodo, <strong>En esta caso la clase que implementa esta interfaz todos los objetos que pertenezcan a esta clase son suceptibles de ser convertidos en Byte </strong> <br><br>
+              2. Ademas de esta interfaz se debe tener en cuenta las clases mark  <strong><u><span style = "background-color: #FFFF00;">ObjectOutputStream</span></u> : esta construye un flujo de datos por el cual es posible transferir un objeto desde nuestra aplicacion java hacia un medio de almacenamiento  y <u><span style = "background-color: #FFFF00;">ObjectInputStream</span></u> : Crea un flujo de datos por el cual un objeto puede viajar desde afuera hacia adentro de la aplicacion java </strong><br><br>
+              Ahora en la imagen observamos dos metodos <strong>writeObjet()</strong> que se encarga descomponer el objeto para crear esa sucession de bytes y <strong>readObject()</strong> se encarga de restaurar el objeto apartir de esa succesion de bytes
+            </td>
+            <td>
+              Cada programa que se realiza en java tiene un numero unico que lo identifica de los demas llamado <strong>SHA</strong> es un huella la realiza el compilar de java de manera automatica por medio de calculos complejos en funcion a las clases, subclases , metodos que tiene la clase dando como resultado un numero de 20 digitos llamado <strong>serialVerionUID</strong> y tanto el emisor como el receptor deben de tener la misma serialVersionUID <br><br>
+              Para darle manejo a lo anterior podemos definir de manera directa un serialVersionUID por defecto <strong>private static final long </strong>serialVersionUID = 1L: <br><br>
+              1.
+              <img
+              src="../../../../../../assets/transversales/Java/serializable.png"
+              alt="serializable"
+              title="serializable"><br><br>
             </td>
           </tr>
 
@@ -287,7 +333,9 @@
 
           <tr>
             <td><a href="https://www.youtube.com/watch?v=sdJgcMaazmI&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=43">Polimorfismo</a></td>
-            <td></td>
+            <td>
+              Permite que una variable de referencia pueda direccionar varios objetos de diversos tipos
+            </td>
             <td>
               <img
               src="../../../../../../assets/transversales/Java/PolimorfismoJava.png"
@@ -372,10 +420,11 @@
 
           <tr>
             <td>
-              <strong>Method Abstract</strong> <br><br>Como es posible de observar por medio de la imagen un metodo abstracto es aquel que lo definimos y las demas clases que herreden de esta clase abstracta pueden implementar de diferente manera <strong>Cuando una clase en java tiene un metodo abstract por obligacion la clase tambien debe ser abstract</strong><br><br>
-              Tambien todas las clases que herreden de una clase abstracta estan en la obligacion de implementar el metodo abstracto <br><br>y esto es implementar un patron de diseño que se debe de seguir para las demas clases <br><br>
+              <strong>Method Abstract</strong> <br><br>Como es posible de observar por medio de la imagen un metodo abstracto es aquel que lo declaramos y las demas clases que herreden de esta clase abstracta deben implementar de diferente manera este metodo abstracto  <strong>Cuando una clase en java tiene un metodo abstract por obligacion la clase tambien debe ser abstract</strong><br><br>
+              Tambien todas las clases que herreden de una clase abstracta estan en la obligacion de implementar el metodo abstracto <br><br>y esto es implementar un patron de diseño que se debe de seguir para las demas clases <br><br>Una clase normal no puede tener metodos abstractos <br><br>
             </td>
             <td colspan="2" >
+              <strong>Una clase Abstracta no se puede instanciar </strong>Esto se debe a que esta clase no conoce de implementaciones solo tiene declarados firmas me metodos sin implementar Paso lo mismo en el caso de las Interfaces que se instancian por medio de las clases que las implementen, las clases abstractas se pueden instanciar solo por medio de las clases que las extiendan <br><br>
               <img
               src="../../../../../../assets/transversales/Java/MethodAbstract.png"
               alt="MethodAbstract"
@@ -584,7 +633,12 @@
 
           <tr>
             <td><a href="https://www.youtube.com/watch?v=bTu-fz1JmWQ">Collections</a></td>
-            <td></td>
+            <td>
+              El Api de Collection o el Framework maneja diferente tipo de estructuras como las <br><br>
+              1. Listados <br>
+              2. Conjuntos <br>
+              3. Mapas (llave, valor)<br>
+            </td>
             <td>
               <img
               src="../../../../../../assets/transversales/Java/Collections.png"
@@ -701,6 +755,42 @@
           </tr>
 
           <tr>
+            <td>Interfaces funcionales</td>
+            <td>
+              <strong>Consumer</strong><br><br>
+              Terminal Operation <br>
+              es una funcion que recibe algo y no genera salida <strong>Es consumer o Interfaz funcional JAVA8 Oracle </strong> <br><br>
+              Una interfaz funcional <strong>Solamente puede tener la declaracion de un metodo abstracto que no devuelve nada <span style = "background-color: #FFFF00;"><u>void</u></span> </strong> la notacion seria que recibe algo pero no devuelve nada <br><br>
+              <strong>(T t) -> void</strong>
+            </td>
+            <td>
+              <strong>Predicate</strong><br><br>
+              Intermediate Operation <br>
+              <strong>Collect</strong><br><br>
+              terminal Operation <br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Referencia de metodos Operador(::) </td>
+            <td>
+              //forma normal <br>
+              <strong>System.out.println()</strong><br><br>
+              //Usando Referencia de metodos <br>
+              <strong>System.out::println</strong><br>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Generics(Tipo de dato Generico)</td>
+            <td>
+              Funciona como especie de plantilla esto quiere decir que en tiempo de ejecucion de manera explicita o implicita se debe definir la T que tipo de dato es !! <br><br>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
               <td><a href="">Diagramas UMl </a>En los metodos se debe declarar el comportamiento del obejto en estos metodos el obejtivo es <strong>El NO PEDIR COMO PARAMETRO UNA VARIABLE QUE YA TIENE EL OBJETO ESTO ES REDUNDANTE Y ESTOS METODOS PUEDEN SER PRIVADOS Y PROTECTED</strong> </td>
               <td colspan="2">
                 <img
@@ -715,7 +805,6 @@
               <td></td>
               <td></td>
           </tr>
-
 
           <tr>
             <td></td>

@@ -9,6 +9,30 @@
       </thead>
       <tbody>
           <tr>
+            <td></td>
+            <td>
+              * JSF nacio en el 2004 por SUN pensado para la parte web. <br>
+              * Permite el uso de JavaScript <br>
+              * Resuelve Validaciones, Conversiones, Mensajes de error e Internacionalizacion <br>
+              * Desarrollo de componentes propios <br>
+              * Las presentacion esta es JSP y XHTML <br>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Etiquetas</td>
+            <td>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/Etiquetas.png"
+              alt="Etiquetas"
+              title="Etiquetas"><br><br>
+            </td>
+          </tr>
+
+          <tr>
               <td>This is a table to Java Server Faces</td>
               <td>
                 Java server faces es un framework de aplicaciones web basado en java, permite simplificar la construcción de interfaces de usuario para aplicaciones web mediante el uso de componentes gráficos y la vinculación del patrón MVC <br><br>
@@ -55,7 +79,11 @@
                 Empieza desde el request hasta el response <br><br>
                 Restore view en esta etapa se restaura el arbol de componentes botones, inputs , form etc.. una vez obtenido el arbol de componetes se procesan todos los valores a sociados a los mismos, se validan datos actualiza los modelos este paso pasa primero por los controladores finalmente invoka la aplicacion llamando al gestor que es el <strong>Java Bean </strong>Este se encarga de traer todos los componentes asociados en conjunto con la informacion que viene los objetos para renderizarla en un navagador por medio de un servidor que para nuestro caso es Tomcat <br><br>
                 Primero dectecta el evento de la persona que esta interactuando en la pagina y por medio del protocolo HTTP crea el FacesRequest llega al motor JSF recupera la informacion atraves de los Beans, crea el arbol de componentes genera el archivo xml con los datos lo lleva a nuestra pagina a nuestro navegador y atraves del DOM y con ayuda de JavaScript y JavaServerFaces pinta la informacion <br><br>
-                <strong>Un servlet de la clase javax.faces.webapp.FacesServlet es el motor de cualquier aplicación JSF</strong>
+                <strong>Un servlet de la clase javax.faces.webapp.FacesServlet es el motor de cualquier aplicación JSF</strong><br><br>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida0.png"
+                alt="JSFCicloVida0"
+                title="JSFCicloVida0"><br><br>
               </td>
               <td>
                 1.
@@ -104,7 +132,6 @@
                 los controladores en JSF son <strong>managed Beans</strong><br>
                 los controladores en Spring son <strong>Controllers</strong> <br>
                 los controladores en Stratus son <strong>...</strong> <br>
-
               </td>
               <td>
                 <img
@@ -112,6 +139,22 @@
                 alt="SettingJSF"
                 title="SettingJSF"><br><br>
               </td>
+          </tr>
+
+          <tr>
+            <td>ManagedBean //Controllers</td>
+            <td>
+              * Clases Java de respaldo para las operaciones a realizar en las paginas web, que soportan la logica del negocio <br>
+              * Requieren ser invocados con la expresion <strong>EL = {{abrellave}}#bean.atributo{{cierrallave}}</strong>
+              * Esta clase debe estar mappeada en un archivo de configuracion "faces-config.xml"(JSF 1) o atraves de anotaciones (JSF 2+) <br>
+              * Dicho lo anterior este archivo de configuracion contiene la caracterizacion del comportamiento, la ubicacion y los datos de la clase los tag: <br><br>
+              <strong>managed-bean :</strong> Es un apodo o alias a la clase que vamos a mapear <br><br>
+              <strong>managed-class :</strong> Es la ruta en donde esta ubicada la clase <br><br>
+              <strong>managed-scope :</strong> Describimos el ambito de la clase, ademas el comportamiento, <br><br>
+              <strong>navigation-rule :</strong> Son las reglas de navegacion debemos indicar que salida dara la pagina y despues indicar hacia donde se debe dirigir <br><br>
+
+            </td>
+            <td></td>
           </tr>
 
           <tr>
