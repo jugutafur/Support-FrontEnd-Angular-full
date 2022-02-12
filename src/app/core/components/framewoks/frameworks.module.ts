@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { FrameworksRoutingModule } from './frameworks-routing.module';
 import { JavaSwingComponent } from './java-swing/java-swing.component';
 import { JavaSpringComponent } from './java-spring/java-spring.component';
+import { JaxbComponent } from './jaxb/jaxb.component';
 
 @NgModule({
     declarations:[
@@ -19,7 +20,8 @@ import { JavaSpringComponent } from './java-spring/java-spring.component';
         VueJsComponent,
         JavaServerFacesComponent,
         JavaSwingComponent,
-        JavaSpringComponent
+        JavaSpringComponent,
+        JaxbComponent
     ],
     imports:[
         CommonModule,
