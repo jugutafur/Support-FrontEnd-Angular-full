@@ -15,7 +15,7 @@
               * Permite el uso de JavaScript <br>
               * Resuelve Validaciones, Conversiones, Mensajes de error e Internacionalizacion <br>
               * Desarrollo de componentes propios <br>
-              * Las presentacion esta es JSP y XHTML <br>
+              * La presentacion esta en JSP y XHTML <br>
             </td>
             <td></td>
           </tr>
@@ -49,10 +49,12 @@
                 ver info <a href="https://desarrolloweb.com/articulos/831.php">Link 1</a>
               </td>
               <td>
+                1.
                 <img
                 src="../../../../../assets/framework/JavaServerFaces/Servlet.png"
                 alt="Servlet"
                 title="Servlet"><br><br>
+                2.
                 <img
                 src="../../../../../assets/framework/JavaServerFaces/JSF1.png"
                 alt="JSF1"
@@ -116,6 +118,9 @@
             <td>Funcionamiento General</td>
             <td>
               Empieza por el faces request luego se crea el FacesServlet <strong>declarado en el archivo web.xml </strong>se genera su FacesContext este crea una instancia unica por cada request luego FacesServlet delega el procesamiento al ciclo de vida luego cada fase puede acceder y modificar su contenido en el FacesContext luego envia la respesta al FacesServlet y este ultimo solicita al FacesContext ejecutar la fase de render response para finalmente generar el Faces response <br><br>
+              Ahora tener en cuenta que en el archivo de Web.xml <strong>Web Deployment Definition</strong> Se encuentra definidos los servlets faces : <br><br>
+              1. La definition = {{abreDiamante}}servlet{{cierraDiamante}} <br>
+              2. El Mapping = {{abreDiamante}}servlet-mapping{{cierraDiamante}} <br>
             </td>
             <td>
               <img
