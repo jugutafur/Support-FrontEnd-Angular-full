@@ -57,9 +57,16 @@
                 <td></td>
             </tr>
             <tr>
-                <td>Decoradores o Anotaciones</td>
+                <td>Anotaciones</td>
                 <td>
-                    <u>spring web</u> <br><br>
+                    <a href="https://www.baeldung.com/spring-postconstruct-predestroy">Ver inf @PostConstruct y @PreDestroy</a> <br><br>
+                    <strong>@PostConstruct</strong> //Spring llama a los métodos anotados con @PostConstruct solo una vez, justo después de la inicialización de las propiedades del bean . Tenga en cuenta que estos métodos se ejecutarán incluso si no hay nada que inicializar. <br>
+                    El método anotado con <strong>@PostConstruct</strong> puede tener cualquier nivel de acceso pero no puede ser estático. Debe ser declarado despues de la injeccion de dependencias, solo es posible en <strong>Beans</strong> que soporten la injeccion de dependencias <br>
+                    <br>
+                    <strong>@PreDestroy</strong> //Un método anotado con @PreDestroy se ejecuta solo una vez, justo antes de que Spring elimine nuestro bean del contexto de la aplicación.
+                    <br>
+                    Al igual que con <strong>@PostConstruct</strong> , los métodos anotados con @PreDestroy pueden tener cualquier nivel de acceso, pero no pueden ser estáticos.
+                    <br>El propósito de este método debe ser liberar recursos o realizar cualquier otra tarea de limpieza antes de que se destruya el bean, por ejemplo, cerrar una conexión a la base de datos. <br><br>
                     <strong>@SpringBootApplication</strong> //declara la class main por donde inicia el project <br>
                     <strong>@RestController</strong>  //que la clase es un controller <br>
                     <strong>@RequestMapping("/saludar")</strong>  //define el path principal del controller <br>
