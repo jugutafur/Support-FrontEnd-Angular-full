@@ -9,15 +9,35 @@
       </thead>
       <tbody>
           <tr>
-            <td></td>
+            <td>
+              <a href="https://www.youtube.com/watch?v=dZnXn-ecwp8&t=29s">Info proyecto JSF</a><br><br>
+              <strong>Todo proyecto JSF debe tener un archivo de web.xml </strong> EN el encontramos los servlet y mas importante en los tags de servlet name y mapping encontramos el servlet el <strong>Faces Servlet</strong> de esta manera indicamos que nuestra aplicacion usa JSF ademas <strong>que debemos agregar la dependencia necesario en el pom.xml y build.gradle <br><br> como visto en la imagen 2</strong>
+            </td>
             <td>
               * JSF nacio en el 2004 por SUN pensado para la parte web. <br>
               * Permite el uso de JavaScript <br>
               * Resuelve Validaciones, Conversiones, Mensajes de error e Internacionalizacion <br>
               * Desarrollo de componentes propios <br>
               * La presentacion esta en JSP y XHTML <br>
+              * <strong>Programacion orientada a eventos</strong><br>
+              * <strong>Etiquetas enriquezidas </strong>por lado del servidor para que en el lado del cliente tenga <strong>HTML</strong>
+              * <strong>Flujos de navegacion</strong> en base a cadenas de control. Estos flujos es poaible definirlos desde java o con un archivo llamado <strong>faces-config</strong> siendo esta ultima mejor ya que en un solo archivo se centraliza la navegacion de la aplicacion <br>
+              * <strong>Soporte de peticiones asincronas (AJAX)</strong> todos los frameworks que programan aplicaciones web como spring web y JSF tienen mejorado esat parte de comunicacion entre el servidor y el cliente <br>
+              * JSF es la tecnologia que avala <strong>Oracle</strong> para las apliaciones web es por ello que este framework tiene soporte nativo para <strong>WebSphere y GlassFish </strong>lo que significa que no es necesario agregar librerias a nuestro servidor ya que este ya las contiene <br>
+              * facil integracion con standalone en Apache Tomcat solo es necesario agregar las librerias necesarias <br>
             </td>
-            <td></td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/EstructuraJSF.png"
+              alt="EstructuraJSF"
+              title="EstructuraJSF"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/ConfiguracionJSF.png"
+              alt="ConfiguracionJSF"
+              title="ConfiguracionJSF"><br><br>
+            </td>
           </tr>
 
           <tr>
@@ -185,6 +205,7 @@
             <td>Scope</td>
             <td>El alcance</td>
             <td>
+              <strong>@ViewScope</strong> Que el alcance del Bean a a ser a nivel de vista en el momento que el usuario de refresh a la pagina los datos del Bean <strong>desaparecen: Se Destruyen el ManagedBean y se crea uno nuevo</strong>
               <img
               src="../../../../../assets/framework/JavaServerFaces/JSFScope.png"
               alt="JSFScope"

@@ -8,6 +8,19 @@
           </tr>
       </thead>
       <tbody>
+            <tr>
+              <td><strong><a href="https://dzone.com/articles/named-vs-managedbean-laquo-glenware"> CDI </a></strong></td>
+              <td>
+                La especificación CDI Beans – (CDI: Contexts and Dependency Injection), define el marco de trabajo de inyección de dependencias utilizado de forma estándar en la plataforma Java EE siendo un elemento fundamental de la misma. Su funcionamiento y cometido es equivalente al sistema de inyección de dependencias de Spring.
+              </td>
+              <td>
+                <strong>@Named</strong> //para declarar un Bean en lugar de <strong>@ManagedBean</strong> ya que esta ultima esta en desuso <br>
+                Estas anotaciones proporcionan inyecciones de dependencia <br><br>
+                <strong>@ManagedBean</strong> – javax.faces.bean.ManagedBean – gestionado por contenedor JSF <br>
+                <strong>@Named</strong> – javax.faces.bean – Bean CDI administrado por el servidor de aplicaciones <br><br>
+                Esto significa que los beans @Named son visibles para todo el contenedor JEE, mientras que @ManagedBean solo son visibles para el contenedor JSF. El problema de la visibilidad se cubre en esta tabla:
+              </td>
+            </tr>
 
             <tr>
                 <td>Java</td>
@@ -804,12 +817,6 @@
               <td></td>
               <td></td>
               <td></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
           </tr>
 
           <tr>
