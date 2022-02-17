@@ -138,7 +138,7 @@
             <td>Funcionamiento General</td>
             <td>
               Empieza por el faces request luego se crea el FacesServlet <strong>declarado en el archivo web.xml </strong>se genera su FacesContext este crea una instancia unica por cada request luego FacesServlet delega el procesamiento al ciclo de vida luego cada fase puede acceder y modificar su contenido en el FacesContext luego envia la respesta al FacesServlet y este ultimo solicita al FacesContext ejecutar la fase de render response para finalmente generar el Faces response <br><br>
-              Ahora tener en cuenta que en el archivo de Web.xml <strong>Web Deployment Definition</strong> Se encuentra definidos los servlets faces : <br><br>
+              Ahora tener en cuenta que en el archivo de Web.xml <strong>Web Deployment Definition (es un fichero en el formato estándar para aplicaciones web con servlets, que contiene la configuración global a toda(s) la(s) aplicacion(es) )</strong> Se encuentra definidos los servlets faces : <br><br>
               1. La definition = {{abreDiamante}}servlet{{cierraDiamante}} <br>
               2. El Mapping = {{abreDiamante}}servlet-mapping{{cierraDiamante}} <br>
             </td>
