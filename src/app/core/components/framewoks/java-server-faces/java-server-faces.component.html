@@ -9,11 +9,39 @@
       </thead>
       <tbody>
           <tr>
+            <td></td>
+            <td>
+              * <strong>Componentes de interfaz de usuario IU</strong> <br>
+              - Componetes que generan datos <br>
+              -- No editables <br>
+              -- editables <br><br>
+              - Componentes que generan acciones <br><br>
+              * <strong>Un modelo de renderizado</strong> <br><br>
+              * <strong>Un modelo para el manejo de eventos y listeners</strong><br>
+              JSf Maneja 2 tipos de eventos <br><br>
+              -Eventos de Aplicacion <br>
+              --Generados por componentes UI <br>
+              --Hay 2 tipos: ActionEvent o Value Change Event <br><br>
+              -Eventos de Ciclo de Vida <br>
+              --Se clasifican en Eventos de Fase y Eventos de Sistema <br><br>
+              * <strong>Un modelo de conversion y validacion de datos</strong> <br><br>
+              * <strong>Un modelo para el soporte Ajax</strong> <br><br>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/EventsAndListeners.png"
+              alt="EventsAndListeners"
+              title="EventsAndListeners"><br><br>
+            </td>
+          </tr>
+
+          <tr>
             <td>
               <a href="https://www.youtube.com/watch?v=dZnXn-ecwp8&t=29s">Info proyecto JSF</a><br><br>
               <strong>Todo proyecto JSF debe tener un archivo de web.xml </strong> EN el encontramos los servlet y mas importante en los tags de servlet name y mapping encontramos el servlet el <strong>Faces Servlet</strong> de esta manera indicamos que nuestra aplicacion usa JSF ademas <strong>que debemos agregar la dependencia necesario en el pom.xml y build.gradle <br><br> como visto en la imagen 2</strong>
             </td>
             <td>
+              * Es una especificacion, parte de Java EE que define un marco de trabajo MVC pare el desarrolo de aplicaciones web basado en un modelo de componentes de interfaz de usuario del lado del servidor <br>
               * JSF nacio en el 2004 por SUN pensado para la parte web. <br>
               * Permite el uso de JavaScript <br>
               * Resuelve Validaciones, Conversiones, Mensajes de error e Internacionalizacion <br>
@@ -22,7 +50,7 @@
               * <strong>Programacion orientada a eventos</strong><br>
               * <strong>Etiquetas enriquezidas </strong>por lado del servidor para que en el lado del cliente tenga <strong>HTML</strong>
               * <strong>Flujos de navegacion</strong> en base a cadenas de control. Estos flujos es poaible definirlos desde java o con un archivo llamado <strong>faces-config</strong> siendo esta ultima mejor ya que en un solo archivo se centraliza la navegacion de la aplicacion <br>
-              * <strong>Soporte de peticiones asincronas (AJAX)</strong> todos los frameworks que programan aplicaciones web como spring web y JSF tienen mejorado esat parte de comunicacion entre el servidor y el cliente <br>
+              * <strong>Soporte de peticiones asincronas (AJAX)</strong> todos los frameworks que programan aplicaciones web como spring web y JSF tienen mejorado esta parte de comunicacion entre el servidor y el cliente <br>
               * JSF es la tecnologia que avala <strong>Oracle</strong> para las apliaciones web es por ello que este framework tiene soporte nativo para <strong>WebSphere y GlassFish </strong>lo que significa que no es necesario agregar librerias a nuestro servidor ya que este ya las contiene <br>
               * facil integracion con standalone en Apache Tomcat solo es necesario agregar las librerias necesarias <br>
             </td>
@@ -41,19 +69,32 @@
           </tr>
 
           <tr>
-            <td>Etiquetas</td>
+            <td>Archivos</td>
             <td>
+              <strong>faces-config.xml (META-INF) </strong><br>
+              * Contine las reglas de navegacion <br>
+              * la configuracion de Internacionalizacion <br>
+              * Antes en JSF-1 este archivo se mapeaban los beans ademas de la ruta y su Scope <br>
+              <strong>web.xml (WEB-INF)</strong><br>
+              * Contiene los Servlets (name y el mapping) <br>
+              * El archivo por el cual arranca la aplicacion <br>
+              <strong>Pom.xml  (Project Object Model)</strong> <br>
+              * Contiene la inyeccion de todas las dependencias necesarias para que funcione el proyecto <br>
+              * La version del proyecto <br>
+              * El nombre del proyecto <br>
+              * El paquete que dara por salida <br>
             </td>
             <td>
+              En versiones JSF-1
               <img
-              src="../../../../../assets/framework/JavaServerFaces/Etiquetas.png"
-              alt="Etiquetas"
-              title="Etiquetas"><br><br>
+              src="../../../../../assets/framework/JavaServerFaces/JSF-1MapeoDeJavaBeans.png"
+              alt="1MapeoDeJavaBeans"
+              title="1MapeoDeJavaBeans"><br><br>
             </td>
           </tr>
 
           <tr>
-              <td>This is a table to Java Server Faces</td>
+              <td>Java Server Faces</td>
               <td>
                 Java server faces es un framework de aplicaciones web basado en java, permite simplificar la construcción de interfaces de usuario para aplicaciones web mediante el uso de componentes gráficos y la vinculación del patrón MVC <br><br>
                 Dentro de las caracteristicas descritas en la segunda imagen se menciona una capa superior <strong>Java API los servlet</strong> esto quiere decir que todo lo que hagamos con Java para la web va a emplear servlets en segundo plano, lo que hagamos con Spring, JSF etc.. <br><br>
@@ -98,7 +139,7 @@
           <tr>
               <td>Ciclo de vida</td>
               <td>
-                Empieza desde el request hasta el response <br><br>
+                Empieza desde el Faces Request hasta el Faces Response <br><br>
                 Restore view en esta etapa se restaura el arbol de componentes botones, inputs , form etc.. una vez obtenido el arbol de componetes se procesan todos los valores a sociados a los mismos, se validan datos actualiza los modelos este paso pasa primero por los controladores finalmente invoka la aplicacion llamando al gestor que es el <strong>Java Bean </strong>Este se encarga de traer todos los componentes asociados en conjunto con la informacion que viene los objetos para renderizarla en un navagador por medio de un servidor que para nuestro caso es Tomcat <br><br>
                 Primero dectecta el evento de la persona que esta interactuando en la pagina y por medio del protocolo HTTP crea el FacesRequest llega al motor JSF recupera la informacion atraves de los Beans, crea el arbol de componentes genera el archivo xml con los datos lo lleva a nuestra pagina a nuestro navegador y atraves del DOM y con ayuda de JavaScript y JavaServerFaces pinta la informacion <br><br>
                 <strong>Un servlet de la clase javax.faces.webapp.FacesServlet es el motor de cualquier aplicación JSF</strong><br><br>
@@ -151,7 +192,7 @@
           </tr>
 
           <tr>
-              <td>Settings</td>
+              <td>Anotaciones</td>
               <td>
                 los controllers son llamados de diferente manera dependiendo del framewok usado <br><br>
                 los controladores en JSF son <strong>managed Beans</strong><br>
@@ -167,7 +208,7 @@
           </tr>
 
           <tr>
-            <td>ManagedBean //Controllers</td>
+            <td>ManagedBean //Anotaciones</td>
             <td>
               * Clases Java de respaldo para las operaciones a realizar en las paginas web, que soportan la logica del negocio <br>
               * Requieren ser invocados con la expresion <strong>EL = {{abrellave}}#bean.atributo{{cierrallave}}</strong>
@@ -273,8 +314,35 @@
           </tr>
 
           <tr>
+            <td>Etiquetas</td>
+            <td>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/Etiquetas.png"
+              alt="Etiquetas"
+              title="Etiquetas"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td><a href="https://stackoverflow.com/questions/17544141/purpose-of-the-houtputlabel-and-its-for-attribute">Diferencia entre outputLabel y outputText</a></td>
+              <td>
+                La diferencia radica en el HTML generado label puede contener un atributo llamado for que cuando hacae macth con un id de igual valor estos dos tag se relacionan <br><br>
+                Ahora bien no se debe usar solo para mostrar un texto de la siguiente manera  <br>
+                {{abreDiamante}}h:outputLabel value="#{{abrellave}}bean.message{{cierrallave}}" /{{cierraDiamante}} <br><br>
+                Donde no se usa el atributo for. Para estos casos se debe usar <strong>outputText</strong>
+              </td>
               <td></td>
-              <td></td>
+          </tr>
+
+          <tr>
+              <td>Diferencia entre action y actionListener</td>
+              <td>
+                los dos pueden contener valores que retornan el metodo declarado en el action <strong>PEROooooooo</strong><br><br>
+                <strong>action = </strong>Es usado para cuando el valor que tiene va a Re-direccionar a otra vista <br>
+                <strong>actionListener =</strong> No Re-direcciona a otra Vista solo ejecuta el metodo
+              </td>
               <td></td>
           </tr>
 
@@ -410,11 +478,6 @@
               <td></td>
           </tr>
 
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
           <tr>
               <td></td>
               <td></td>

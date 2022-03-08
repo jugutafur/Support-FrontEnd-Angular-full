@@ -26,18 +26,18 @@
                 <td>Java</td>
                 <td>
                   1. tiene una programacion orienta a los objetos <br><br>
-                  2. tiene un enfoque o filosofia de <strong>programacion funcional</strong> Java No es 100% funcional lo que pasa es que para ser competitivo en el mercado frente a otros lenguajes que son mucho mas compactos como kotlin, scala, strass.. (lenguajes que al igual que Java usan la VM) entre otros, usa la programacion funcional ya que los mencionados usando menos lineas de codigo hacen lo mismo que Java  <br><br>
+                  2. tiene un enfoque o filosofia de <strong>programacion funcional</strong> Java No es 100% funcional lo que pasa es que para ser competitivo en el mercado frente a otros lenguajes que son mucho mas compactos como kotlin, scala, struts.. (lenguajes que al igual que Java usan la VM) entre otros, usa la programacion funcional ya que los mencionados usando menos lineas de codigo hacen lo mismo que Java  <br><br>
                   3. fue de <strong>version 7 hacia atras</strong> Programacion Imperativa (El paso a paso para realizar una tarea <strong>El comó hay que hacer las cosas</strong> ) <br><br>
-                  4. Es de <strong>version 8 hacia adelante</strong> con enfoque a programacion declarativa (El como hago las cosas <strong>El Qué hay que hacer</strong> ) <br><br>
+                  4. Es de <strong>version 8 hacia adelante</strong> con enfoque a programacion declarativa (<strong>El Qué hay que hacer</strong> ) <br><br>
                   5. java es con finalidad <strong>WORA write once run anywhere</strong><br><br>
-                  6. En una aplicacion Java los Jar tienes realciones = los programas son <strong>clases</strong> luego los programas son <strong>paquetes</strong> luego los programas son <strong>Modulos</strong> <br><br>
+                  6. En una aplicacion Java los Jar tienes relaciones = los programas son <strong>clases</strong> luego los programas son <strong>paquetes</strong> luego los programas son <strong>Modulos</strong> <br><br>
                   7. Los 4 primeros digitos del cualquier archivo.class es el numero magico <strong>CA-FE-BA-BE</strong> <br><br>
                   8. String <strong>NO ES UNA PALABRA RESERVADA</strong> la clase String es final por lo cual no se puede <strong>heredar de ella </strong>al ser una clase final es inmutable y toda instancia que se hace de ella cada vez que se desea modificar lo que da como resultado es la creacion de nuevas instancias <strong>(Estas alteraciones que se hacen a las variables String queda en un espacio de la HEAP MEMORY Especial el pool de String )</strong> ya que apuntan a direcciones de memoria diferentes es por ello que se debe usar StringBuilder <br><br>
                   9. desde la version 8 la merory heap es dinamica <br><br>
-                  10. el garbash collector marca la variable u objeto que no tiene referencia es decir que nadie apunta a el primero <strong>Lo marca, lo elimina y adjunta o pega los demas objetos o varaibles para que las demas instanciaciones sean secuencial </strong><br><br>
+                  10. el garbash collector marca la variable u objeto que no tiene referencia es decir que nadie apunta a el primero <strong>Lo marca, lo elimina y adjunta o pega los demas objetos o variables para que las demas instanciaciones sean secuencial </strong><br><br>
                   11. <strong>TODO NUMERO LITERAL ENTERO QUE SE USE EN EL CODIGO FUENTE SERA INTERPRETADO POR EL COMPILADOR COMO DE TIPO INT</strong><br><br>
                   12. <strong>TODO NUMERO LITERAL DECIMAL O DE COMA FLOTANTE QUE SE USE EN EL CODIGO FUENTE SERA INTERPRETADO POR EL COMPILADOR COMO DE TIPO DOUBLE--> POR ELLO SE DEBE INIDCAR LA (F)DESUES DEL NUMERO DECIMAL X.XX PARA INIDCAR QUE ES FLOAT </strong><br><br>
-                  13. Los constructores <strong>No se heredan se invocan</strong> En una cadena de herencia empieza a invocar todos los constructores hacia arriba y luego los va ejectando hacia abajo hacia los hijos inicializandolos en orden hacia abajo <strong>Es por ello que la primera linea que tiene el constructor es la invocacion hacia el constructor padre</strong><br><br>
+                  13. Los constructores <strong>No se heredan se invocan</strong> En una cadena de herencia empieza a invocar todos los constructores hacia arriba y luego los va ejectando hacia abajo hacia los hijos inicializandolos en orden hacia abajo <strong>Es por ello que la primera linea que tiene el constructor es la invocacion hacia el constructor padre</strong> Es por ello la utilidad de la stack memory por que en ella se conoce la secuencia, recorrido o tracer<br><br>
                   14. Dentro de un arreglo de objetos <strong>YO NO TENGO OBJETOS LO QUE TENGO SON VALORES DE REFENCIA DONDE ESTAN GUARDADOS ESOS OBJETOS </strong> los metodos no retornan objetos <strong> RETORNAN VALORES DE REFERENCIA DONDE ESTA GUARDADO ESOS OBJETOS</strong> Ahora bien los metodos normales o los constructores dentro de sus zona de parametros no reciben objetos o variables<strong> RECIBEN VALORES DE REFERENCIA DONDE ESTAN ESTOS GUARDADOS ESOS OBJETOS Y ESAS VARIABLES </strong><br><br>
                   15. product.setAmount(35_000); //Caracteristica desde java 9 <br><br>
                   16. En el stack memory se guarda la pila de llamado por eso se llama stack(pila) cuando el metodo main llama un metodo y este metodo llama a otro metodo o en una apliacion con hilos cada hilo tiene su pila dentro del stack memory para que de esta manera el programa se pueda devolver puede caber dentro de la invocacion de los constructores cuando hay herencia <br><br>
@@ -120,8 +120,8 @@
           <tr>
             <td>Argumentos vs Parametros</td>
             <td>
-              caller(Argumento...) <br><br>
-              worker(Parametro...) <br><br>
+              caller(Argumento, Argumento, Argu....) <br><br>
+              worker(Parametro, Parametro, Para....) <br><br>
             </td>
             <td></td>
           </tr>
@@ -143,8 +143,8 @@
             <td>Excepciones</td>
             <td>
               hay dos tipos de excepciones <br><br>
-              1. las gestionadas (Son de las cuales el programador se puede recuperar) <br>
-              2. las No gestionadas (Son de tipo Runtime ocurren en tiempo de ejecucion y se deben de presentar ya que no se trata de maquillar errores) <br>
+              1. <strong>las gestionadas</strong> (Son de las cuales el programador se puede recuperar) <br>
+              2. <strong>las No gestionadas</strong> (Son de tipo Runtime ocurren en tiempo de ejecucion y se deben de presentar ya que no se trata de maquillar errores) <br>
               3. <strong>Nosotros podemos crear exceptiones de tipo runtime y exception</strong> una cosa es lanzar y otra cosa es atrapar la exception <strong> throw y catch</strong> <br>
               <br><br>
               para crear una exception lo logramos generando una clase nombre camelCase la cual tambien puede tener atributos y metodos y con la palabra reservada throws se indica al compilador que esta clase va a ser invocada en caso de una exception gestionada <strong>se puede lanzar y de esta manera se vuelve una exception gestionada</strong> dentro de esta clase generalmente se hace el llamado a dos constructores de la clase padre o superclase <br><br>
@@ -163,7 +163,7 @@
               src="../../../../../../assets/transversales/Java/DeclararExceptiones.png"
               alt="DeclararExceptiones"
               title="DeclararExceptiones"><br><br>
-              3. lanzar una exception gestionada <strong>Throw</strong><br>
+              3. lanzar una exception gestionada <strong>Throws y throw</strong><br>
               <img
               src="../../../../../../assets/transversales/Java/LanzarExceptiones.png"
               alt="LanzarExceptiones"
