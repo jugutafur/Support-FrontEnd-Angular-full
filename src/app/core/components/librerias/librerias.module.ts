@@ -12,7 +12,7 @@ import { PrimefacesComponent } from './primefaces/primefaces.component';
 
 @NgModule({
     declarations:[
-        GormComponent,
+        GormComponent, 
         MainLibreriasComponent,
         BootstrapComponent,
         SwaggerComponent,
