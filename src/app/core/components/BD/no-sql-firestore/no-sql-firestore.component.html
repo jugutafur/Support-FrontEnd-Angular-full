@@ -15,7 +15,8 @@
                     <p>-Son ideales para almacenar y extraer datos con una clave unica </p>
                     <p>-Manejan diccionarios de manera excepcional Se basan en algoritmos de hash o hashmap</p>
 
-                    <strong>Basadas en documentos: MongoDB, Firestore (servicio en la nube, es un ambiente grafico)</strong>
+                    <strong>Basadas en documentos: MongoDB, Firestore (servicio en la nube, es un ambiente
+                        grafico)</strong>
                     <p> Basadas en objetos de tipo JSON. Ideal para almacenar datos JSON y XML</p>
                     <p>- Son una implementación de clave valor que varía en la forma semiestructurada en que se trata la
                         información</p>
@@ -38,18 +39,35 @@
 
                 </td>
                 <td>
-                    <img src="../../../../../assets/bd/NoSql firestore/ejemplosNotSQL.png" alt="bases datos norelacionales"> <br><br>
-                    <img src="../../../../../assets/bd/NoSql firestore/estructuraFirestore.png" alt="estructura o jerarquia">
+                    <img src="../../../../../assets/bd/NoSql firestore/ejemplosNotSQL.png"
+                        alt="bases datos norelacionales"> <br><br>
+                    <img src="../../../../../assets/bd/NoSql firestore/estructuraFirestore.png"
+                        alt="estructura o jerarquia">
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <a href="https://firebase.google.com/">Firebase Servicio apliacaciones web y moviles </a>
+                    <a href="https://firebase.google.com/">*Firebase Servicio apliacaciones web y moviles </a> <br>
+                    <a href="https://platzi.com/clases/1566-bd/19828-colecciones-vs-subcolecciones/">*Colecciones vs subcolecciones</a><br>
+                    <a href="https://platzi.com/clases/1566-bd/20158-construyendo-platziblog-en-firestore/">*Construyendo Platziblog en Firestore</a><br>
                 </td>
                 <td>
-                    <p>Las top level collections son las colecciones que se tienen de inmediato o entrada en el proyecto.</p>
-                    <p>collecion es como folder, documentos serian las entidades en sql</p>
+                    <p>Las top level collections son las colecciones que se tienen de inmediato o entrada en el
+                        proyecto.</p>
+                       
+
+
+                    <p> <strong>Tabla -> Colección...... Tupla o renglon -> Documento </strong></p>
+                    <p>La particularidad de las top level collections es que existen en el primer nivel de manera
+                        intrínseca. Las subcolecciones ya no vivirán al inicio de la base de datos
+                         Si tienes una entidad separada que vas a referenciar desde muchos lugares es recomendado usar un
+                        top level collection.Por el otro lado si se necesita hacer algo intrínseco al documento es aconsejable usar
+                        subcolecciones.
+                    </p> 
+                    <p>resumen: Dentro de las Colecciones existen 2 grandes tipos. Las Top level collection o colecciones de nivel superior y las subcollections o subcolecciones.
+                         Estas últimas viven únicamente dentro de un documento padre.</p>
+
                 </td>
                 <td>
                     <img src="../../../../../assets/bd/NoSql firestore/tiposDedato.png" alt="tipos datosy emplo">
