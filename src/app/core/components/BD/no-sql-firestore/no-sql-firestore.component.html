@@ -49,24 +49,28 @@
             <tr>
                 <td>
                     <a href="https://firebase.google.com/">*Firebase Servicio apliacaciones web y moviles </a> <br>
-                    <a href="https://platzi.com/clases/1566-bd/19828-colecciones-vs-subcolecciones/">*Colecciones vs subcolecciones</a><br>
-                    <a href="https://platzi.com/clases/1566-bd/20158-construyendo-platziblog-en-firestore/">*Construyendo Platziblog en Firestore</a><br>
+                    <a href="https://platzi.com/clases/1566-bd/19828-colecciones-vs-subcolecciones/">*Colecciones vs
+                        subcolecciones</a><br>
+                    <a href="https://platzi.com/clases/1566-bd/20158-construyendo-platziblog-en-firestore/">*Construyendo
+                        Platziblog en Firestore</a><br>
                 </td>
                 <td>
                     <p>Las top level collections son las colecciones que se tienen de inmediato o entrada en el
                         proyecto.</p>
-                       
+
 
 
                     <p> <strong>Tabla -> Colección...... Tupla o renglon -> Documento </strong></p>
                     <p>La particularidad de las top level collections es que existen en el primer nivel de manera
                         intrínseca. Las subcolecciones ya no vivirán al inicio de la base de datos
-                         Si tienes una entidad separada que vas a referenciar desde muchos lugares es recomendado usar un
-                        top level collection.Por el otro lado si se necesita hacer algo intrínseco al documento es aconsejable usar
+                        Si tienes una entidad separada que vas a referenciar desde muchos lugares es recomendado usar un
+                        top level collection.Por el otro lado si se necesita hacer algo intrínseco al documento es
+                        aconsejable usar
                         subcolecciones.
-                    </p> 
-                    <p>resumen: Dentro de las Colecciones existen 2 grandes tipos. Las Top level collection o colecciones de nivel superior y las subcollections o subcolecciones.
-                         Estas últimas viven únicamente dentro de un documento padre.</p>
+                    </p>
+                    <p>resumen: Dentro de las Colecciones existen 2 grandes tipos. Las Top level collection o
+                        colecciones de nivel superior y las subcollections o subcolecciones.
+                        Estas últimas viven únicamente dentro de un documento padre.</p>
 
                 </td>
                 <td>
@@ -74,40 +78,104 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>
+                    <strong>Big Data: es un concepto que nace de la necesidad de manejar grandes cantidades de
+                        datos.</strong>
+                </td>
+                <td>
+                    <p>
+                        La tendencia comenzó con compañías como YouTube al tener la necesidad de guardar y consultar
+                        mucha información de manera rápida </p>
+                    <p>Es un gran movimiento que consiste en el uso de diferentes tipos de bases de datos.</p>
+                </td>
+                <td>
+                    <strong>Datos generados en un minuto del 2021</strong>
+                    <img src="../../../../../assets/bd/NoSql firestore/bigData.png"
+                        alt="Datos generados en un minuto del 2021">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Data Warehouse: trata de guardar cantidades masivas de datos para la posteridad.</strong>
+                </td>
+                <td>
+                    <p>En primer lugar, DW no es un producto que pueda ser comprado en el mercado, sino más bien un
+                        concepto que debe ser construido</p>
+                    <p> Allí se guarda todo lo que no está viviendo en la aplicación pero es necesario tenerlo.
+                        Debe servir para guardar datos por un largo periodo de tiempo y estos datos se deben poder usar
+                        para poder encontrar cuestiones interesantes para el negocio.</p>
+
+                    <p>La información ingresada al Data Warehouse debe pasar por el proceso ETL (Extract, Transform and
+                        Load).</p>
+                </td>
+                <td>
+                    <img src="../../../../../assets/bd/NoSql firestore/dataWarehouse.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td> <strong>Data mining: serie de tecnicas para transformar Data</strong></td>
+                <td>
+                    <p>El Data Mining se dedica a minar datos, a extraerlos de donde sea que estén (archivos muertos,
+                        base de datos actual, etc…) y hacer sentido de ellos para darles un uso.</p>
+                    <p>El datamining (minería de datos), es el conjunto de técnicas y tecnologías que permiten explorar
+                        grandes bases de datos, de manera automática o semiautomática,
+                        con el objetivo de encontrar patrones repetitivos, tendencias o reglas que expliquen el
+                        comportamiento de los datos en un determinado contexto.</p>
+                </td>
+                <img src="../../../../../assets/bd/NoSql firestore/DataMining.png" alt="fases ">
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> <a href="https://platzi.com/clases/1566-bd/19833-etl/"> ETL</a> siglas de Extract, Transform,
+                    Load (extraer, transformar y cargar): herramienta en la ciencia de Datos</td>
+                <td>
+                    <p> Se trata de tomar datos de archivos muertos y convertirlos en algo que sea de utilidad para el
+                        negocio.
+                        También ayuda a tomar los datos vivos de la aplicación, transformarlos y guardarlos en un data
+                        warehouse periódicamente.</p>
+
+                    <p>resumen: ETL es una de las herramientas/técnicas que se utilizan en Data Mining. payline(serie de
+                        pasos medio pra un resultado)</p>
+                </td>
+                <td>
+                    <img src="../../../../../assets/bd/NoSql firestore/ETL.png" alt="transformar de carbon a diamante">
+                </td>
+            </tr>
+            <tr>
+                <td> <a href="https://platzi.com/cursos/business-intelligence/">Business intelligence</a> </td>
+                <td>
+                    <p>es una parte muy importante de las carreras de datos ya que es el punto final del manejo de estos.
+                         Su razón de ser es tener la información lista, clara y que tenga todos los elementos para tomar decisiones en una empresa.</p>
+                    <p>
+                        Es necesario tener una buena sensibilidad por entender el negocio, sus necesidades y la información que 
+                        puede llevar a tomar decisiones en el momento adecuado al momento de realizar business intelligence.</p>
+                </td>
                 <td></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <td>Machine Learning(mas avanzado de business intelligence)</td>
+                <td>
+                    <p>Machine Learning tiene significados que varían. Es una serie de técnicas que involucran la inteligencia artificial y la detección de patrones.
+                        ademas para datos tiene un gran campo de acción. Nos ayuda a hacer modelos que encuentran patrones fortuitos encontrando correlaciones inesperadas.
+                       </p>
+                       <p> Tiene dos casos de uso particulares:</p> 
+                       <p>* Clasificación y   Predicción</p>
+                       <p>Nota: se basa en calculos matematicos, pero se requiere mas en conocimientos de trato de dato: etl, data Warehouse</p>
+                </td>
 
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>
+                    <img src="../../../../../assets/bd/NoSql firestore/machineLearning.png" alt="modelo">
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>
+                    <a href="https://cloud.google.com/bigquery/docs/introduction">¿Qué es BigQuery?</a>
+                </td>
                 <td></td>
                 <td></td>
             </tr>
