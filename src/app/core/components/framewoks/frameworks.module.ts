@@ -11,6 +11,7 @@ import { FrameworksRoutingModule } from './frameworks-routing.module';
 import { JavaSwingComponent } from './java-swing/java-swing.component';
 import { JavaSpringComponent } from './java-spring/java-spring.component';
 import { JaxbComponent } from './jaxb/jaxb.component';
+import { JavaServerPagesComponent } from './java-server-pages/java-server-pages.component';
 
 @NgModule({
     declarations:[
@@ -21,7 +22,8 @@ import { JaxbComponent } from './jaxb/jaxb.component';
         JavaServerFacesComponent,
         JavaSwingComponent,
         JavaSpringComponent,
-        JaxbComponent
+        JaxbComponent,
+        JavaServerPagesComponent
     ],
     imports:[
         CommonModule,

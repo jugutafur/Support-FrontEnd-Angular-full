@@ -9,6 +9,7 @@ import { VbComponent } from './components/vb/vb.component';
 import { FsharpComponent } from './components/fsharp/fsharp.component';
 
 import { TransversalesRoutingModule } from './transversales-routing.module';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TransversalesRoutingModule } from './transversales-routing.module';
     JavaComponent,
     VbComponent,
     CsharpComponent,
-    FsharpComponent
+    FsharpComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,

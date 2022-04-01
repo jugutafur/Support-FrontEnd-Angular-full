@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainTransversalesComponent  {
 
-  lista= ["JAVA", "VB" , "C#", "F#"]
+  lista= ["JAVA", "VB" , "C#", "F#", "Settings"]
 
 }

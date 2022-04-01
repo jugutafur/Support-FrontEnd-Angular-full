@@ -9,6 +9,7 @@ import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.
 import { JavaSwingComponent } from './java-swing/java-swing.component';
 import { JavaSpringComponent } from './java-spring/java-spring.component';
 import { JaxbComponent } from './jaxb/jaxb.component';
+import { JavaServerPagesComponent } from './java-server-pages/java-server-pages.component';
 
 const routes : Routes =[
     {
@@ -42,7 +43,11 @@ const routes : Routes =[
     {
       path: 'Jaxb',
       component: JaxbComponent
-  }
+    },
+    {
+      path: 'JavaServerPages',
+      component: JavaServerPagesComponent
+    }
 ]
 
 @NgModule({
