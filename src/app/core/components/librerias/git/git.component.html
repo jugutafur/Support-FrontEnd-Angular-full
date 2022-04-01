@@ -9,20 +9,17 @@
         </thead>
         <tbody>
             <tr>
-              <td colspan="3" class="titulo"><strong>git</strong></td>
+                <td colspan="3" class="titulo"><strong>git</strong></td>
             </tr>
 
             <tr>
                 <td>Comandos git</td>
                 <td>
-                    git checkout -b {{abreDiamante}} new-branch{{cierraDiamante}}//para crear nueva rama
-                    git checkout {{abreDiamante}} nombre rama{{cierraDiamante}}  // para pasarme de rama
                     npm rebuild node-sass <br />
                     npm install --save-dev node-sass <br>
                     npm update caniuse-lite <br>
                     npm install <br />
                     ng build <br />
-                    juan
 
                     angular <br />
                     npm install -g @angular/cli <br />
@@ -34,6 +31,7 @@
             </tr>
 
             <tr>
+                <td></td>
                 <td>
                     mkdir // crear carpeta <br>
                     rm "Xarchivo" //borrar archivo <br>
@@ -43,14 +41,44 @@
                     ls o dir // ver archivos <br>
                     pwd mostrar la ruta donde se enecuentra <br>
                     git --version // version de git <br>
+                    git remote -v //conocer cuales  respositorios tengo <br>
+                    git remote remove nombreReposotirio // elimanar repositorio
+                    <a href="https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration">
+                        git log --oneline --all --graph --decorate //para mostrar en cosola lo cambios que he realizado </a> <br>
+                    git lg // <br>
+
                     ssh -v //version de ssh <br>
                     godoc fmt //documentation de la liberia <br>
-                    ls -lh //ver no solo los documentos que estan en esa carpeta si no ademas los permisos solo estos documentos <br>
+                    ls -lh //ver no solo los documentos que estan en esa carpeta si no ademas los permisos solo estos
+                    documentos <br>
+
                 </td>
-                <td></td>
+               
                 <td></td>
             </tr>
 
+            <tr>
+                <td>
+                    <strong>Pasos para subir cambios entre ramas</strong>
+                </td>
+                <td>
+                    <p>Nota despues de subir los cambios a la rama que se este trabajando:</p>
+                    <p>1. aceptar la solicitud de comparacion y estracion en Git </p>
+                    <p>2. create pull request: se va diricionar a un registro para el ingreso de comentarios. pero lo mas
+                        importante es la comparacion interna y la verificacion interna para no dar conflitos entre las ramas.
+                        Despues continuamos con la creacion de solicitud de extracion</p>
+                    <p>3. Confrimar Merge, despues va reflejar el resultado de la solicitud</p>
+                    <p>4.finalmente se confirmara de forma de visual que fue exitoso el Merge</p>
+                    <p>Nota final: para ver la actualizados los cambios entre las ramas: git pull </p>
+        
+                </td>
+                <td>
+                    <img src="../../../../../assets/librerias/Git y Heroku/UnionDeRamas.png" alt="">
+                </td>
+  
+            </tr>
+            
+              
             <tr>
                 <td></td>
                 <td></td>
@@ -58,25 +86,25 @@
             </tr>
 
             <tr>
-              <td colspan="3" class="titulo"><strong>Heroku</strong></td>
+                <td colspan="3" class="titulo"><strong>Heroku</strong></td>
             </tr>
 
             <tr>
                 <td>Comandos Heroku</td>
                 <td>
-                  heroku login //acceder a la cuenta<br>
-                  heroku create xProyect //crear proyecto<br>
-                  heroku addons:create heroku postgresql //cread DB <br>
-                  heroku config //ver config DB <br>
-                  <strong>ver imagen pra compartir DB entre proyectos heroku <br>la primera app es el nombre del proyecto al que querremos donde se instale la segunta referencia de app es el proyecto que tiene la BD <br><br> TENER EN CUENTA EL LA PALABRA COOPER EN ESTE CASO QUE HACE REFERENCIA AL COLOR ESTO ES PARA DESLIGAR DE DEJAR DE COMPARTIR UN BD ENTRE PROYECTOS</strong> <br>
+                    heroku login //acceder a la cuenta<br>
+                    heroku create xProyect //crear proyecto<br>
+                    heroku addons:create heroku postgresql //cread DB <br>
+                    heroku config //ver config DB <br>
+                    <strong>ver imagen pra compartir DB entre proyectos heroku <br>la primera app es el nombre del
+                        proyecto al que querremos donde se instale la segunta referencia de app es el proyecto que tiene
+                        la BD <br><br> TENER EN CUENTA EL LA PALABRA COOPER EN ESTE CASO QUE HACE REFERENCIA AL COLOR
+                        ESTO ES PARA DESLIGAR DE DEJAR DE COMPARTIR UN BD ENTRE PROYECTOS</strong> <br>
                 </td>
                 <td>
-                  <img
-                  src="../../../../../assets/repositorios/Heroku1.png"
-                  alt="Heroku1"
-                  title="Heroku1"><br><br>
+                    <img src="../../../../../assets/repositorios/Heroku1.png" alt="Heroku1" title="Heroku1"><br><br>
 
-                  <a href="https://devcenter.heroku.com/articles/managing-add-ons">ver info</a>
+                    <a href="https://devcenter.heroku.com/articles/managing-add-ons">ver info</a>
                 </td>
             </tr>
 

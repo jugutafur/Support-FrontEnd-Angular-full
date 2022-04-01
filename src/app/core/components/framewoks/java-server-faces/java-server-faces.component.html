@@ -8,6 +8,24 @@
           </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>
+            <strong><a href="https://dzone.com/articles/named-vs-managedbean-laquo-glenware"> CDI </a></strong><br><br>
+            <a href="https://www.adictosaltrabajo.com/2013/02/08/cdi-weld-arquilian/">Ver info superImportante</a>
+
+          </td>
+          <td>
+            La especificación CDI Beans – (CDI: Contexts and Dependency Injection), define el marco de trabajo de inyección de dependencias utilizado de forma estándar en la plataforma Java EE siendo un elemento fundamental de la misma. Su funcionamiento y cometido es equivalente al sistema de inyección de dependencias de Spring.
+          </td>
+          <td>
+            <strong>@Named</strong> //para declarar un Bean en lugar de <strong>@ManagedBean</strong> ya que esta ultima esta en desuso <br>
+            Estas anotaciones proporcionan inyecciones de dependencia <br><br>
+            <strong>@ManagedBean</strong> – javax.faces.bean.ManagedBean – gestionado por contenedor JSF <br>
+            <strong>@Named</strong> – javax.faces.bean – Bean CDI administrado por el servidor de aplicaciones <br><br>
+            Esto significa que los beans @Named son visibles para todo el contenedor JEE, mientras que @ManagedBean solo son visibles para el contenedor JSF. El problema de la visibilidad se cubre en esta tabla:
+          </td>
+        </tr>
+
           <tr>
             <td></td>
             <td>
@@ -49,7 +67,7 @@
               * La presentacion esta en JSP y XHTML <br>
               * <strong>Programacion orientada a eventos</strong><br>
               * <strong>Etiquetas enriquezidas </strong>por lado del servidor para que en el lado del cliente tenga <strong>HTML</strong>
-              * <strong>Flujos de navegacion</strong> en base a cadenas de control. Estos flujos es poaible definirlos desde java o con un archivo llamado <strong>faces-config</strong> siendo esta ultima mejor ya que en un solo archivo se centraliza la navegacion de la aplicacion <br>
+              * <strong>Flujos de navegacion</strong> en base a cadenas de control. Estos flujos es posible definirlos desde java o con un archivo llamado <strong>faces-config</strong> siendo esta ultima mejor ya que en un solo archivo se centraliza la navegacion de la aplicacion <br>
               * <strong>Soporte de peticiones asincronas (AJAX)</strong> todos los frameworks que programan aplicaciones web como spring web y JSF tienen mejorado esta parte de comunicacion entre el servidor y el cliente <br>
               * JSF es la tecnologia que avala <strong>Oracle</strong> para las apliaciones web es por ello que este framework tiene soporte nativo para <strong>WebSphere y GlassFish </strong>lo que significa que no es necesario agregar librerias a nuestro servidor ya que este ya las contiene <br>
               * facil integracion con standalone en Apache Tomcat solo es necesario agregar las librerias necesarias <br>
@@ -77,7 +95,7 @@
               * Antes en JSF-1 este archivo se mapeaban los beans ademas de la ruta y su Scope <br>
               <strong>web.xml (WEB-INF)</strong><br>
               * Contiene los Servlets (name y el mapping) <br>
-              * El archivo por el cual arranca la aplicacion <br>
+              * El archivo por el cual arranca la aplicacion (welcome file list)<br>
               <strong>Pom.xml  (Project Object Model)</strong> <br>
               * Contiene la inyeccion de todas las dependencias necesarias para que funcione el proyecto <br>
               * La version del proyecto <br>
@@ -244,7 +262,17 @@
 
           <tr>
             <td>Scope</td>
-            <td>El alcance</td>
+            <td>
+              El alcance <br><br>
+              <strong>@RequestScoped </strong> = en cada peticion que haga el usuario hacia el controlador se va a estar creando un nuevo objeto (por ejemplo cuando haces una busqueda donde el dato a buscar sea diferente en cada momento) <br><br>
+              <strong>@ViewScoped </strong>=  Este vive a nivel de pagina es decir cuando el usuario da refresh a la pagina o cambia de pagina el bean vuelve a generarse<br><br>
+              <strong>@SessionScoped  </strong> = va a estar a nivel de session, es decir no se va a destruir este bean hasta que se destruya la sesiion del usuario (mantener las credenciales del usuario <strong>(usuario y contraseña)</strong> ) <br><br>
+              <strong>@ApplicationScoped </strong>= Esta activo en toda la aplicacion, por lo general se emplea para objetos que no van a cambiar como una lista de paises <br><br>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/Scope.png"
+              alt="Scope"
+              title="Scope"><br><br>
+            </td>
             <td>
               <strong>@ViewScope</strong> Que el alcance del Bean a a ser a nivel de vista en el momento que el usuario de refresh a la pagina los datos del Bean <strong>desaparecen: Se Destruyen el ManagedBean y se crea uno nuevo</strong>
               <img
@@ -347,8 +375,17 @@
           </tr>
 
           <tr>
-              <td></td>
-              <td></td>
+              <td>Etiquetas</td>
+              <td>
+                <strong>insertar CSS (SIN NO TE ACTUALIZA LOS CAMBIOS EN EL NAVEGADOR CTRL+F5)</strong> <br>
+                * {{abreDiamante}}link rel="stylesheet" href="resources/musicShop/css/default.css"/{{cierraDiamante}} <br>
+                * {{abreDiamante}}link href="#{{abrellave}}facesContext.externalContext.requestContextPath{{cierrallave}}/resources/css/default.css" rel="stylesheet" type="text/css" /{{cierraDiamante}} <br>
+                * {{abreDiamante}}h:outputStylesheet library="resources" name="resources/css/default.css"/{{cierraDiamante}}<br><br>
+                <strong>link</strong><br>
+                * {{abreDiamante}}h:outputLink value="shopping-cart.xhtml" {{cierraDiamante}}Shoopping cart {{abreDiamante}}/h:outputLink {{cierraDiamante}} <strong>DEBE LLEVAR LA EXTENCION</strong> <br><br>
+                * {{abreDiamante}}h:commandLink action="/index" value="index" /{{cierraDiamante}} <strong>Es opcional el /</strong> <br><br>
+                * {{abreDiamante}}h:commandButton action="/index" value="ir al inicio" /{{cierraDiamante}} <br>
+              </td>
               <td></td>
           </tr>
 

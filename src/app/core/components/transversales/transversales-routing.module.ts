@@ -7,6 +7,7 @@ import { JavaComponent } from './components/java/java.component';
 import { VbComponent } from './components/vb/vb.component';
 import { CsharpComponent } from './components/csharp/csharp.component';
 import { FsharpComponent } from './components/fsharp/fsharp.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
 
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'F#',
     component: FsharpComponent
+  },
+  {
+    path: 'Settings',
+    component: SettingsComponent
   }
 ]
 

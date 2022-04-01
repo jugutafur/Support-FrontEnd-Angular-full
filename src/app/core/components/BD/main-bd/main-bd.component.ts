@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainBdComponent  {
 
-  lista =  ["mySQL", "PostgreSQL", "SQLServer", "MongoDB", "Oracle"]
+  lista =  ["mySQL", "PostgreSQL", "SQLServer", "MongoDB", "Oracle", "NoSql-Firestore"]
   constructor() { }
 }

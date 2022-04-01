@@ -8,6 +8,7 @@ import { MysqlComponent } from './mysql/mysql.component';
 import { PostgresqlComponent } from './postgresql/postgresql.component';
 import { SqlserverComponent } from './sqlserver/sqlserver.component';
 import { OracleComponent } from './oracle/oracle.component';
+import { NoSqlFirestoreComponent } from './no-sql-firestore/no-sql-firestore.component';
 
 const routes : Routes = [
     {
@@ -33,6 +34,10 @@ const routes : Routes = [
     {
         path: 'Oracle',
         component: OracleComponent
+    },
+    {
+        path: 'NoSql-Firestore',
+        component: NoSqlFirestoreComponent
     }
 ]
 
