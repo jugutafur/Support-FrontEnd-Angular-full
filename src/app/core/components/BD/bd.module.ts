@@ -7,8 +7,10 @@ import { MongoDBComponent } from './mongo-db/mongo-db.component';
 import { SqlserverComponent } from './sqlserver/sqlserver.component';
 import { OracleComponent } from './oracle/oracle.component';
 
+
 import { CommonModule } from '@angular/common';
 import { BdRoutingModule } from './sql-routing.module';
+import { NoSqlFirestoreComponent } from './no-sql-firestore/no-sql-firestore.component';
 
 
 
@@ -19,7 +21,8 @@ import { BdRoutingModule } from './sql-routing.module';
     MainBdComponent,
     MongoDBComponent,
     SqlserverComponent,
-    OracleComponent
+    OracleComponent,
+    NoSqlFirestoreComponent
   ],
   imports: [
     CommonModule,
