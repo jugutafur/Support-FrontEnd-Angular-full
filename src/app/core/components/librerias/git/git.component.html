@@ -31,8 +31,9 @@
             </tr>
 
             <tr>
-                <td></td>
+                <td>Comandos git</td>
                 <td>
+                    mv nombre achivo //cambio ubicacion <br>
                     mkdir // crear carpeta <br>
                     rm "Xarchivo" //borrar archivo <br>
                     cat "Xarchivo" //ver archivo en consola <br>
@@ -41,14 +42,18 @@
                     ls o dir // ver archivos <br>
                     pwd mostrar la ruta donde se enecuentra <br>
                     git --version // version de git <br>
+                    git fetch origin //para ver que cambios hay entre ramas <br>
                     git commit -am "comentario"//agregar y comentario <br>
                     git remote -v //conocer cuales  respositorios tengo <br>
                     git remote remove nombreReposotirio // elimanar repositorio <br>
-                    git branch -D nombreRama// para eliminar rama
-                    gi
+                    git branch -D nombreRama// para eliminar rama de forma local <br>
+                    git push origin --delete nombreRama// para eliminar rama del remoto <br>
+                    git pull origin master// para bajar los cambios de cierta rama <br>
                     <a href="https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration">
                         git log --oneline --all --graph --decorate //para mostrar en cosola lo cambios que he realizado </a> <br>
                     git lg // <br>
+                    git stash //cuando tenemos algo imcompleto para no realizar un commit.
+                     permite almacenar provicionalemnte los cambios en los memoria para pasarnos a otra  rama  <br>
 
                     ssh -v //version de ssh <br>
                     godoc fmt //documentation de la liberia <br>
@@ -83,8 +88,10 @@
             
               
             <tr>
-                <td></td>
-                <td></td>
+                <td>Etiquetas(nota solo se crean en la rama master</td>
+                <td>
+                    git tag "vO.O.1"//nos permite crear una refencia para que apunte a un commit en especial</td>
+                    git push origin --tags//para publicar etiquetas
                 <td></td>
             </tr>
 
