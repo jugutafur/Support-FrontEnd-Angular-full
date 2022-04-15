@@ -10,6 +10,8 @@ import { FsharpComponent } from './components/fsharp/fsharp.component';
 
 import { TransversalesRoutingModule } from './transversales-routing.module';
 import { SettingsComponent } from './components/settings/settings.component';
+import { CursoTerminalComponent } from './components/curso-terminal/curso-terminal.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SettingsComponent } from './components/settings/settings.component';
     VbComponent,
     CsharpComponent,
     FsharpComponent,
-    SettingsComponent
+    SettingsComponent,
+    CursoTerminalComponent
+
   ],
   imports: [
     CommonModule,
