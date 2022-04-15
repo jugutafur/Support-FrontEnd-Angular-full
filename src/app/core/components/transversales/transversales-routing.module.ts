@@ -8,6 +8,7 @@ import { VbComponent } from './components/vb/vb.component';
 import { CsharpComponent } from './components/csharp/csharp.component';
 import { FsharpComponent } from './components/fsharp/fsharp.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { CursoTerminalComponent } from './components/curso-terminal/curso-terminal.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'Settings',
     component: SettingsComponent
+  },
+  {
+    path: 'Terminal',
+    component: CursoTerminalComponent
   }
 ]
 
