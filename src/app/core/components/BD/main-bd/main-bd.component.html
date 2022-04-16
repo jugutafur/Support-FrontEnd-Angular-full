@@ -11,8 +11,8 @@
 <div>
  <h3>paguinas de interes en el DATABASE:</h3>
  <a href="https://generatedata.com/"> para crear datos en las tablas</a> <br>
- <a href="https://console.cloud.google.com/getting-started?pli=1"> servicios administrados en la nube. Gratis!!!</a>
-
+ <a href="https://console.cloud.google.com/getting-started?pli=1"> servicios administrados en la nube. Gratis!!!</a><br>
+ 
 </div>
 <div>
     <div class="container">
@@ -25,6 +25,17 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td><strong>Diferentes conecciones BD</strong></td>
+                    <td>
+                        <p>1. <a href="https://github.com/carta87/RedSocialAndAPI/blob/master/src/main/java/com/platzi/mensajes_app/datababe/Conexion.java">
+                                         forma sencilla de coneccion de una base datos MySql</a></p>
+                    </td>
+                    <td><p>1. se crea clase donde estaran los datos de la Conexion y en el metodo Main se crea objecto Conexion y se invoca su metodo. Esta es la forma mas sencilla,
+                        pero en un proyecto mas elaborado solo se llama el objecto de la conexion la capa DAO que se encarga de realizar las operaciones CRUD.
+                        Ademas se utiliza del paquete SQL las clases Conexion, PreparedStatement,  ResultSet y ResultSet</p>
+                    </td>
+                </tr>
                 <tr>
                     <td>Que es una base de datos </td>
                     <td>
@@ -236,8 +247,14 @@
                 </tr>
 
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><strong>JDBC: Java Data Base Connectivity</strong></td>
+                    <td><strong>Clases</strong> <br>
+                        <strong>DriverManager:</strong> es para cargar un driver (según el motor de BD). Nos permite crear una instancia de la conexión. <br>
+                        <strong>Connection:</strong> para establecer conexiones con las bases de datos*.* Genera la sesión, maneja todo el ciclo de vida de una sesión cuando nos conectamos a una base de datos. <br>
+                        <strong>Statement:</strong> para ejecutar sentencias SQL y enviarlas a las BD. Nos ayuda a traer datos de una tabla. <br>
+                        <strong>PreparedStatement:</strong> hace lo mismo que Statement sólo que permite recibir parámetros (clausula where). <br>
+                        <strong>ResultSet:</strong> para almacenar el resultado de la consulta y almacenarlos en nuestros objetos (modelos). Es una interfaz que nos ayudará a manejar los datos obtenidos convirtiendo los datos en objetos. <br>
+                    </td>
                     <td></td>
                 </tr>
 

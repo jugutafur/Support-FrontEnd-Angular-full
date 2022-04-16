@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainArquitecturasComponent implements OnInit {
 
-  lista = ['soap','rest', 'maven', 'gradle'];
+  lista = ['soap','rest', 'maven', 'gradle' , 'microservicios'];
   constructor() { }
 
   ngOnInit(): void {

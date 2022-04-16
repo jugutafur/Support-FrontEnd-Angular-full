@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ArquitecturaRoutingModule } from './arquitectura-routing.module';
 import { MavenComponent } from './maven/maven.component';
 import { GradleComponent } from './gradle/gradle.component';
+import { MicroserviciosComponent } from './microservicios/microservicios.component';
 
 @NgModule({ 
     declarations: [
@@ -15,7 +16,8 @@ import { GradleComponent } from './gradle/gradle.component';
         RestComponent,
         MainArquitecturasComponent,
         MavenComponent,
-        GradleComponent
+        GradleComponent,
+        MicroserviciosComponent
     ],
     imports:[
         CommonModule,

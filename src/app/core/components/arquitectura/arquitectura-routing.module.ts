@@ -6,6 +6,7 @@ import { SoapComponent } from './soap/soap.component';
 import { RestComponent } from './rest/rest.component';
 import { MavenComponent } from './maven/maven.component';
 import { GradleComponent } from './gradle/gradle.component';
+import { MicroserviciosComponent } from './microservicios/microservicios.component';
 
 const routes : Routes = [
     {
@@ -27,7 +28,12 @@ const routes : Routes = [
     {
         path: 'gradle',
         component: GradleComponent
+    },
+    {
+        path: 'microservicios',
+        component: MicroserviciosComponent
     }
+
 ]
 
 @NgModule({
