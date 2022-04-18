@@ -9,6 +9,7 @@ import { CsharpComponent } from './components/csharp/csharp.component';
 import { FsharpComponent } from './components/fsharp/fsharp.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { CursoTerminalComponent } from './components/curso-terminal/curso-terminal.component';
+import { TestJavaComponent } from './components/test-java/test-java.component';
 
 const routes: Routes = [
 
@@ -39,7 +40,12 @@ const routes: Routes = [
   {
     path: 'Terminal',
     component: CursoTerminalComponent
+  },
+  {
+    path: 'test-java',
+    component: TestJavaComponent
   }
+
 ]
 
 @NgModule({
