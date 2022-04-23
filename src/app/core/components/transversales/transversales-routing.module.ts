@@ -10,7 +10,8 @@ import { FsharpComponent } from './components/fsharp/fsharp.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { CursoTerminalComponent } from './components/curso-terminal/curso-terminal.component';
 import { TestJavaComponent } from './components/test-java/test-java.component';
-
+import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
+import { JAVABasicoComponent } from './components/javabasico/javabasico.component';
 const routes: Routes = [
 
   {
@@ -18,9 +19,18 @@ const routes: Routes = [
     component: MainTransversalesComponent,
   },
   {
-    path: 'JAVA',
+    path:'Fundamentos Programacion',
+    component: FundamentosProgramacionComponent
+  },
+  {
+    path: 'JAVABasico',
+    component:  JAVABasicoComponent
+  },
+  {
+    path: 'JAVAIntermedio',
     component: JavaComponent
   },
+  
   {
     path: 'VB',
     component: VbComponent
