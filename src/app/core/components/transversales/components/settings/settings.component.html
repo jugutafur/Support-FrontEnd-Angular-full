@@ -1,0 +1,389 @@
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+      <thead>
+          <tr>
+              <th scope="col">Referencia</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Ejemplo</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Overview">Cookies</a>
+            <a href="https://developer.mozilla.org/es/docs/Tools/Storage_Inspector/Cookies">Detalle de los atributos de las Cookies</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector#table_widget">El inspector de elementos Herramienta de desarrollo Mozilla Firefox</a>
+          </td>
+          <td>
+            ver detalle de header <br>
+
+            <strong>Comando por consola</strong> <br>
+            curl -I ww.eltiempo.com <br><br>
+            <strong><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</a></strong> Es la codificacion con la cual se envia la infomacion hay 5 formas de enviarla <br><br>
+            1. chunked //fragmentada <br>
+            2. compress //Compresion (en desuso) <br>
+            3. deflate<br>
+            4. gzip<br>
+            5. identity<br><br>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Cookies">Info sobre cookie</a> Las cookies se usan generalmente para decirle al servidor que dos peticiones tienen su origen en el mismo navegador web <br>
+            <strong>HTTP es un protocolo con sessiones pero sin estado: </strong> Es decir no guarda ningun datos entre dos peticiones en la misma sesion es por esto que se usan las <strong>HTTP cookies</strong> que si permiten guardar datos repecto a la sesion de comunicacion. HTTP se conoce como un protocolo de la capa de aplicación, y se transmite sobre el protocolo TCP, o el protocolo encriptado TLS <br><br>
+
+            <strong>
+            response.addCookie(cookie) //servidor agrega cookies <br>
+            request.getCookies() //Cliente lee cookie <br><br>
+          </strong>
+            El servidor envia las cookie el cliente se las devuelve cargadas
+            por lo general el cliente inicia la comunicacion el servidor tambien lo puede hacer pero no es recomendable <br>
+            Por lo general el user-agent es el navegador web pero no siempre cualquier otro dispositivo puede hacer peticiones a un servidor gracias a los web services <br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td><a href="https://www.youtube.com/watch?v=VU5M7s5xWaM">Cookie</a></td>
+          <td>
+            <strong>Write</strong><br>
+            * clase Cookie ->Metodo setMaxAge(int segundos) <br>
+            * interfaz HttopServletResponse -> Metodo addCookie(Cookie cookie) <br><br>
+            <strong>Read</strong><br>
+            * interfaz HttopServletRequest -> Metodo getCookies() <br>
+            * clase Cookie ->Metodo getValues() y Metodo getName() <br><br><br>
+            <strong>NOTA request solo tiene 2 setters</strong><br><br>
+            1. setAttribute(String, objeto) <br>
+            2. setCharacterEncoding(String Character-Encoding) <br><br>
+            <strong>Por lo demas es el response(SERVIDOR) quien carga con la tarea de modificar las cokkies y cabeceros de la peticion.</strong>
+          </td>
+          <td>
+            <img
+            src="./../../../../../../assets/transversales/Settings/Cookie.png"
+            alt="Cookie"
+            title="Cookie">
+          </td>
+        </tr>
+
+        <tr>
+          <td>Consideraciones</td>
+          <td>
+            * Es clara la idea que para la comunicacion entre el cliente y el servidor se emplea <strong>HTTP</strong> en la capa de aplicacion y entre estos dos puntos pueden encontrarse varios elementos que participan en esta comunicion (Proxys, routes ..etc) <br><br>
+            * Cuando un cliente hace una peticion aun servidor y envia el request por la capa de aplicacion lo hace usando la capa de transporte <strong>TCP (Transfer Control Protocol)</strong>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td><a href="https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan">Codigo de Respuestas</a></td>
+          <td>
+            <strong>Códigos de estado 100</strong> <br>
+            Los códigos de estado que empiezan por 100 no son errores sino meramente informativos. Como usuario nunca los verás, sino que entre bambalinas indica que la petición se ha recibido y se continúa el proceso.<br><br>
+
+            <strong>100 Continue:</strong> indica al navegador que continúe haciendo su petición<br>
+            <strong>101 Switching Protocols:</strong> indica al navegador que acepta el cambio de protocolo pedido.<br>
+            <strong>102 Processing:</strong> indica al navegador que ha recibido la petición y está aun procesándola.<br>
+            <strong>103 Checkpoint:</strong> reanudará una petición cancelada con anterioridad. <br><br>
+            <strong>Códigos de estado 200</strong><br>
+            Estos códigos también indican que todo ha ido correctamente. La petición se ha recibido, se ha procesado y se ha devuelto satisfactoriamente. Por tanto, nunca los verás en tu navegador, pues significan que todo ha ido bien. <br><br>
+            <strong>200 OK:</strong> todo se ha procesado de forma correcta.<br>
+            <strong>201 Created: </strong> la petición se ha procesado y como resultado se ha creado un nuevo recurso.<br>
+            <strong>202 Accepted:</strong> la petición ha sido aceptada pero todavía no se ha completado.<br>
+            <strong>203 Non-Authoritative Information:</strong> indica que la petición se ha completado, pero se ha obtenido el recurso de otro servidor.<br>
+            <strong>204 No Content:</strong> la petición se ha procesado con éxito, pero el resultado está vacío.<br>
+            <strong>205 Reset Content:</strong> igual que el anterior, pero indicando al navegador que debe inicializar la página desde la que se realizó la petición.<br>
+            <strong>206 Partial Content:</strong> se está devolviendo el contenido pedido de forma parcial. Útil para reanudar descargas que se han pausado.<br>
+            <strong>207 Multi-Status:</strong> devuelve varias peticiones a la vez.<br>
+            <strong>208 Already Reported:</strong> ya se devolvió el listado de elementos, así que no se vuelve a listar.<br><br>
+          </td>
+          <td>
+            <strong>Códigos de estado 300</strong>
+            Los códigos de estado que empiezan por 300 están relacionados con redirecciones. Los servidores usan estos códigos para indicar al navegador que la página o recurso que han pedido se ha movido de sitio. Como usuario, no verás estos códigos, aunque gracias a ellos una página te podría redirigir automáticamente a otra.<br><br>
+            <strong>300 Multiple Choices:</strong> indica al navegador que existen varias alternativas para el contenido que ha pedido. Por ejemplo, un vídeo puede estar disponible en distintos formatos o calidades.<br>
+            <strong>301 Moved Permanently:</strong> la página que estás buscando no está aquí y se ha movido permanentemente a una nueva ubicación.<br>
+            <strong>302 Found:</strong> indica que la página o recurso está disponible en otra ubicación.<br>
+            <strong>303 See Other:</strong> igual al anterior.<br>
+            <strong>304 Not Modified:</strong> indica al navegador que la página no se ha modificado desde la última vez que se pidió. Así se puede evitar descargarla de nuevo, ahorrando ancho de banda.<br>
+            <strong>305 Use Proxy:</strong> este recurso solo está disponible desde un proxy.<br>
+            <strong>306 Switch Proxy:</strong> Este código ya no se usa.<br>
+            <strong>307 Temporary Redirect:</strong> indica al navegador que este recurso o página se ha movido de sitio, pero todavía está disponible en esta dirección.<br>
+            <strong>308 Permanent Redirect:</strong> similar al código 301, la página ha cambiado de lugar permanentemente.<br><br>
+            <strong>Códigos de estado 400</strong><br>
+            Los estados 400 se corresponden a errores del cliente y con frecuencia sí los verás. Es el caso del archiconocido error 404, que aparece cuando la página que has intentado buscar no existe. Es, por tanto, un error del cliente (la dirección web estaba mal).<br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+
+            <strong>400 Bad Request:</strong> algo ha ido mal con la petición. Si recibes este error, prueba a refrescar la página o actualizar tu navegador.<br>
+            <strong>401 Unauthorized:</strong> no tienes permiso para recibir ese contenido.<br>
+            <strong>402 Payment Required:</strong> en desuso por ahora.<br>
+            <strong>403 Forbidden:</strong> la petición es correcta pero el servidor se niega a ofrecerte el recurso o página web. Es posible que necesites una cuenta en el servicio e iniciar sesión antes de poder acceder.<br>
+            <strong>405 Method Not Allowed:</strong> no se permite el uso de ese método.<br>
+            <strong>406 Not Acceptable:</strong> la petición solo puede generar un tipo de contenido distinto al que se especificó como aceptable.<br>
+            <strong>407 Proxy Authentication Required:</strong> se requiere al cliente que se identifique mediante un proxy.<br>
+            <strong>408 Request Timeout:</strong> el servidor ha pasado demasiado tiempo esperando una respuesta por parte del cliente.<br>
+            <strong>409 Conflict:</strong> la petición no se pudo completar porque hubo un problema con ella.<br>
+            <strong>410 Gone:</strong> esa página no existe, se borró. Este código es usado por buscadores como Google, que usan la información para eliminar contenido de su base de datos.<br>
+            <strong>411 Length Required:</strong> el cliente debía indicar la longitud del contenido, pero no lo hizo.<br>
+            <strong>412 Precondition Failed:</strong> el servidor no cumple las condiciones previas que se indicaban en la petición.<br>
+            <strong>413 Payload Too Large:</strong> la petición es demasiado larga y el servidor se niega a procesarla.<br>
+            <strong>414 URI Too Long:</strong> la dirección web es demasiado larga. Si recibes este error, difícilmente podrás solucionarlo pues no es problema tuyo, sino de la página que generó dicho enlace.<br>
+            <strong>415 Unsupported Media Type:</strong> el tipo de archivo que se ha recibido es distinto al que se esperaba.<br>
+            <strong>416 Range Not Satisfiable:</strong> el cliente ha pedido una porción de un recurso que es incorrecta.<br>
+            <strong>417 Expectation Failed:</strong> el servidor no puede cumplir con las expectaciones de la cabecera.<br>
+            <strong>418 I'm a teapot:</strong> es un código de estado que nació como una broma de April's Fools. Puedes recibir uno visitando esta web.<br>
+            <strong>421 Misdirected Request:</strong> el servidor es incapaz de producir una respuesta.<br>
+            <strong>422 Unprocessable Entity:</strong> la petición era correcta pero tenía algún error semántico.<br>
+            <strong>423 Locked:</strong> este recurso está bloqueado.<br>
+            <strong>424 Failed Dependency:</strong> este recurso depende de otra respuesta, que falló.<br>
+            <strong>426 Upgrade Required:</strong> el cliente debe usar un protocolo distinto.<br>
+            <strong>428 Precondition Required:</strong> el servidor requiere que la petición sea condicional.<br>
+            <strong>429 Too Many Requests:</strong> se han enviado demasiadas peticiones en un corto período de tiempo.<br>
+            <strong>431 Request Header Fields Too Large:</strong> la cabecera o algunos de los campos de la cabecera son demeasiado grandes.<br>
+            <strong>452 Unavailable for Legal reasons:</strong> el servidor deniega el accceso a este recurso por motivos legales.<br><br>
+          </td>
+          <td>
+            <strong>Códigos de estado 500</strong><br>
+            Mientras que los códigos de estado 400 implican errores por parte del cliente (es decir, de parte tuya, tu navegador o tu conexión), los errores 500 son errores desde la parte del servidor. Es posible que el servidor tenga algún problema temporal y no hay mucho que puedas hacer salvo probar de nuevo más tarde.<br><br>
+            <strong>501 Not Implemented:</strong> el servidor aun no ha implementado el método que se ha pedido, aunque es probable que se añada en un futuro.<br>
+            <strong>502 Bad Gateway:</strong> el servidor está actuando como un proxy o gateway y ha recibido una respuesta inválida del otro servidor.<br>
+            <strong>504 Gateway Timeout:</strong> el servidor está actuando como una gateway o proxy y no recibió respuesta del servidor.<br>
+            <strong>505 HTTP Version Not Supported:</strong> el servidor no soporta la versión del protocolo HTTP que se le pidió.<br>
+            <strong>506 Variant Also Negotiates:</strong> la petición resulta en una petición con referencias circulares.<br>
+            <strong>507 Insufficient Storage:</strong> el servidor no tiene espacio suficiente para completar la petición.<br>
+            <strong>508 Loop Detected:</strong> el servidor ha detectado un bucle infinito.<br>
+            <strong>510 Not Extended:</strong> el servidor requiere de extensiones para completar la petición.<br>
+            <strong>511 Network Authentication Required: </strong> el cliente necesita identificarse.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      </tbody>
+  </table>
+</div>

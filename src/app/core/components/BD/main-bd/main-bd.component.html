@@ -1,0 +1,323 @@
+<div>
+    <nav>
+        <ul>
+            <li *ngFor="let menu of lista">
+                <a routerLink="/{{menu}}"
+                    routerLinkActive="active">{{menu}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+ <h3>paguinas de interes en el DATABASE:</h3>
+ <a href="https://generatedata.com/"> para crear datos en las tablas</a> <br>
+ <a href="https://console.cloud.google.com/getting-started?pli=1"> servicios administrados en la nube. Gratis!!!</a><br>
+
+</div>
+<div>
+    <div class="container">
+        <table class="table table-striped table-hover table-bordered align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">Referencia</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Diferentes conecciones BD</strong></td>
+                    <td>
+                        <p>1. <a href="https://github.com/carta87/RedSocialAndAPI/blob/master/src/main/java/com/platzi/mensajes_app/datababe/Conexion.java">
+                                         forma sencilla de coneccion de una base datos MySql</a></p>
+                    </td>
+                    <td><p>1. se crea clase donde estaran los datos de la Conexion y en el metodo Main se crea objecto Conexion y se invoca su metodo. Esta es la forma mas sencilla,
+                        pero en un proyecto mas elaborado solo se llama el objecto de la conexion la capa DAO que se encarga de realizar las operaciones CRUD.
+                        Ademas se utiliza del paquete SQL las clases Conexion, PreparedStatement,  ResultSet y ResultSet</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Que es una base de datos </td>
+                    <td>
+                        Es una coleccion de datos almacenados de forma organizada con una logica coherente
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Ques es un registro </td>
+                    <td>
+                        Conjunto de campos que contienen datos relacionados con una misma entidad u obejto
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Que es una consulta</td>
+                    <td>
+                        Es una solicitud de informacion contenida en una bd o en una tabla
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Comandos SQL</strong></td>
+                    <td>
+                        1. DDL: Data Defintion Languaje <br>
+                        2. DML: Data Manipluation Languaje <br>
+                        3. DCL: Data Control Languaje <br>
+                        4. TCL: Transaction Control Languaje <br>
+                    </td>
+                    <td>
+                        1. DDL: CREATE, AFTER, DROP, TRUNCATE,/ COMMENT, RENAME <br>
+                        2. DML: SELECT, INSERT, UPDATE, DELETE,/ MERGE, CALL, EXPLAIN PLAN, LOCK TABLE  <br>
+                        3. DCL: GRANT, ROLLBACK, SAVEPOINT, BEGIN, TRAIN <br>
+                        4. TCL: /COMMIT, ROLLBACK, SAVEPOINT, SET Transaction
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>tipos de consulta</td>
+                    <td>
+                        1. Seleccion : No modifican la informacionde las tablas <br>
+                        2. Accion : Si modifican la informacionde las tablas <br>
+                        3. Especificas de sql : solo es posible realizarlas programando SQL<br>
+                    </td>
+                    <td>
+                        <strong>1.  Consultas de Seleccion </strong><br> 1. Normales <br>2. De Referencia Cruzadas <br>3. De duplicados <br>4. De no coincidencias <br><br>
+                        <strong>2.  Consultas de Accion </strong><br> 1. Actualizacion <br>2. Eliminacion <br>3. Creacion de tablas <br>4. Datos anexados <br><br>
+                        <strong>3.  especificas de SQL </strong><br> 1. Union <br>2. Paso de Datos <br>3. Creacion de tablas <br>4. Datos anexados
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Consultas de Agrupacion o totales</td>
+                    <td>
+                        En estas consultas 1° se agrupan los registros y 2° realiza la operacion
+                    </td>
+                    <td>
+                        <strong>Funciones de Agreagados</strong> <br><br>
+                        <strong>AVG: </strong> Calcula el promedio <br>
+                        <strong>COUNT: </strong>Cuenta los registros <br>
+                        <strong>SUM: </strong>Suma los valores <br>
+                        <strong>MAX: </strong>Devuelve el maximo <br>
+                        <strong>MIN: </strong>Devielve el minimo <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>3 conceptos </strong></td>
+                    <td>
+                        hay tres conceptos entorno a las Bases de Datos <br><br>
+                        1. Lenguaje <br>
+                        2. motor: Software que provee un conjunto de servicios encargados de administrar una base de datos. PostgreSql, SqlServer, mongoDb...entre otros <br>
+                        3. servidor: Es el equipo que provee el hardware para que el motor instale la BD. Computador que tiene un motor de base de datos instalado y en ejecución.<br>
+                    </td>
+                    <td>
+                        Ahora bien estas bases de datos como PostgreSQL son <strong>Objecto-Relacional</strong> esto quiere decir que tienen una estructura como la de programacion orientada a objetos donde tiene herencia, interfaces <br><br><br>
+                        <img
+                        src="../../../../../assets/bd/tipoDato.png"
+                        alt="tipoDato"
+                        title="tipoDato">
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>Tipos de datos</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td>Standar <strong>ACID</strong></td>
+                    <td>Es el standar que deben de cumplir las bases de datos</td>
+                    <td>
+                        • A: Atomicity – Atomicidad -> Separar las funciones desarrolladas en la BD como pequeñas tareas y ejecutarlas como un todo. Si alguna tarea falla se hace un rollback(Se deshacen los cambios) <br><br>
+                        • C: Consistency – Consistencia -> Todo lo que se desarrolló en base al objeto relacional. Los datos tienen congruencia <br><br>
+                        • I: Isolation – Aislamiento -> Varias tareas ejecutándose al mismo tiempo dentro de la BD<br><br>
+                        • D: Durability – Durabilidad -> Puedes tener seguridad que la información no se perderá por un fallo catastrófico. PostgreSQL guarda la información en una Bitácora<br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Constraints(Restricciones)</td>
+                    <td>
+                        <strong>NOT NULL </strong> : garantiza que los valores de una columna no puedan serlo NULL. <br><br>
+                        <strong>UNIQUE</strong> : garantiza que los valores de una columna sean únicos en las filas de la misma tabla.<br><br>
+                        <strong>PRIMARY KEY</strong> : una columna de clave primaria que identifica de forma exclusiva las filas de una tabla. Una tabla puede tener una y solo una clave principal. La restricción de clave principal le permite definir la clave principal de una tabla.<br><br>
+                        <strong>CHECK</strong> : una CHECKrestricción garantiza que los datos deben satisfacer una expresión booleana.<br><br>
+                        <strong>FOREING KEY</strong> : garantiza que los valores en una columna o un grupo de columnas de una tabla existan en una columna o grupo de columnas en otra tabla. A diferencia de la clave principal, una tabla puede tener muchas claves externas.<br><br>
+                        <strong>Deafult</strong> Coloca un valor por defecto cuando no hay un valor especificado <br><br>
+                        <strong>index </strong>Se crea por columna para permitir busquedas mas rapidas <br><br>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>SQL = RBD Bases de Datos Relacionales</td>
+                    <td>
+                      SqlServer = Microsoft <br>
+                      Oracle = Oracle <br>
+                      MySql(antes era de SunMicroSystem) = Oracle <br>
+                      MySql(Open Source) = Oracle <br>
+                      PostgreSQL(Open Source) <br>
+                      MariaDB <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>NoSql = BD no relacionales  = RDBMS (Relational DataBase Magement System)</td>
+                    <td>
+                      mainCash <br>
+                      casandra de <strong>Facebook</strong> <br>
+                      MongoDB <br>
+                      fireStore <br>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Tecnisismo</td>
+                    <td>
+                      * las entidades son las tablas <strong>rectangulo</strong> <br>
+                      * los atributos con los campos <strong>ovalo</strong> <br>
+                      * hay atributos que son multivaluado (tiene multiples valores) <strong>ovalo doble</strong><br>
+                      * hay atributos que compuestos que en ellos hay otros atributos <strong>motor</strong>
+                      * hay atributos que se pueden inferir de acuerdo a la logica <strong>ovalo punteado</strong><br>
+                      * el atributo que identifica de manera unica a un objeto es <strong>subraydo</strong> y este atributo puede ser natural o artificial es decir natural que no se puede separar del objeto(cedula, numero de serie..etc) y el artificial hace referencia al que le asignados de manera apropositamente la diferenciar un objeto del otro ejemplo un <strong>id</strong>
+                    </td>
+                    <td>
+                      <img
+                      src="../../../../../assets/bd/BD.png"
+                      alt="BD"
+                      title="BD"><br><br>
+                      <img
+                      src="../../../../../assets/bd/DB2.png"
+                      alt="DB2"
+                      title="DB2">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="https://platzi.com/clases/1566-bd/20197-entidades-y-atributos/">
+                      Entidades fuertes y debiles</a>
+                    </td>
+                    <td>
+                      la fuerte hace referencia a que no dependen de nadie para existir <br>
+                      la debil hace si requieren de otras entidades para existir(pueden ser debiles por entidad o por existencia) <br>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Relaciones</td>
+                    <td>Las relaciones, representadas por un rombo, sirven para crear relaciones entre entidades. Por convención las relaciones son verbos que conectan entidades. Existen entidades multivaluadas o compuestas que tienen vida propia y se relacionan con otras entidades, por lo que se pueden normalizar (concepto que se explicará luego) <br><br>
+
+                    Cardinalidad <br><br>
+
+                    Es una propiedad de las relaciones que indica la cantidad y correspondencia con la que puede estar relacionada una entidad y puede ser uno a uno, uno a varios, varios a uno y varios a varios.</td>
+                    <td>
+                      <img
+                      src="../../../../../assets/bd/Relacion.png"
+                      alt="Relacion"
+                      title="Relacion">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entidad: es algo similar a un objeto (POO) y representa algo en el mundo real, incluso algo abstracto.
+                        <p>Tienen atributos que son las cosas que los hacen ser una entidad y por convención se ponen en plural.</p> </td>
+                    <td>
+                        <strong>Los atributos</strong> son aquellos que tienen atributos ellos mismos. <br>
+                        <strong>Los atributos llave</strong> son aquellos que identifican a la entidad y no pueden ser repetidos. Existen: <br>
+                        <p>•	Naturales: son inherentes al objeto como el número de serie </p>
+                        <p>•	Clave artificial: no es inherente al objeto y se asigna de manera arbitraria</p>
+                        </td>
+                    <td>
+                        <img src="../../../../../assets/bd/entidad.jpg" alt="Muestra diagrama ER" title="diagrama ER">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <strong>Teroria conjuntos</strong>
+                            <p>Los diagramas de Venn son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos.</p>
+                        <br>
+                        <img
+                        src="../../../../../assets/bd/teroriaConjuntos.png"
+                        alt="Relations"
+                        title="Relations">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>JDBC: Java Data Base Connectivity</strong></td>
+                    <td><strong>Clases</strong> <br>
+                        <strong>DriverManager:</strong> es para cargar un driver (según el motor de BD). Nos permite crear una instancia de la conexión. <br>
+                        <strong>Connection:</strong> para establecer conexiones con las bases de datos*.* Genera la sesión, maneja todo el ciclo de vida de una sesión cuando nos conectamos a una base de datos. <br>
+                        <strong>Statement:</strong> para ejecutar sentencias SQL y enviarlas a las BD. Nos ayuda a traer datos de una tabla. <br>
+                        <strong>PreparedStatement:</strong> hace lo mismo que Statement sólo que permite recibir parámetros (clausula where). <br>
+                        <strong>ResultSet:</strong> para almacenar el resultado de la consulta y almacenarlos en nuestros objetos (modelos). Es una interfaz que nos ayudará a manejar los datos obtenidos convirtiendo los datos en objetos. <br>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Hibernate</strong> <br><a href="https://www.youtube.com/watch?v=gG4C8S6c7v8">conexion</a> </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

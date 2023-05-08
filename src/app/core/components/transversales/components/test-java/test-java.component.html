@@ -1,0 +1,132 @@
+
+<div>
+    <a href="https://www.vogella.com/tutorials/JUnit/article.html">    informacion util JUnit</a>
+</div>
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+    <thead>
+      <tr>
+        <th scope="col">Referencia</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>test</td>
+        <td>
+          <strong>Beneficios</strong> <br />
+          * comprobar los requerimientos y asi identificar errores de
+          desarollo<br />
+          * Documentacion/ejemplos, logramos que sea fiable nuestro
+          desarrollo<br />
+          * Ayuda en el diseño (TDD) Desarrollo guiado por pruebas de software,
+          o Test-driven development <br />
+          * confianza al desarollar y confianza para factorizar(evitando duda
+          tecnica) <br />
+          * Menores costos de mantenimiento y reducece errores en producion
+          <br /><br />
+          <strong> Existen test automáticos y manuales</strong> los automáticos
+          van a requerir tiempo de desarrollo y algunas veces no serán tan
+          viables,  pero de ser posible siempre trata de hacer test automáticos
+          ya que: <br />
+          *Son más rápidos, Son más fiables ySon incrementales. <br />
+        </td>
+        <td>
+          <img
+            src="../../../../../../assets/transversales/testing-java/procesoTesing.png"
+            alt="procesoTesing"
+          />
+        </td>
+      </tr>
+      
+      <tr>
+        <td><strong>Tipos de test</strong></td>
+        <td>
+          <strong> Unitario:</strong> realizan pruebas a una función o clase muy
+           concreta de nuestro proyecto. <br>
+           <strong>Integración:</strong>  prueban cómo se conectan
+          diferentes componentes de nuestro proyecto. <br> 
+           <strong>Funcionales:</strong> prueban una
+          funcionalidad de nuestro proyecto, pueden involucrarse varias clases. <br>
+           <strong>Inicio a fin:</strong> prueba todo un proceso del proyecto. <br> 
+           <strong>Estrés:</strong> útil para probar si nuestra aplicación puede soportar grandes cantidades de
+          procesos y peticiones a la vez. <br>
+        </td>
+        <td><img src="../../../../../../assets/transversales/testing-java/tiposTesting.png" alt="tiposTesting"></td>
+      </tr>
+
+      <tr>
+          <td><strong>Buenas praticas Test </strong></td>
+          <td>
+              * La forma correcta de separar nuestras pruebas es realizar cada una en su propia función. <br>
+              * además, el nombre de la función debe describir que estamos probando. principio de utilitario <br>
+              * Nos podemos apoiyar en las Exepciones en java para describir mejor la traza error y razon para ser mostradada <br>
+              * En el objecto Assert.assertEquals() de la liberia JUnit nos permite realizar diferentes comparaciones.  valor: Esperado y actual <br>
+              * Mockito core nos va a servir para simular clases mientras probamos, para no interferir en otras capas del negocio como
+               en un sitema de pagos. tendra scope : test en pom.xml. ademas me permite que sean independientes a otras clases<br> 
+          </td>
+          <td><img src="../../../../../../assets/transversales/testing-java/partesTest.png" alt="partesTest"></td>
+      </tr>
+
+      <tr>
+        <td><strong>TDD: test Driven development o desarollo guiado por test</strong></td>
+        <td><Strong>consiste en crear primero los test antes que las clases permitiendonos ver 
+                   si el diseño de una clase es el mas adecuado </Strong> <br>
+                  
+                   <strong>El ciclo del TDD: </strong> <br>
+                   * Red: escribe un test hastq ue falle. <br>
+                   * Green: escribe el codigo necesarrio para que el test pase. <br>
+                   * Refactor: mejora el codigo <br>
+
+                   <Strong>Reglas</Strong> <br>
+                   1. solo escribiras codigo de tets hasta que falle. <br>
+                   2. solo escribiras codigo de producion para pasar el test <br>
+                   3. no escribiras mas codigo de producion del necesarrio <br>
+                  </td>
+        <td><img src="../../../../../../assets/transversales/testing-java/cicloTDD.png" alt="cicloTDD"></td>
+      </tr>
+
+
+      <tr>
+        <td colspan="3">
+          <img
+            src="../../../../../../assets/transversales/testing-java/que es requirimiento.png"
+            alt="que es requirimiento"
+          />
+        </td>
+      </tr>
+
+      <tr>
+        
+        <td colspan="3"> <img src="../../../../../../assets/transversales/testing-java/requirimiento.png" alt="los roles que participan en requirimiento"></td>
+      </tr>
+
+      <tr>
+        <td colspan="3"><img src="./../../../../../../assets/transversales/testing-java/ejemplos de requerimientos Funcionales .png" alt="ejemplos"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
