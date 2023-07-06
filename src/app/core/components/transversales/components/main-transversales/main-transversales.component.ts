@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainTransversalesComponent  {
 
-  lista= ["Fundamentos Programacion",  "JAVABasico", "JAVAIntermedio", "VB" , "C#", "F#", "Settings" , "Terminal", "test-java"]
+  lista= ["Fundamentos Programacion",  "JAVABasico", "JAVAIntermedio", "VB" , "C#", "F#", "Settings" , "Terminal", "test-java","Redes"]
 
 }
