@@ -24,7 +24,7 @@
       <tr>
           <td><strong>La terminal</strong> </td>
           <td>
-              <strong>Que es una terminal: es una interfaces grafica que simula una linea de comandos</strong> <br>
+              <strong>Que es una terminal: es una cosola de linea de comandos</strong> <br><br>
               Cuando hablamos de una línea de comandos nos referimos a una shell <br>
               *Terminal: Ventanita que nos muestra el prompt. Este aloja a la shell. <br>
               *Línea de comandos (shell): Un programa que toma comandos y los pasa al sistema operativo para hacer algo. <br>
@@ -181,14 +181,46 @@
           * git config --edit --global : verificar que se configuro bien //
           cerrar cont + x <br />
         </td>
-
-
       </tr>
 
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td colspan="3" class="titulo"><strong>Power Shell</strong></td>
+      </tr>
+
+      <tr>
+        <td>Command</td>
+        <td>
+          * <strong>Get-Command</strong> //nos muestra todos los comandos <br><br>
+          * <strong>Get-Command *xxx*</strong> //nos trae todos coincidencias <br><br>
+          * <strong>Get-Process</strong> //podemos ver los procesos <br><br>
+          * <strong>Get-Service</strong> //podemos ver los Servicios <br><br>
+          * <strong>Get-Disk</strong> //ver detalle de las unidades de almacenamiento <br><br>
+          * <strong>Get-Volume</strong> //ver detalle de las unidades "particiones " <br><br>
+        </td>
+        <td>
+          <strong>Windows Server </strong>
+          * <strong>Get-ADUser -filter *</strong> //Agrega Usuarios "Pero debe ser controlador de dominio el servidor que ejecuta este comando" <br><br>
+          conectarse a un servidor que si sea controlador de dominio <br>
+          1. abrir una nueva sesion <br><br>
+          * <strong>New-PSSession -ComputerName xxxxxx -credential zqm\administrador</strong> //Conectarse a otro equipo <br>ya despues nos pide el password <br>
+          <img
+          src="../../../../../../assets/transversales/cursoTerminal/1.JPG"
+          alt="1"
+          title="1"><br><br>
+          2. Entrar a la session <br>
+          * <strong>Enter-PPSession -Id x</strong> //Ingresar a la session la x es el id que nos mostro en el parametro anterior<br>
+          <img
+          src="../../../../../../assets/transversales/cursoTerminal/3.jpg"
+          alt="3"
+          title="3"><br><br>
+          ahora podemos ver la lista de Usuarios, ademas podemos ver que estamos adentro de la maquina el prompt cambio  <br>
+          <img
+          src="../../../../../../assets/transversales/cursoTerminal/2.jpg"
+          alt="2"
+          title="2"><br><br>
+          * <strong>exit</strong> //Salimos de la Session<br><br>
+          * <strong>Invoke-Command -ScriptBlock {{this.abrellave}}Get-Process{{this.cierrallave}} -ComputerName {{this.abrellave}}"zqmdc-001"{{this.cierrallave}} -Credential {{this.abrellave}}zqm\adminsitrador{{this.cierrallave}}</strong> //Con este comando podemos ejecutar un bloque de codigo para otro equipo<br>
+        </td>
       </tr>
       <tr>
         <td></td>
