@@ -14,6 +14,7 @@ import { CursoTerminalComponent } from './components/curso-terminal/curso-termin
 import { TestJavaComponent } from './components/test-java/test-java.component';
 import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
 import { JAVABasicoComponent } from './components/javabasico/javabasico.component';
+import { RedesComponent } from './components/redes/redes.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { JAVABasicoComponent } from './components/javabasico/javabasico.componen
     CursoTerminalComponent,
     TestJavaComponent,
     FundamentosProgramacionComponent,
-    JAVABasicoComponent
+    JAVABasicoComponent,
+    RedesComponent
 
   ],
   imports: [
