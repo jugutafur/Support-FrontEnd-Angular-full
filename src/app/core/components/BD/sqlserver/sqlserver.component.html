@@ -18,7 +18,7 @@
       </tr>
 
       <tr>
-        <td>Ques es un registro</td>
+        <td>Que es un registro</td>
         <td>
           Conjunto de campos que contienen datos relacionados con una misma
           entidad u objeto
@@ -32,6 +32,83 @@
           Es una solicitud de informacion contenida en una bd o en una tabla
         </td>
         <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="https://www.youtube.com/watch?v=ltdAtAN1OMI&list=PLo2KWRlNB8vsgfeCL2VGJiKMrtyo3Ai2c">SQL Server es un conjunto de herramientas</a></td>
+        <td></td>
+        <td>
+          <img
+          src="../../../../../assets/bd/SqlServer/componentesSQL.png"
+          alt="componentesSQL"
+          title="componentesSQL"
+        />
+        </td>
+      </tr>
+
+      <tr>
+        <td><a href="https://www.youtube.com/watch?v=dqWnRAEUpco&list=PLo2KWRlNB8vsgfeCL2VGJiKMrtyo3Ai2c&index=2">Instancias de SQL Server</a></td>
+        <td>
+          * Es posible instalar varias veces SQL Server en un equipo y cada instalacion tendra como resultado una instancia diferente. <br><br>
+          * Hay componentes que se pueden instalar varias veces pero hay otros que solo se instala una unica vez por equipo y esto sera compartido por todas las instancias presentes en el equipo. <br><br>
+          * El tener varias instancias instaladas permite <strong>aislamiento</strong> de data. <br><br>
+          * Permite tener varias versiones de SQL Server como tambien permite tener varias versiones de <strong>Collections "idiomas y caracteres especiales por region que permite la BD"</strong> . <br><br>
+          * Hay dos tipos de instancias <br><br>
+          - Por defecto <br>
+          - Nombradas "Personalizadas" <br><br>
+        </td>
+        <td>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>Ediciones</td>
+        <td>
+          <strong>Comandos</strong> <br>
+          * select @@Version <br><br>
+          * select
+          SERVERPROPERTY('productversion'),
+          SERVERPROPERTY('productlevel'),
+          SERVERPROPERTY('edition') <br><br>
+          <img
+          src="../../../../../assets/bd/SqlServer/VersionComando.png"
+          alt="VersionComando"
+          title="VersionComando"
+        />
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/bd/SqlServer/Ediciones.png"
+          alt="Ediciones"
+          title="Ediciones"
+        /> <br>
+          <img
+          src="../../../../../assets/bd/SqlServer/VersionSQLServer.png"
+          alt="VersionSQLServer"
+          title="VersionSQLServer"
+        />
+        </td>
+      </tr>
+
+      <tr>
+        <td><a href="https://www.youtube.com/watch?v=1JXOoIyEOO4&list=PLo2KWRlNB8vsgfeCL2VGJiKMrtyo3Ai2c&index=3">Cuentas de Servicios</a></td>
+        <td>
+          las cuentas de servicios nos permite correr, detener los servicios de windows y para esto hay varios tipos de cuentas de servicios... si el equipo esta en red o en una organizacion que cuente con Active Directory las cuentas de servicios deben ser de dominio <br><br>
+          * las contraseñas <strong>NO</strong> deben expirar <br><br>
+          * lo ideal es que cada servicio tenga una cuenta de servicio diferente .. esto es para aislar y dar mayor seguridad ademas si se bloquea una cuenta, no bloquea los demas Servicios <br><br>
+          * hay tres protocolos de Red que son soportados <br>
+          1. TCP/IP <br>
+          2. Named Pipes <br>
+          3. Shared Memory <br>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/bd/SqlServer/CuentaDeServicio.png"
+          alt="CuentaDeServicio"
+          title="CuentaDeServicio"
+        />
+        </td>
       </tr>
 
       <tr>
