@@ -40,6 +40,10 @@ const routes: Routes = [
       {
         path: "Transversales",
         loadChildren: () => import ('./core/components/transversales/transversales.module').then(m=>m.TransversalesModule)
+      },
+      {
+        path: "Servidores",
+        loadChildren: () => import ('./core/components/servidores/servidores.module').then(m=>m.ServidoresModule)
       }
     ]
   }

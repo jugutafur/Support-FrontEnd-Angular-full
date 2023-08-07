@@ -8,9 +8,11 @@ import { LibreriasModule } from './components/librerias/librerias.module';
 import { FrameworksModule } from './components/framewoks/frameworks.module';
 import { ArquitecturaModule } from './components/arquitectura/arquitectura.module';
 import { TransversalesModule } from './components/transversales/transversales.module';
+import { ServidoresModule } from './components/servidores/servidores.module';
 
 @NgModule({
-  declarations: [ ],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     FrontEndModule,
@@ -19,7 +21,8 @@ import { TransversalesModule } from './components/transversales/transversales.mo
     LibreriasModule,
     FrameworksModule,
     ArquitecturaModule,
-    TransversalesModule
+    TransversalesModule,
+    ServidoresModule
   ]
 })
 export class CoreModule { }

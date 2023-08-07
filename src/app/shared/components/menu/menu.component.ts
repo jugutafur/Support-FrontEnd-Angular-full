@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-  lista = ["FrontEnd", "BackEnd", "BD", "Frameworks", "Librerias", "Arquitecturas", "Transversales"];
+  lista = ["FrontEnd", "BackEnd", "BD", "Frameworks", "Librerias", "Arquitecturas", "Transversales","Servidores"];
   dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
 
   constructor() { }
