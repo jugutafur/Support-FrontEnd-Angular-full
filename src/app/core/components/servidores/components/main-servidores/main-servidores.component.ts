@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-servidores.component.scss']
 })
 export class MainServidoresComponent {
-    lista=["WAS","WebLogic"];
+    lista=["WAS","WebLogic","tomcat","wildfly","DB2","IIS"];
+    fabricantes=["IBM","Oracle","XX","XX","XX","XX"]
 }

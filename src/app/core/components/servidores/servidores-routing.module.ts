@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainServidoresComponent } from './components/main-servidores/main-servidores.component';
-import { WebSphereComponent} from './components/WebSphere/web-sphere/web-sphere.component';
-import { WebLogicComponent} from './components/WebLogic/web-logic/web-logic.component';
+import { WebSphereComponent} from './components/WebSphere/web-sphere.component';
+import { WebLogicComponent} from './components/WebLogic/web-logic.component';
+import { TomcatComponent } from './components/tomcat/tomcat.component';
+import { WildflyComponent } from './components/wildfly/wildfly.component';
+import { Db2Component } from './components/db2/db2.component';
+import { IisComponent } from './components/iis/iis.component';
 
 const routes: Routes = [
   {
@@ -16,8 +20,23 @@ const routes: Routes = [
   {
     path: "WebLogic",
     component: WebLogicComponent,
+  },
+  {
+    path: "tomcat",
+    component: TomcatComponent,
+  },
+  {
+    path: "wildfly",
+    component: WildflyComponent,
+  },
+  {
+    path: "DB2",
+    component: Db2Component,
+  },
+  {
+    path: "IIS",
+    component: IisComponent,
   }
-
 ];
 
 @NgModule({

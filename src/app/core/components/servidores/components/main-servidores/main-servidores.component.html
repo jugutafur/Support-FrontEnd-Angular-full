@@ -1,7 +1,10 @@
 <div>
   <nav>
       <ul>
-          <li *ngFor="let menu of lista">
+
+        fabricante = servidor
+          <li *ngFor="let menu of lista let indice = index">
+            {{fabricantes[indice]}} =
               <a routerLink="/{{menu}}"
                   routerLinkActive="active">{{menu}}</a>
           </li>
