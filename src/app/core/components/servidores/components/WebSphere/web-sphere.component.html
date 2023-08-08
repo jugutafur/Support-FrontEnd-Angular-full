@@ -10,11 +10,32 @@
           </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>Que es un servlet</td>
+          <td>
+            un Servlets es el concepto más básico de componente web a nivel de  Java EE. Se trata de una clase que genera una página HTML <br>
+          </td>
+          <td>
+            <img
+            src="../../../../../../assets/servidores/was/Servlet.JPG"
+            alt="Servlet"
+            title="Servlet">
+          </td>
+        </tr>
           <tr>
-              <td><strong>WAS Servidor de aplicaciones WebSphere</strong></td>
+              <td>WAS, <strong>Servidor de aplicaciones WebSphere</strong></td>
               <td>
                 * WebSphere es una familia de productos de software privado de IBM. <br><br>
-                * WAS, servidor de aplicaciones WebSphere <br>
+                * El producto es compatible con componentes de aplicaciones que se ajusten a las especificaciones de Java Platform Entreprise Edition (JEE) <br><br>
+                * las aplicaciones web se ejecutan en el contenedor web <br><br>
+                * las aplicaciones web se componen de uno a mas servlets <br><br>
+                * El contenedor web ejecuta los servlets, archivos JSP y otros tipos de inclusiones del lado del servidor <br><br>
+                * Cada tiempo de ejecucion del servidor de aplicaciones tiene un contenedor logico que puede modificarse, pero no crearse ni eliminarse <br><br>
+                * <strong>cadenas de transporte de contenedores web</strong> cadenas que entran al contenedor web y que constan de un canal de entrada <strong>TCP</strong> que proporciona la conexion a la red, un canal de entrada <strong>HTTP</strong> que atiende solicitudes HTTP y un canal de contenedor web que atiende a los servlets y archivos JSP <br><br>
+                * <strong>Procesamiento de los servlets</strong> el contenedor web procesa los servlet y genera 2 objetos un de salida y otro de respuesta y esta clase Java estan los metodos de inicio, proceso y destruccion del servlet y si bien generan HTML tambien puede contener la conexion a BD, filtrar datos atender varios clientes a la vez etc. <br><br>
+                * <strong>Gestion de sesiones</strong> soporta javax.servlet.http.HttpSession es decir todo las acciones de los usuarios en el navegador quedan registradas en la sesion <br><br>
+                * <strong>Aplicaciones SIP</strong> son programas Java que utilizan al menos un servlet de protocolo de inicio de sesion <strong>Session Initiation Protocol (SIP) </strong><br><br>
+                * <strong>Aplicaciones portlet</strong> Son servlet Java reutilizable que aparecen a lo largo de las paginas y sirven para brindar acceso a otras aplicaciones, servicio y contenido web diferente. <br><br>
               </td>
               <td></td>
           </tr>
@@ -79,7 +100,9 @@
           </tr>
 
           <tr>
-            <td></td>
+            <td>
+              la herramienta de wasdmin es un shell de comandos con el fin de administrar todos los artefactos de una célula de IBM WebSphere Application Server
+            </td>
             <td>
               * <strong>cd usr/websphere/AppServer/profiles/bin </strong><br><br>
               * <strong>./wsadmin.sh -lang -jython</strong> <br><br>
@@ -131,6 +154,7 @@
               <td></td>
               <td></td>
           </tr>
+
           <tr>
               <td></td>
               <td></td>
