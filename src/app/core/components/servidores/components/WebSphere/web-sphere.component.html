@@ -31,19 +31,47 @@
                 * las aplicaciones web se componen de uno a mas servlets <br><br>
                 * El contenedor web ejecuta los servlets, archivos JSP y otros tipos de inclusiones del lado del servidor <br><br>
                 * Cada tiempo de ejecucion del servidor de aplicaciones tiene un contenedor logico que puede modificarse, pero no crearse ni eliminarse <br><br>
+                <strong>1.</strong> <br>
                 * <strong>cadenas de transporte de contenedores web</strong> cadenas que entran al contenedor web y que constan de un canal de entrada <strong>TCP</strong> que proporciona la conexion a la red, un canal de entrada <strong>HTTP</strong> que atiende solicitudes HTTP y un canal de contenedor web que atiende a los servlets y archivos JSP <br><br>
                 * <strong>Procesamiento de los servlets</strong> el contenedor web procesa los servlet y genera 2 objetos un de salida y otro de respuesta y esta clase Java estan los metodos de inicio, proceso y destruccion del servlet y si bien generan HTML tambien puede contener la conexion a BD, filtrar datos atender varios clientes a la vez etc. <br><br>
                 * <strong>Gestion de sesiones</strong> soporta javax.servlet.http.HttpSession es decir todo las acciones de los usuarios en el navegador quedan registradas en la sesion <br><br>
+                <strong>2.</strong> <br>
                 * <strong>Aplicaciones SIP</strong> son programas Java que utilizan al menos un servlet de protocolo de inicio de sesion <strong>Session Initiation Protocol (SIP) </strong><br><br>
+                <strong>3.</strong> <br>
                 * <strong>Aplicaciones portlet</strong> Son servlet Java reutilizable que aparecen a lo largo de las paginas y sirven para brindar acceso a otras aplicaciones, servicio y contenido web diferente. <br><br>
               </td>
-              <td></td>
+              <td>
+                <img
+                src="../../../../../../assets/servidores/was/arquitectura.JPG"
+                alt="arquitectura"
+                title="arquitectura">
+              </td>
           </tr>
 
           <tr>
               <td></td>
-              <td></td>
-              <td></td>
+              <td>
+                <strong>4.</strong> <br>
+                las aplicaciones EJB se ejecutan en el <strong>contenedor EJB</strong>
+                * En este contenedor se maneja los BEANS de sesion y de entidad <br><br>
+                * Los BEANS empresariales que manejan la logica de negocio no se comunican directamente con el servidor de apliacion lo hacen por medio de esta interfaz el <strong>contenedor EJB</strong><br><br>
+                <strong>Client container</strong> En un entorno cliente-servidor: el cliente se comunica con las aplicaciones que esta <strong>instalada</strong> y se <strong>ejecutan</strong> en el servidor <br><br>
+                <strong>5.</strong> <br>
+                * El contenedor de clientes se instala por separado del servidor de aplicaciones en la maquina del cliente <br><br>
+                * En el diagrama se muestra un cliente Java que se ejecuta dentro del contenedor de cliente <br><br>
+                <strong>6.</strong> <br>
+                * <strong>Cliente Web o cliente de navegador web</strong> En el navegador web el cliente realiza una solicitud al servidor de aplicaciones <br><br>
+                <strong>7.</strong> <br>
+                * <strong>Clientes administrativos</strong> hay dos tipos: <br>
+                1. Cliente de secuencia de comandos <br>
+                2. Consola Administrativa
+              </td>
+              <td>
+                <img
+                src="../../../../../../assets/servidores/was/arquitectura2.JPG"
+                alt="arquitectura2"
+                title="arquitectura2">
+              </td>
           </tr>
 
           <tr>
@@ -100,10 +128,17 @@
           </tr>
 
           <tr>
+            <td></td>
+            <td>Hay una opcion para no usar archivos SystemOut.log, SystemErr.log, trace.log o activity.log que es configurar el servidor para utilizar la infraestructura de registro y rastreo extensible de alto rendimiento <strong>(HPEL)</strong> mas info <a href="https://www.ibm.com/docs/en/was/8.5.5?topic=console-starting-logging-off-administrative">aqui</a></td>
+            <td></td>
+          </tr>
+
+          <tr>
             <td>
               la herramienta de wasdmin es un shell de comandos con el fin de administrar todos los artefactos de una célula de IBM WebSphere Application Server
             </td>
             <td>
+              Antes de usar la consola administrativa <strong>wsadmin</strong> se debe instalar en el perfil donde se desea ejecutar esto es posible con el script <strong>deploymentConsole</strong> mas info <a href="https://www.ibm.com/docs/en/was/8.5.5?topic=console-installing-uninstalling-administrative">aqui</a><br><br>
               * <strong>cd usr/websphere/AppServer/profiles/bin </strong><br><br>
               * <strong>./wsadmin.sh -lang -jython</strong> <br><br>
               * <strong>print Help.AdminApp()</strong><br><br>
