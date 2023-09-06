@@ -13,6 +13,7 @@ import { TestJavaComponent } from './components/test-java/test-java.component';
 import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
 import { JAVABasicoComponent } from './components/javabasico/javabasico.component';
 import { RedesComponent } from './components/redes/redes.component';
+import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 const routes: Routes = [
 
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'Redes',
     component: RedesComponent
+  },
+  {
+    path: 'CodeWarrior',
+    component: CodewarriorComponent
   }
 
 ]

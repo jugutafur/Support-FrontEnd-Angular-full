@@ -15,6 +15,7 @@ import { TestJavaComponent } from './components/test-java/test-java.component';
 import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
 import { JAVABasicoComponent } from './components/javabasico/javabasico.component';
 import { RedesComponent } from './components/redes/redes.component';
+import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RedesComponent } from './components/redes/redes.component';
     TestJavaComponent,
     FundamentosProgramacionComponent,
     JAVABasicoComponent,
-    RedesComponent
+    RedesComponent,
+    CodewarriorComponent
 
   ],
   imports: [
