@@ -39,10 +39,64 @@
               </td>
           </tr>
           <tr>
-              <td>Cross site Scripting Protection</td>
+              <td><strong>(XSS)</strong> Cross site Scripting Protection</td>
               <td></td>
               <td>
                 <img src="../../../../../../assets/transversales/CodeWarrior/Cross site Scripting Protection.png" alt="Cross site Scripting Protection">
+              </td>
+          </tr>
+
+          <tr>
+              <td><strong>(XSS)</strong> Secuencia de Datos entre sitios -Basada en DOM</td>
+              <td>
+                no deberia ser posible agregar componentes de esta forma. <br><br>
+                En la imagen es posible evidenciar el codigo resaltado lo cual no es correcto y ademas se puede evidenciar el como el codigo venia aggrando y editando componentes de manera correcta "En lineas previas" <br><br>
+                Claramente la solucion es que todos los elementos sean creados y editados como se evidenia en el fix <br><br>La recomendacion es evitar usar <strong>innerHTML</strong> lo recomendado es usar <strong>textContent</strong><br><br>
+                Ademas de usar la libreria <strong>DOMPurify.sanitize</strong><br><br>
+                <img src="../../../../../../assets/transversales/CodeWarrior/XSS Basada en DOM fix3.png" alt="XSS Basada en DOM fix 3"><br><br>
+                <img src="../../../../../../assets/transversales/CodeWarrior/XSS Basada en DOM fix2.png" alt="XSS Basada en DOM fix 2"><br><br>
+              </td>
+              <td>
+                <img src="../../../../../../assets/transversales/CodeWarrior/XSS Basada en DOM.png" alt="XSS Basada en DOM"><br><br>
+                fix <br>
+                <img src="../../../../../../assets/transversales/CodeWarrior/XSS Basada en DOM fix.png" alt="XSS Basada en DOM fix">
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                Redirecciones y Reenvios no validos
+              </td>
+              <td>
+                Un atacante puede enviar un email donde esta un link para para que la victima ingrese donde: <br><br>
+                1. el link esta compuesto por 2 partes la 1.ra es un direccionamiento a una pagina confiable y despues de esa pagina confiable esta un <strong>redireccionamiento </strong>a un sitio peligroso como en el siguiente Ejemplo adjunto <br><br>
+                desde la consola podemos ver como lo salva y luego es posible redireccionar el sitio a la pagina insegura <br><br>Este es el problema vs fix <br><br>
+                <img src="../../../../../../assets/transversales/CodeWarrior/reenvio a sitios inseguros fix.png" alt="Reenvio a sitios inseguros fix">
+                la razon <br><br>
+                <img src="../../../../../../assets/transversales/CodeWarrior/reenvio a sitios inseguros razon.png" alt="Reenvio a sitios inseguros razon">
+              </td>
+              <td>
+                <img src="../../../../../../assets/transversales/CodeWarrior/Reenvio a sitios inseguros.JPG" alt="Reenvio a sitios inseguros">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Defectos de inyeccion - Inyeccion CSS</td>
+              <td>
+                No permita que los usuarios ingresen reglas CSS para personalizar las paginas esto genera un punto de acceso para atacantes
+              </td>
+              <td>
+                <img src="../../../../../../assets/transversales/CodeWarrior/Inyeccion por CSS.png" alt="Inyeccion por CSS"> <br><br>
+                fix
+                <img src="../../../../../../assets/transversales/CodeWarrior/Inyeccion por CSS fix.png" alt="Inyeccion por CSS fix">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Defectos de Inyeccion - Inyeccion por codigo</td>
+              <td></td>
+              <td>
+                <img src="../../../../../../assets/transversales/CodeWarrior/Inyeccion por codigo.png" alt="Inyeccion por codigo">
               </td>
           </tr>
 
@@ -51,10 +105,11 @@
               <td></td>
               <td></td>
           </tr>
+
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
 
           <tr>
@@ -62,10 +117,71 @@
               <td></td>
               <td></td>
           </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
           <tr>
               <td></td>
               <td></td>
               <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
 
           <tr>
