@@ -14,6 +14,7 @@ import { FundamentosProgramacionComponent } from './components/fundamentos-progr
 import { JAVABasicoComponent } from './components/javabasico/javabasico.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
+import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.component';
 const routes: Routes = [
 
   {
@@ -32,7 +33,10 @@ const routes: Routes = [
     path: 'JAVAIntermedio',
     component: JavaComponent
   },
-
+  {
+    path: 'JAVAAvanzado',
+    component: JavaAvanzadoComponent
+  },
   {
     path: 'VB',
     component: VbComponent
