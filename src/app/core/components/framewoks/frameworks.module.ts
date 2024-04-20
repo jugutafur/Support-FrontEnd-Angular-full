@@ -12,6 +12,7 @@ import { JavaSwingComponent } from './java-swing/java-swing.component';
 import { JavaSpringComponent } from './java-spring/java-spring.component';
 import { JaxbComponent } from './jaxb/jaxb.component';
 import { JavaServerPagesComponent } from './java-server-pages/java-server-pages.component';
+import { SpringbootComponent } from './springboot/springboot.component';
 
 @NgModule({
     declarations:[
@@ -23,7 +24,8 @@ import { JavaServerPagesComponent } from './java-server-pages/java-server-pages.
         JavaSwingComponent,
         JavaSpringComponent,
         JaxbComponent,
-        JavaServerPagesComponent
+        JavaServerPagesComponent,
+        SpringbootComponent
     ],
     imports:[
         CommonModule,

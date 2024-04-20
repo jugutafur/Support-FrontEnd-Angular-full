@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainFrameworksComponent {
 
-  lista = ["angular", "react", "vue-js", "JavaServerFaces", "JavaServerPages","JavaSwing", "JavaSpring", "Jaxb"];
+  lista = ["angular", "react", "vue-js", "JavaServerFaces", "JavaServerPages","JavaSwing", "JavaSpring(Framework)","JavaSpringBoot", "Jaxb"];
 
 }
