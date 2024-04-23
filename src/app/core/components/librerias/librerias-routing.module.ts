@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ReactComponent } from './react/react.component';
 import { MainLibreriasComponent } from './main-librerias/main-librerias.component';
 import { GormComponent } from './gorm/gorm.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
@@ -9,6 +10,10 @@ import { GitComponent } from './git/git.component';
 import { PrimefacesComponent } from './primefaces/primefaces.component';
 
 const routes : Routes = [
+    {
+      path: 'react',
+      component: ReactComponent
+    },
     {
       path: '',
       component: MainLibreriasComponent

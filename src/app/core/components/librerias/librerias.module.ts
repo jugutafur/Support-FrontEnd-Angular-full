@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { GormComponent } from './gorm/gorm.component';
 import { MainLibreriasComponent } from './main-librerias/main-librerias.component';
 
+import { ReactComponent } from './react/react.component'
 import { CommonModule } from '@angular/common';
 import { LibreriasRoutingModule } from './librerias-routing.module';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
@@ -12,7 +13,8 @@ import { PrimefacesComponent } from './primefaces/primefaces.component';
 
 @NgModule({
     declarations:[
-        GormComponent, 
+        ReactComponent,
+        GormComponent,
         MainLibreriasComponent,
         BootstrapComponent,
         SwaggerComponent,

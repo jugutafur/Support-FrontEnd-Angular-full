@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 
 import { MainFrameworksComponent } from './main-frameworks/main-frameworks.component';
 import { AngularComponent } from './angular/angular.component';
-import { ReactComponent } from './react/react.component';
 import { VueJsComponent } from './vue-js/vue-js.component';
 import { JavaServerFacesComponent } from './java-server-faces/java-server-faces.component';
 
@@ -18,7 +17,6 @@ import { SpringbootComponent } from './springboot/springboot.component';
     declarations:[
         MainFrameworksComponent,
         AngularComponent,
-        ReactComponent,
         VueJsComponent,
         JavaServerFacesComponent,
         JavaSwingComponent,
