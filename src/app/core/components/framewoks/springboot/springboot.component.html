@@ -141,30 +141,28 @@
             <td>Anotaciones</td>
             <td>
                 <a href="https://www.baeldung.com/spring-postconstruct-predestroy">Ver inf @PostConstruct y @PreDestroy</a> <br><br>
-                <strong>@PostConstruct</strong> //Spring llama a los métodos anotados con @PostConstruct solo una vez, justo después de la inicialización de las propiedades del bean . Tenga en cuenta que estos métodos se ejecutarán incluso si no hay nada que inicializar. <br>
+                <strong>{{arroba}}PostConstruct</strong> //Spring llama a los métodos anotados con {{arroba}}PostConstruct solo una vez, justo después de la inicialización de las propiedades del bean . Tenga en cuenta que estos métodos se ejecutarán incluso si no hay nada que inicializar. <br>
                 El método anotado con <strong>@PostConstruct</strong> puede tener cualquier nivel de acceso pero no puede ser estático. Debe ser declarado despues de la injeccion de dependencias, solo es posible en <strong>Beans</strong> que soporten la injeccion de dependencias <br>
                 <br>
-                <strong>@PreDestroy</strong> //Un método anotado con @PreDestroy se ejecuta solo una vez, justo antes de que Spring elimine nuestro bean del contexto de la aplicación.
+                <strong>{{arroba}}PreDestroy</strong> //Un método anotado con {{arroba}}PreDestroy se ejecuta solo una vez, justo antes de que Spring elimine nuestro bean del contexto de la aplicación.
                 <br>
-                Al igual que con <strong>@PostConstruct</strong> , los métodos anotados con @PreDestroy pueden tener cualquier nivel de acceso, pero no pueden ser estáticos.
+                Al igual que con <strong>@PostConstruct</strong> , los métodos anotados con {{arroba}}PreDestroy pueden tener cualquier nivel de acceso, pero no pueden ser estáticos.
                 <br>El propósito de este método debe ser liberar recursos o realizar cualquier otra tarea de limpieza antes de que se destruya el bean, por ejemplo, cerrar una conexión a la base de datos. <br><br>
                 <strong>@SpringBootApplication</strong> //declara la class main por donde inicia el project <br>
                 <strong>@Service</strong>// es el puente enter el controller y el repository <br>
                 <strong>@RestController</strong>  //que la clase es un controller <br>
-                <strong>@Autowired // Inversion de control</strong> esto delega al framework como el encargado de crear e instanciar el objeto<br>
-                <strong>@RequestMapping{{abreParentesis}}"/saludar"{{cierraParentesis}}</strong>  //define el path principal del controller <br>
-                <strong>@GetMapping{{abreParentesis}}"/hola"{{cierraParentesis}}</strong> // define el path secundario del controlador <br><br>
-            </td>
-            <td></td>
-          </tr>
+                <strong>@Autowired // Inversion de control</strong> esto delega al framework como el encargado de crear e instanciar el objeto<br><br><br>
 
-          <tr>
-            <td>MapStruct</td>
-            <td>
-              <strong>@Mapper{{abreParentesis}}componentModel = "spring"{{cierraParentesis}}</strong> indicara que la interface va a mapear la table del dominio y la identidad <br><br>
-              <strong>@Mappings</strong> grupo de traductor de campos entre tablas <br><br>
-              <strong>@Mapping</strong> van cruzados y es de donde va a sacar el valor y donde se lo va a poner <br>
-              <strong>@InheritInverseConfiguration</strong> es para hacer de manera inversa la traduccion ya con esto ya no es necesario declaran nuevamente mappings<br>
+                <mark><span style = "background-color: #FFFF00;">A nivel de controlador</span></mark><br>
+                <strong>* @RequestMapping{{abreParentesis}}"/saludar"{{cierraParentesis}}</strong>  //define el path principal del controller <br>
+                <strong>* @GetMapping{{abreParentesis}}"/hola"{{cierraParentesis}}</strong> // define el path secundario del controlador <br>
+                <strong>* @PostMapping{{abreParentesis}}"/Save"{{cierraParentesis}}"</strong> //Para hacer update de Registro. <br>
+                <strong>* @DeleteMapping{{abreParentesis}}"/delete/{{abrellave}}id{{cierrallave}}"{{cierraParentesis}}</strong> //Para eliminar un Registro. <br><br>
+                <strong>* @PathVariable{{abreParentesis}}"id" int productId{{cierraParentesis}}</strong> //Valor que viene por la URL. <br>
+                <strong>* @RequestBody{{abreParentesis}}Product product{{cierraParentesis}}</strong> //Objeto que viene por el body de Request. <br><br>
+
+                <mark><span style = "background-color: #FFFF00;">Documentar swagger</span></mark><br>
+                <strong>* @ApiOperation{{abreParentesis}}"Select One Specific Product"{{cierraParentesis}}"</strong> //Descripcion de End-point. <br><br>
             </td>
             <td></td>
           </tr>
@@ -189,9 +187,10 @@
                 <u><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.stored-procedures">Procedimiento Almacenado</a></u><br><br>
                 <strong>@Query</strong>(nativeQuery = true) o con la anotación <strong>@Procedure</strong>.<br>
                 <strong>@Query {{abreParentesis}}value = " SELECT * FROM categorias WHERE id_categoria = ? ", nativeQuery = true {{cierraParentesis}}.</strong> Desde la interfaz del crud podemos implementar querys de manera nativa de esta manera<br>
-                <strong>@Repository</strong> Con este le indicamos a JavaSpring que la clase va a interacturar con la BD por que en esta clase estaran definidos los metodos que operaran con los registros de la BD. <strong>tambien es posible decorar nuestra clase no con @Repository sino @Component PERO ES MEJOR @Repository</strong><br>
+                <strong>@Repository</strong> Con este le indicamos a JavaSpring que la clase va a interacturar con la BD por que en esta clase estaran definidos los metodos que operaran con los registros de la BD. <strong>tambien es posible decorar nuestra clase no con @Repository sino @Component PERO ES MEJOR @Repository</strong><br><br>
+                * El mismo caso ocurre que podemos usar @Service por @Compoonent <strong>PERO es mejor usar {{arroba}}Service esto es asi por que nos da una diferenciacion semantica de cual es la finalidad de existir ya sea de la clase o interfaz </strong>
             </td>
-            <td>
+            <td>fdgfd
               <strong>@Embeddable</strong> En el caso que la tabla tenga una Primary Key compuesta debemos <br><br>
 
               <a href="https://platzi.com/clases/1996-java-spring/31505-crear-entity-cuando-su-clave-primaria-es-compuesta/">llaves PK Compuestas</a>
@@ -231,9 +230,9 @@
           <tr>
             <td><a href="https://platzi.com/clases/1996-java-spring/31510-que-es-el-patron-data-mapper-y-que-resuelve/">patron Data mapper</a></td>
             <td>
-                Es la forma en la cual traducimos o convertimos una tabla en otra, esto con el fin de:
+                Es la forma en la cual traducimos o convertimos una tabla en otra, esto con el fin de: <br><br>
                 * tener tablas definidas en termino de la persistencia con sus semejantes en termino de dominio <strong>la respuesta mostrara la data que tenga las entidades en el dominio NO en la persistencia. </strong><br><br>
-                * Con esto descoplamos la BD de la Api <br><br>
+                * Con esto descoplamos la BD de la Api. Ningun agente externo podra darse cuenta de que forma estan diseñadas las tablas que mapean la BD. <br><br>
                 * Mapeamos solo los campos que son necesarios y no todos los campo de las tablas ya que estos puede tener sentido de existencia <strong>SOLO en BD</strong>. <br><br>
                 * De esta manera la Api podria cambiar de BD y no tendria conflicto con el codigo <br><br>
                 Para usarlo debemos: <br><br>
@@ -251,6 +250,24 @@
                 src="../../../../../assets/framework/JavaSpringBoot/DataMapper.png"
                 alt="DataMapper"
                 title="DataMapper">
+            </td>
+          </tr>
+
+          <tr>
+            <td>MapStruct</td>
+            <td>
+              <strong>@Mapper{{abreParentesis}}componentModel = "spring"{{cierraParentesis}}</strong> indicara que la interface va a mapear la table del dominio y la identidad <br><br>
+              <strong>@Mappings</strong> grupo de traductor de campos entre tablas <br><br>
+              <strong>@Mapping</strong> van cruzados y es de donde va a sacar el valor y donde se lo va a poner <br>
+              <strong>{{arroba}}InheritInverseConfiguration</strong> es para hacer de manera inversa la traduccion ya con esto ya no es necesario declaran nuevamente mappings<br><br>
+              y como es posible de observer en la linea 27 le indicamos que ignore un campo al mapear de la capa de la entity en la persistencia al entity del dominio y se debe a que precisamente en el entity del dominio ese campo no es necesario <strong>Es neesario indicar que lo ignore sino genere error</strong> <br><br>
+              Y en la linea 12 indicamos que un mapper puede llamar a otro mapper con <strong>uses = {{abrellave}} CategoryMapper.class {{cierrallave}}</strong> <br>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaSpringBoot/Mapper.PNG"
+              alt="Mapper"
+              title="Mapper">
             </td>
           </tr>
 

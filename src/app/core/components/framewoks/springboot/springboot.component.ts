@@ -15,6 +15,7 @@ export class SpringbootComponent {
   public cierraParentesis: string;
   public abreCuadro: string;
   public cierraCuadro: string;
+  public arroba: string;
 
   constructor() {
     this.abrellave= "{";
@@ -25,5 +26,6 @@ export class SpringbootComponent {
     this.cierraParentesis= ")";
     this.abreCuadro= "[";
     this.cierraCuadro= "]";
+    this.arroba= "@";
   }
 }

@@ -17,6 +17,7 @@ import { JAVABasicoComponent } from './components/javabasico/javabasico.componen
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.component';
+import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.
     JAVABasicoComponent,
     RedesComponent,
     CodewarriorComponent,
-    JavaAvanzadoComponent
+    JavaAvanzadoComponent,
+    AnalisDatosComponent
 
   ],
   imports: [

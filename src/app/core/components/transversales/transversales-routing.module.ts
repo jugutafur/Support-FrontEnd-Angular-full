@@ -15,6 +15,7 @@ import { JAVABasicoComponent } from './components/javabasico/javabasico.componen
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.component';
+import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
 const routes: Routes = [
 
   {
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: 'CodeWarrior',
     component: CodewarriorComponent
+  },
+  {
+    path: 'Analis de Datos',
+    component: AnalisDatosComponent
   }
 
 ]
