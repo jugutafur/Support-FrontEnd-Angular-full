@@ -18,6 +18,7 @@ import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
+import { TestJavascriptComponent } from './components/test-javascript/test-javascript.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AnalisDatosComponent } from './components/analis-datos/analis-datos.com
     RedesComponent,
     CodewarriorComponent,
     JavaAvanzadoComponent,
-    AnalisDatosComponent
+    AnalisDatosComponent,
+    TestJavascriptComponent
 
   ],
   imports: [

@@ -16,6 +16,7 @@ import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { JavaAvanzadoComponent } from './components/java-avanzado/java-avanzado.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
+import { TestJavascriptComponent } from './components/test-javascript/test-javascript.component';
 const routes: Routes = [
 
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'test-java',
     component: TestJavaComponent
+  },
+  {
+    path: 'test-JavaScript',
+    component: TestJavascriptComponent
   },
   {
     path: 'Redes',

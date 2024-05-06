@@ -47,6 +47,7 @@
             <tr>
                 <td> <a href="https://angular.io/cli"> Comandos de Angular</a></td>
                 <td>
+                    <strong>ng test --no-watch --code-coverage</strong><br>
                     ng --version // ver la version de angular<br>
                     ng new Xproyecto --routing=true --style=scss //configurar un primer routing y el style del proyecto <br>
                     ng g m nombreModule //crear un nuevo modulo <br>
@@ -665,6 +666,7 @@
                     <strong>Pruebas Unitarias</strong><br><br>
                 </td>
                 <td>
+                    <strong>ng test --no-watch --code-coverage</strong><br><br>
                     se puede instalar mocha para visualizar el servidor de las pruebas unitarias no por un reporte de html como normalmente lo hace karma sino en consola <br><br><strong>npm i karma-mocha-reporter --save-dev</strong> y se instala en las depedencias del ambiente de desarrollo y no de produccion. <br><br>cuando lo instalamos en package.json agrega una depencia en dev <strong>karma-mocha-reporter</strong> y esta se debe agregar en el archivo <strong>karma.conf.js</strong> en la zona de puglins ver <a href="https://www.youtube.com/watch?v=-y58-AgLyo4">video </a> y se cambia en la parte de reporte <strong>progress a mocha</strong><br><br>
                     <strong>protacto y karma</strong><br><br>
                     <img

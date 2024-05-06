@@ -30,6 +30,7 @@
             * npm test //Starts the test runner. <br>
             * npm run eject// Removes this tool and copies build dependencies, configuration files
               and scripts into the app directory. If you do this, you can’t go back! <br>
+            * npm test -- --coverage //Run testings con reporte de karma. <br>
           </td>
           <td></td>
         </tr>
@@ -119,6 +120,8 @@
         <tr>
           <td>Manejo del Estado</td>
           <td>
+            * Cada vez que se llama al actualizar del estado <strong>"setXXX"</strong> React.js <strong>RENDERIZA EL COMPONENTE</strong>. <br><br>
+            <strong>*El estado en React.js es INMUTABLE{{abreParentesis}}De manera Directa{{cierraParentesis}} y solo de la forma como esta en la linea 13 por medio de una funcion "actualizadora" constrolada por ReactJS para que esta edite el historial de cambios de los estados podemos editar el estado.</strong><br><br>
             En la imagen se muestra el Manejo del Estado donde la linea 13 es :<br><br>
             const [valorQueVaAtomarDespues, funcionQueLlamaInternamente] = React.useState('valor inicial'); <br>
             const [patito, setPatito] = React.useState('juan'); <br><br><br>
@@ -142,14 +145,12 @@
         </tr>
 
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td colspan="3" class="titulo"><strong>Testing</strong></td>
         </tr>
 
         <tr>
           <td></td>
-          <td></td>
+          <td>npm test -- --coverage</td>
           <td></td>
         </tr>
 

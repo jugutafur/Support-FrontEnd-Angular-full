@@ -111,6 +111,23 @@
             </tr>
 
             <tr>
+              <td><a href="https://www.youtube.com/watch?v=ygA5U7Wgsg8">Call Stack</a></td>
+              <td>
+                es la pila de las tareas, en ella podemos ver que funcion se esta ejecuntando a cual va ir .. y la linea de codigo donde viene. <br><br>
+                Es por eso que solo puede ejecutar una tarea a la vez, ademas es <strong>LIFO</strong> Last In First Out "El ultimo que Ingreso es que Primero Salir". <br><br>
+                * En la linea 9 hay una funcion que se llama "mezclarIngredientes(n)" y la linea 3 se llama asi misma enviando como parametro un numero-1 en este caso podemos ver que en callStack cada vez se crea un scope(independiente) por cada vez que se llama. <br><br>
+                * En la linea 5 se declara una constante llamada prueba que su valor estara determinado por la funcion anonima ,,, las cuales se pueden ver como script en el instector. <br><br>
+                cada vez que se ejecuta un archivo.js se crea un objeto llamado <strong>anonymous</strong> que es que contine el hilo principal del programa y una vez que finalice todas las lineas del  programa <strong>SALE</strong> del callStack. <br><br>
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/FrontEnd/JavaScript/callStack.png"
+                alt="callStack"
+                title="callStack"><br><br>
+              </td>
+            </tr>
+
+            <tr>
                 <td><strong>Primer paso</strong></td>
                 <td>
                     1. Una vez que el cliente hace una request al motor de renderizado este internamente lo primero que define es un <strong>entorno global</strong> donde define 3 cosas principalmente: <br><br>
@@ -698,15 +715,41 @@
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>localStore</td>
+                <td>
+                  Guarda data en el navegador, sin importar que se apague el equipo, se cierre la session. <br><br>
+                  * localStorage.getItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong> {{cierraParentesis}} //Obtener<br><br>
+                  * localStorage.setItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon', 'valorDeObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
+                  * localStorage.removeItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/FrontEnd/JavaScript/localStorage1.PNG"
+                  alt="localStorage1"
+                  title="localStorage1"><br><br>
+                  <img
+                  src="../../../../../assets/FrontEnd/JavaScript/localStorage2.PNG"
+                  alt="localStorage2"
+                  title="localStorage2"><br><br>
+                </td>
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><strong><a href="https://www.youtube.com/watch?v=K4vCTeKKCkU">CustomHooks</a></strong></td>
+                <td>
+                    * Deben de empezar con la palabra <strong>use</strong>XXXXX. <br><br>
+                    * la idea es que dentro de esta funcion se maneje el estado y NO el otro componente. <br><br>
+                <img
+                  src="../../../../../assets/FrontEnd/JavaScript/CustonHooksAntes.PNG"
+                  alt="CustonHooksAntes"
+                  title="CustonHooksAntes"><br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/CustonHooksDespues.PNG"
+                    alt="CustonHooksDespues"
+                    title="CustonHooksDespues"><br><br>
+                </td>
             </tr>
 
             <tr>
