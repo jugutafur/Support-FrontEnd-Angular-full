@@ -16,8 +16,16 @@
             * Virtualiza el DOM para poderlo manipular. <br>
             * Usa JSX Javascript con xml. <br>
             * Data Bindig Unidireccional la informacion pasa del padre a hijo y no al contrario. <br>
+            * React es un proyecto Open Source diseñado para crear interfaces de usuarios es decir que es <strong>agnostico de la plataforma.</strong><br>
+            * <a href="https://es.legacy.reactjs.org/docs/composition-vs-inheritance.html"><strong>composición</strong></a> revisar imagen --- -> <br>
+            *
           </td>
-          <td></td>
+          <td>
+            <img
+            src="../../../../../assets/librerias/React/composicion.PNG"
+            alt="composicion"
+            title="composicion"><br><br>
+          </td>
         </tr>
 
         <tr>
@@ -36,6 +44,39 @@
         </tr>
 
         <tr>
+          <td>Stateful y Statless components</td>
+          <td>
+            Los componentes stateful son los componentes que guardan y manejan estados. Por lo que hemos aprendido hasta ahora sería los que usan alguna variable que usa React.useState <br><br>
+            Mientras los componentes stateless son los componentes que solo presentan información. Es decir son los componentes que reciben props o simplemente muestran algun contenido
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>componentes</td>
+          <td>
+            hay dos tipos de componetes aunque actualmente es posible desarrollar usando los dos tipos <strong>Se recomienda usar componetes funcionales </strong>ya que desde la <strong>version 16.8</strong> de react estos implementan <strong>hooks</strong> haciendolos mucho mas potentes que los componentes de clases. <br><br>
+            Ademas ya que en React la reautilizacion de codigo se logra por medio de la <strong>composicion en lugar de herencia</strong> <br><br>
+            componetes funcionales
+            <img
+            src="../../../../../assets/librerias/React/componenteFuncional.PNG"
+            alt="componenteFuncional"
+            title="componenteFuncional"><br><br>
+            componetes de clases
+            <img
+            src="../../../../../assets/librerias/React/componenteClass.PNG"
+            alt="componenteClass"
+            title="componenteClass"><br><br>
+          </td>
+          <td>
+            <img
+            src="../../../../../assets/librerias/React/componentes.PNG"
+            alt="componentes"
+            title="componentes"><br><br>
+          </td>
+        </tr>
+
+        <tr>
           <td>
             ReactDOM.render(QUE, DONDE)
           </td>
@@ -45,12 +86,12 @@
           <td>
             El Que
             <img
-                    src="../../../../../assets/framework/React/ReactDom.PNG"
+                    src="../../../../../assets/librerias/React/ReactDom.PNG"
                     alt="ReactDom"
                     title="ReactDom"><br><br>
             El Donde
             <img
-                    src="../../../../../assets/framework/React/ReactDomDonde.PNG"
+                    src="../../../../../assets/librerias/React/ReactDomDonde.PNG"
                     alt="ReactDomDonde"
                     title="ReactDomDonde"><br><br>
           </td>
@@ -64,7 +105,7 @@
           </td>
           <td>
             <img
-                    src="../../../../../assets/framework/React/JSX.png"
+                    src="../../../../../assets/librerias/React/JSX.png"
                     alt="JSX"
                     title="JSX"><br><br>
           </td>
@@ -78,12 +119,12 @@
           <td>
             Asi es como un componente setea parametros
             <img
-                    src="../../../../../assets/framework/React/propsSend.PNG"
+                    src="../../../../../assets/librerias/React/propsSend.PNG"
                     alt="propsSend"
                     title="propsSend"><br><br>
             Asi es como una funcion recibe unos parametros
             <img
-                    src="../../../../../assets/framework/React/props.PNG"
+                    src="../../../../../assets/librerias/React/props.PNG"
                     alt="props"
                     title="props"><br><br>
           </td>
@@ -99,7 +140,7 @@
           </td>
           <td>
             <img
-                    src="../../../../../assets/framework/React/2.png"
+                    src="../../../../../assets/librerias/React/2.png"
                     alt="2"
                     title="2"><br><br>
           </td>
@@ -118,7 +159,11 @@
         </tr>
 
         <tr>
-          <td>Manejo del Estado</td>
+          <td colspan="3" class="titulo"><a href="https://es.legacy.reactjs.org/docs/hooks-intro.html">hooks</a></td>
+        </tr>
+
+        <tr>
+          <td>Manejo del Estado <br><strong>const {{abreCuadro}} {{cierraCuadro}}= React.useState{{abreParentesis}}{{cierraParentesis}};</strong></td>
           <td>
             * Cada vez que se llama al actualizar del estado <strong>"setXXX"</strong> React.js <strong>RENDERIZA EL COMPONENTE</strong>. <br><br>
             <strong>*El estado en React.js es INMUTABLE{{abreParentesis}}De manera Directa{{cierraParentesis}} y solo de la forma como esta en la linea 13 por medio de una funcion "actualizadora" constrolada por ReactJS para que esta edite el historial de cambios de los estados podemos editar el estado.</strong><br><br>
@@ -129,19 +174,39 @@
           </td>
           <td>
               <img
-              src="../../../../../assets/framework/React/Manejo del Estado.png"
+              src="../../../../../assets/librerias/React/Manejo del Estado.png"
               alt="Manejo del Estado"
               title="Manejo del Estado"><br><br>
           </td>
         </tr>
 
         <tr>
-          <td>Stateful y Statless components</td>
+          <td>Efectos en React <br><strong>React.useEffect{{abreParentesis}} funcion anonima , array de dependencias{{cierraParentesis}};</strong></td>
           <td>
-            Los componentes stateful son los componentes que guardan y manejan estados. Por lo que hemos aprendido hasta ahora sería los que usan alguna variable que usa React.useState <br><br>
-            Mientras los componentes stateless son los componentes que solo presentan información. Es decir son los componentes que reciben props o simplemente muestran algun contenido
+            De la imagen adjunta se espera que imprima los mensajes en el siguiente order: <br><br>
+            log 1 <br>
+            log 2 <br>
+            log 3 <br><br>
+            Pero en realidad se imprime. <br>
+            log 1 <br>
+            log 3 <br>
+            log 2 <br><br>
+            y luego solo imprime 1 y 3: esto sucede por 2 causas: <br><br>
+            <strong>1ro.</strong> cuando se renderiza por primera vez el imprime todos los console.log  PERO imprime de ultimas el console.log <strong>Looooooooooooooog 2</strong> que esta encapsulado en la funcion React.useEffect y luego solo imprime 1 y 3 pues ya el 2 lo cargo en memoria, Esto es ultil para logica que es muy pesado y solo se requiere que se ejecute una sola vez. <br><br>
+            <strong>2do.</strong> y solo se va a imprimir cuando el estado cambie como se muestra en la imagen 2, en este caso se agrega un segundo parametro que es un array donde se indica va a volver a cargar cuando el estado de <strong>totalToDo</strong> CAMBIE....
           </td>
-          <td></td>
+          <td>
+            imagen 1 <br>
+            <img
+            src="../../../../../assets/librerias/React/Efectos1.PNG"
+            alt="Efectos1"
+            title="Efectos1"><br><br>
+            imagen 2
+            <img
+            src="../../../../../assets/librerias/React/Efectos.PNG"
+            alt="Efectos"
+            title="Efectos"><br><br>
+          </td>
         </tr>
 
         <tr>
