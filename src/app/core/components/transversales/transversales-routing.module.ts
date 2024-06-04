@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainTransversalesComponent } from './components/main-transversales/main-transversales.component';
-
+import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { CursoTerminalComponent } from './components/curso-terminal/curso-terminal.component';
-import { FundamentosProgramacionComponent } from './components/fundamentos-programacion/fundamentos-programacion.component';
+import { DockerComponent } from './components/docker/docker.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'Terminal',
     component: CursoTerminalComponent
+  },
+  {
+    path: 'Docker',
+    component: DockerComponent
   },
   {
     path: 'Redes',

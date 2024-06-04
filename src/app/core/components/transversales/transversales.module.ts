@@ -10,6 +10,7 @@ import { FundamentosProgramacionComponent } from './components/fundamentos-progr
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
+import { DockerComponent } from './components/docker/docker.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AnalisDatosComponent } from './components/analis-datos/analis-datos.com
     FundamentosProgramacionComponent,
     RedesComponent,
     CodewarriorComponent,
-    AnalisDatosComponent
+    AnalisDatosComponent,
+    DockerComponent
   ],
   imports: [
     CommonModule,
