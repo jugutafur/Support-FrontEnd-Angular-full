@@ -7,6 +7,10 @@ import { CsharpComponent } from './csharp/csharp.component';
 import { PhpComponent } from './php/php.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
 import { TypecsriptComponent } from './typecsript/typecsript.component';
+import { JavaAvanzadoComponent } from './java-avanzado/java-avanzado.component';
+import { JavaComponent } from './java/java.component';
+import { VbComponent } from './vb/vb.component';
+import { FsharpComponent } from './fsharp/fsharp.component';
 
 const routes: Routes = [
     {
@@ -32,6 +36,30 @@ const routes: Routes = [
     {
         path: 'TypeScript',
         component: TypecsriptComponent
+    },
+    {
+      path: 'JAVABasico',
+      component: JavaAvanzadoComponent
+    },
+    {
+      path: 'JAVAIntermedio',
+      component: JavaComponent
+    },
+    {
+      path: 'JAVAAvanzado',
+      component: JavaAvanzadoComponent
+    },
+    {
+      path: 'VB',
+      component: VbComponent
+    },
+    {
+      path: 'C#',
+      component: CsharpComponent
+    },
+    {
+      path: 'F#',
+      component: FsharpComponent
     }
 ]
 

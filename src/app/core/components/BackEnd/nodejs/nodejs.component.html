@@ -1,95 +1,151 @@
 <div class="container">
-    <table class="table table-striped table-hover table-bordered align-middle">
-        <thead>
-            <tr>
-                <th scope="col">Referencia</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><Strong>Comandos</Strong></td>
-                <td>
-                    npm init // Arrancar proyecto de node <br>
-                    npm init-y // responder a todas las preguntas con yes <br>
-                    npm i -D live server //instalar <br>
-                    
-                </td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-                
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table table-striped table-hover table-bordered align-middle">
+    <thead>
+      <tr>
+          <th scope="col">Referencia</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><Strong>Comandos</Strong></td>
+        <td>
+            npm init // Arrancar proyecto de node <br>
+            npm init-y // responder a todas las preguntas con yes <br>
+            npm i -D live server //instalar <br>
+
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+
+        </td>
+        <td>
+          <strong>Es un entorno de ejecuccion de JavaScript orientado a eventos asincronos</strong> <br><br>
+          * En el caso del navegador de Google Chrome interpreta a JavaScript PERO el motor V8 esta hecho en C++. <br><br>
+          * El el caso del navegador por medio del motor V8 podemos ejecutar archivos JavaScript,,, pero en un proyecto de NodeJS nos permite ejecutrar estos archivos <strong>desde la consola.</strong><br><br>
+          * Un evento <strong>Sincrono bloquea la aplicacion</strong> y un evento <strong>Asincrono, NO</strong>
+          * Podemos ejecutar node directamente en la consola con la herramienta de <strong>REPL Read Eval Print Loop</strong><br><br>
+          * Pasar una funcion como argumento de otra funcion esto se llama <strong>Higher-Order Programming</strong>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/backend/NodeJS/recepcionInformation.PNG"
+          alt="recepcionInformation"
+          title="recepcionInformation"><br><br>
+          <img
+          src="../../../../../assets/backend/NodeJS/Noes.png"
+          alt="Noes"
+          title="Noes">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <strong>modulos built-in </strong>// modulos que no requieren ser instalados. <br>
+          * console <br>
+          * process (argv[], memoryUsage(), env)<br>
+          * http <br>
+          * https <br>
+          * fs(File System)<br>
+          * os = Operating System (type, homedir, hostname, uptime, userInfo) <br>
+          * timers (setTimeout(), setImmediate(), setInterval())
+          * path <br><br>
+          <strong>modulos built-in </strong>// modulos que deben ser instalados.
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/setTimeout">setTimeout()</a></td>
+        <td>
+          * setTimeout() = En la 1ra imagen se describe, donde si la funcion anonima requiere unos parametros para funcionar internamente ... estos argumentos son pasados al final como se ve en la imagen <br><br>
+          * setImmediate() <br>
+          * setInterval() <br>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/backend/NodeJS/setTimeout.png"
+          alt="setTimeout"
+          title="setTimeout"><br><br>
+          <img
+          src="../../../../../assets/backend/NodeJS/setTimeout2.png"
+          alt="setTimeout2"
+          title="setTimeout2">
+        </td>
+      </tr>
+      <tr>
+        <td>fs (file System)</td>
+        <td>
+          * Ademas de trabajar con archivos podemos trabajar con <strong>carpetas.</strong><br><br>
+          * todos metodos de este modulo son <strong>asincronos... PERO</strong><br><br>
+          * podemos convertir estos modulos asincronos a <strong>Sync = Synchronous</strong> de la siguiente manera. <br><br>
+          <img
+          src="../../../../../assets/backend/NodeJS/fsConversionSync.PNG"
+          alt="fsConversionSync"
+          title="fsConversionSync">
+          *
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/backend/NodeJS/fs1.PNG"
+          alt="fs1"
+          title="fs1">
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

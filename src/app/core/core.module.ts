@@ -9,6 +9,7 @@ import { FrameworksModule } from './components/framewoks/frameworks.module';
 import { ArquitecturaModule } from './components/arquitectura/arquitectura.module';
 import { TransversalesModule } from './components/transversales/transversales.module';
 import { ServidoresModule } from './components/servidores/servidores.module';
+import { TestingModule } from './components/testing/testing.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ServidoresModule } from './components/servidores/servidores.module';
     CommonModule,
     FrontEndModule,
     BackEndModule,
+    TestingModule,
     BdModule,
     LibreriasModule,
     FrameworksModule,

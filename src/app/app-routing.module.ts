@@ -42,6 +42,10 @@ const routes: Routes = [
         loadChildren: () => import ('./core/components/transversales/transversales.module').then(m=>m.TransversalesModule)
       },
       {
+        path: "Testing",
+        loadChildren: () => import ('./core/components/testing/testing.module').then(m=>m.TestingModule)
+      },
+      {
         path: "Servidores",
         loadChildren: () => import ('./core/components/servidores/servidores.module').then(m=>m.ServidoresModule)
       }
