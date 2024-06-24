@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MavenComponent implements OnInit {
 
-  constructor() { }
+  public abrellave: string;
+  public cierrallave: string;
+  public abreDiamante: string;
+  public cierraDiamante: string;
+  public abreParentesis: string;
+  public cierraParentesis: string;
+  public abreCuadro: string;
+  public cierraCuadro: string;
 
-  ngOnInit(): void {
+  constructor() {
+    this.abrellave= "{";
+    this.cierrallave="}";
+    this.abreDiamante= "<";
+    this.cierraDiamante= ">";
+    this.abreParentesis= "(";
+    this.cierraParentesis= ")";
+    this.abreCuadro= "[";
+    this.cierraCuadro= "]";
   }
 
+  ngOnInit():void{
+    console.log("");
+  }
 }

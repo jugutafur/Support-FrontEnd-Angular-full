@@ -9,14 +9,149 @@
         </thead>
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td>
+                <a href="https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management">El complemento de Java</a>
+              </td>
+              <td>
+                Para que funcione bien las tareas de gradle se requiere inicialmente en el <strong>build.gradle</strong> El complemento de Java: <br><br>
+                plugins {{abrellave}}<br>
+                  id 'java'<br>
+                {{abrellave}}<br><br>
+                El anterior bloque de codigo se agregan plugins, en este caso agrega <strong>el plugin de Java o complemento de Java</strong> agregando las tareas que se ven en la imagen. <br><br>
+                <a href="https://docs.gradle.org/current/userguide/organizing_tasks.html#sec:lifecycle_tasks"><strong>hay tareas de:</strong></a> <br>
+                * Tareas por procesables. <br>
+                * Tareas de conjunto de fuentes. <br>
+                * Tareas del ciclo de vida. <br><br>
+
+                * Las tareas procesables en Gradle son tareas que realizan un trabajo real, como compilar código. <br><br>
+                *Las tareas del ciclo de vida son tareas que no funcionan por sí mismas. Estas tareas no tienen acciones; en cambio, agrupan tareas procesables y sirven como objetivos para la compilación.
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/arquitectura/Gradle/build.PNG"
+                alt="build"
+                title="build" />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <img
+                  src="../../../../../assets/arquitectura/Gradle/complemento Java.PNG"
+                  alt="complemento Java"
+                  title="complemento Java"
+                />
+              </td>
+            </tr>
+
+            <tr>
+                <td>Gestion de Dependencias</td>
+                <td>
+                  hay depedencias que pueden estar presentes en tiempo de: <br><br>
+
+                    1. compilacion <strong>(compile)</strong> <br>
+                    2. ejecuccion <strong>(runtime)</strong> <br>
+                    3. pruebas  <strong>(test)</strong> <br><br>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/java plugin.PNG"
+                  alt="java plugin"
+                  title="java plugin">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Creacion de task</td>
+                <td>
+                  Una tarea tiene <strong>proiedades</strong> (ext) y  <strong>comportamientos</strong>(doFirst, doLast.. dependOn, ) <br><br>
+                  De la segunda forma podemos capturar parametros que vengan en el script <br><br>
+                  -D parametro del Systema <br>
+                  -P parametro del Proyecto <br><br>
+                  Tener en cuenta que de la segunda manera debemos establecer la variable en el archivo <strong>gradle.properties</strong> unicamente para las <strong>variables del proyecto</strong> ... ya que si son variables del Systema no es necesario. <br><br>
+                  Es importante mencionar que el bloque <strong>doFirst</strong> lo va a realizar primero que <strong>doLast</strong> pero antes que doFirst se realizara los parametros <strong>"ext"</strong>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/task1.PNG"
+                  alt="task1"
+                  title="task1"> <br><br>otra forma <br><br>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/task2.PNG"
+                  alt="task2"
+                  title="task2">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Propiedades</td>
+                <td>
+                  Una tarea puede definir propiedades como se ve en la imagen que puede usar la misma tarea o ser usadas por otra tarea <br><br>
+                  tambien es posible definir las propiedades asi: <br><br>
+                  <strong>
+                    ext.nombre = "pepito perez" <br>
+                    ext.identificacion = "123456" <br>
+                  </strong>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/propiedades.PNG"
+                  alt="propiedades"
+                  title="propiedades"> <br>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>doFirst y doLast</td>
+                <td>
+                  Es posible separar los bloques de codigo como lo muestra la imagen
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/task3.PNG"
+                  alt="task3"
+                  title="task3"> <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>dependsOn</td>
+                <td>
+                  Es posible que una tarea dependa de otra, en la imagen se ven 3 formas direfentes de realizar esta accion. <br>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/dependsOn.PNG"
+                  alt="dependsOn"
+                  title="dependsOn"> <br>
+                </td>
+            </tr>
+
+            <tr>
+              <td>OnlyIf</td>
+              <td>
+                Al igual que depensOn es una clausula que evalua una condicion ,, en este caso la tarea deplegar evalua si compilar ya se ejecuto sino es asi no imprime nada por consola. <br><br>
+
+                Pero si se ejecuta primero compilar y despues ejecutar la clausula <strong>OnlyIf devuelve true</strong> y funciona desplegar.
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/arquitectura/Gradle/onlyIf.PNG"
+                alt="onlyIf"
+                title="onlyIf"> <br>
+              </td>
+            </tr>
+
+            <tr>
+                <td>mustRunAfter</td>
+                <td>
+                  con esta linea obligamos a que <strong>si o si</strong> se ejecute la tarea B despues de A sin importar que se envie por linea de comandos la tarea B "primero",,,, siempre garantizando que se ejecute primero A y despues B
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/mustRunAfter.PNG"
+                  alt="mustRunAfter"
+                  title="mustRunAfter"> <br>
+                </td>
             </tr>
 
             <tr>
@@ -24,38 +159,71 @@
                 <td></td>
                 <td></td>
             </tr>
+
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
         </tbody>
     </table>
