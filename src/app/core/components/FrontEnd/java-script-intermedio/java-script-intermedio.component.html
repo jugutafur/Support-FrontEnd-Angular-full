@@ -1,0 +1,386 @@
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+    <thead>
+      <tr>
+          <th scope="col">Referencia</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>localStore</td>
+        <td>
+          Guarda data en el navegador, sin importar que se apague el equipo, se cierre la session. <br><br>
+          * localStorage.getItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong> {{cierraParentesis}} //Obtener<br><br>
+          * localStorage.setItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon', 'valorDeObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
+          * localStorage.removeItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/localStorage1.PNG"
+          alt="localStorage1"
+          title="localStorage1"><br><br>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/localStorage2.PNG"
+          alt="localStorage2"
+          title="localStorage2"><br><br>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Desestructuración de arrays y objetos</td>
+        <td>
+          En el siguiente ejemplo desestructuramos un array y objeto pero tambien es posible hacerlo en los imports, de tal manera como lo evidenciamos en la 2da imagen donde tenemos un archivo saludos.js donde solo llamamos a la funcion saludarHolaMundo entre llaves. <br>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/desestructuracion.PNG"
+          alt="desestructuracion"
+          title="desestructuracion"><br><br>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/desestructuracion2.PNG"
+          alt="desestructuracion2"
+          title="desestructuracion2"><br><br>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Operador de propagacion <strong>Spread Operator</strong></td>
+        <td>
+          podemos propagar o crear una copia de una variable para agregarla a un nuevo objeto en este caso de resalta lo siguiente: <br><br>
+          1. se puede invocar directamente el array asi como lo muestra la imagen o se puede progagar con los 3 puntos ,, en este caso se mostrarian las posiciones <br><br>
+          2. se pueden agregar nuevos elementos <br>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/Operador de Propagacion.PNG"
+          alt="Operador de Propagacion"
+          title="Operador de Propagacion"><br><br>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Parametro Reset</td>
+        <td>
+          de esta manera podemos crear una funcion que este a la espera de una indeterminada cantidad de parametros
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/Parametro Reset.PNG"
+          alt="Parametro Reset"
+          title="Parametro Reset"><br><br>
+        </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://www.youtube.com/watch?v=rKK1q7nFt7M&t=36s">Promesas</a></td>
+      <td>
+        En la figura 1 tenemos el caso de una funcion que devuelve un array y con el setTimeout simulamos un Asincronismo.. es decir que en el caso nuestro codigo no siempre va a buscar la informacion dentro de nuestro codigo sino que tendra que salir a buscarla por medio de una API <br><br>En este caso simulamos un tiempo de demora en la respuesta evidenciando que nos da un <strong>undefined</strong> es decir que no tuvo nada que renderizar. <br><br>
+        lo anterior se resulve con promesas donde es un objeto especial de javascript donde siempre devulve algo asi sea un error. lo cual se evidencia en la figura 2 <br><br>
+        De igual manera va a esperar el segundo y medio del setTimeout. <br><br>
+        .then() // cuando se resuelva dentro de ella tenemos una funcion de callback, en este caso usamos <strong>x</strong> como varaible interadora ya que la promesa en SI ya esta devulviendo el objeto Administrador en la linea 12 <br>
+      </td>
+      <td>
+        <img
+        src="../../../../../assets/FrontEnd/JavaScript/promesas.PNG"
+        alt="promesas"
+        title="promesas"><br><br>
+        <img
+        src="../../../../../assets/FrontEnd/JavaScript/promesas2.PNG"
+        alt="promesas2"
+        title="promesas2">
+      </td>
+    </tr>
+
+    <tr>
+        <td><a href="https://www.youtube.com/watch?v=rKK1q7nFt7M&t=36s"> Async/Await</a></td>
+        <td>
+          usando el mismo objeto de Administrador que en las promesas con el metodo Async/await tambien podemos resolver el problema anterior. <br><br>
+          Este metodo recibe su nombre precisamente por la forma de usarlo.. es decir para uasr <strong>await</strong> la funcion debe ser <strong>Async</strong>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/Async_await.PNG"
+          alt="Async_await"
+          title="Async_await">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Modulos</td>
+        <td>
+          hay 2 formas de trabajar con modulos en la 1ra imagen exportamos un modulo para que sea usado a lo largo del proyecto .. de esta menera <strong>no es necesario hacer el import</strong><br><br>
+          la 2da es de la forma como lo hacemos en angular con imports de esta segunda manera podemos definir archivos con extencion.mjs <strong>para que no se tenga que modificar el package.json con "type": "nombreModulo"</strong>
+        </td>
+        <td>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/modulos1.PNG"
+          alt="modulos1"
+          title="modulos1"><br><br>2da manera <br>
+          <img
+          src="../../../../../assets/FrontEnd/JavaScript/modulos2.PNG"
+          alt="modulos2"
+          title="modulos2">
+        </td>
+    </tr>
+
+    <tr>
+        <td>generadores <strong>function*</strong></td>
+        <td>
+          la palabra function* define una función generadora, que devuelve un objeto <strong>Generator</strong>
+        </td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Iteration_protocols">Protocolos de Iteración</a></td>
+        <td>
+          Existen dos protocolos: <br><br>
+          1. El protocolo iterable <br>
+          2. El protocolo iterador. <br><br>
+          El protocolo iterable le permite a los objetos en JavaScript definir o personalizar su comportamiento de iteración. Para ser iterable, un objeto debe implementar el método <strong>@@iterator</strong> <br><br>
+          El protocolo iterador define una forma estándar que permite producir una secuencia de valores (sean estos finitos o infinitos)
+        </td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

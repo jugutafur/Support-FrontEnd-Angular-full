@@ -8,6 +8,7 @@ import { MainFrontEndComponent } from './main-front-end/main-front-end.component
 import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { JavaScriptComponent } from './java-script/java-script.component';
+import { JavaScriptIntermedioComponent } from './java-script-intermedio/java-script-intermedio.component';
 
 import { FrontEndRoutingModule } from './front-end-rounting.module';
 
@@ -16,7 +17,8 @@ import { FrontEndRoutingModule } from './front-end-rounting.module';
     MainFrontEndComponent,
     HtmlComponent,
     CssComponent,
-    JavaScriptComponent
+    JavaScriptComponent,
+    JavaScriptIntermedioComponent
   ],
   imports: [
     CommonModule,

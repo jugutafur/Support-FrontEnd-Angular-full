@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MainFrontEndComponent  {
 
-  lista = ["HTML", "CSS", "JavaScript"]
+  lista = ["HTML", "CSS", "JavaScript", "JavaScript Intermedio"]
 
   constructor() {}
 

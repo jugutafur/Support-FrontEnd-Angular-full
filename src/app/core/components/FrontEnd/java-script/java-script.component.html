@@ -46,6 +46,24 @@
             </tr>
 
             <tr>
+              <td>Consideraciones</td>
+              <td>
+                * javaScript es un lenguaje de programacion multiparadigma es posible programar<strong> orientado a objetos o en programacion funcional</strong>. <br><br>
+                * En Javascript no hay herencia. exite la mal llamada <strong>herencia por prototipos o herencia prototipal</strong> que es su nombre oficial <strong>PERO EN REALIDAD</strong> se deberia llamar <strong>Delegacion de objetos</strong> lo que en realidad ocurre es que <Strong>NO</Strong> hay herencia entre objetos, hay objetos que piden cosas a otros objetos <strong>A SUS PROTOTIPOS</strong>. <br><br>
+                * Si bien es cierto que se pueden declarar clases con metodos constructores y que extienden de otras clases .. trans-Banbalinas son los prototipos que delegan unos a otros. <br><br>
+                * En javascript <strong>No es posible escapar a los prototipos</strong><br><br>
+                <strong>LA CADENA DE PROTOTIPOS</strong> <br><br>
+              </td>
+              <td>
+                * Todo en javascript es tratado como objeto <strong>MENOS LOS DATOS PRIMITIVOS</strong><br><br> todos los objetos son prototipos de Objetc.prototype y por encima de este ultimo esta <strong>null</strong> <br><br>
+                <img
+                src="../../../../../assets/FrontEnd/JavaScript/cadenaPrototipos.PNG"
+                alt="cadenaPrototipos"
+                title="cadenaPrototipos"><br><br>
+              </td>
+            </tr>
+
+            <tr>
                 <td>
                     <strong><a href="https://es.wikipedia.org/wiki/Anexo:Comparativa_de_motores_de_renderizado">Motores de renderizado</a></strong><br><br>
                     <strong>Just time compiler</strong>
@@ -421,7 +439,7 @@
             <tr>
                 <td><strong><a href="https://www.youtube.com/watch?v=SPVL8uAezaw&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=17">Errores</a></strong></td>
                 <td>
-                    Si hay un error o no.... el bloque <strong>finaly</strong> siempre se va a ejecutar <br><br>
+                    Si hay un error o no.... el bloque <strong>finally</strong> siempre se va a ejecutar <br><br>
                     Se pueden lanzar errores personalizados un ejemplo es que se este esperando un dato de cierto tipo y el usuario ingresa un dato erroneo o de un tipo diferente en este caso puedo lanzar un error.<br>
                 </td>
                 <td>
@@ -645,7 +663,7 @@
             <tr>
                 <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">for of</a></strong></td>
                 <td>
-                    <strong>for of: </strong> me permite recorrer cualquier valiable que sea interable, incluso si es primitivo como un string <br><br>
+                    <strong>for of: </strong> me permite recorrer cualquier valiable que sea iterable, incluso si es primitivo como un string <br><br>
                 </td>
                 <td>
                     <img
@@ -713,249 +731,6 @@
                     title="objeto2"><br><br>
                 </td>
             </tr>
-
-            <tr>
-                <td>localStore</td>
-                <td>
-                  Guarda data en el navegador, sin importar que se apague el equipo, se cierre la session. <br><br>
-                  * localStorage.getItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong> {{cierraParentesis}} //Obtener<br><br>
-                  * localStorage.setItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon', 'valorDeObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
-                  * localStorage.removeItem{{abreParentesis}}<strong>'nombreDeMiObjetoJSon'</strong>{{cierraParentesis}}. //definir<br><br>
-                </td>
-                <td>
-                  <img
-                  src="../../../../../assets/FrontEnd/JavaScript/localStorage1.PNG"
-                  alt="localStorage1"
-                  title="localStorage1"><br><br>
-                  <img
-                  src="../../../../../assets/FrontEnd/JavaScript/localStorage2.PNG"
-                  alt="localStorage2"
-                  title="localStorage2"><br><br>
-                </td>
-            </tr>
-
-            <tr>
-                <td><strong><a href="https://www.youtube.com/watch?v=K4vCTeKKCkU">CustomHooks</a></strong></td>
-                <td>
-                    * Deben de empezar con la palabra <strong>use</strong>XXXXX. <br><br>
-                    * la idea es que dentro de esta funcion se maneje el estado y NO el otro componente. <br><br>
-                <img
-                  src="../../../../../assets/FrontEnd/JavaScript/CustonHooksAntes.PNG"
-                  alt="CustonHooksAntes"
-                  title="CustonHooksAntes"><br><br>
-                </td>
-                <td>
-                    <img
-                    src="../../../../../assets/FrontEnd/JavaScript/CustonHooksDespues.PNG"
-                    alt="CustonHooksDespues"
-                    title="CustonHooksDespues"><br><br>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
         </tbody>
     </table>
 </div>
