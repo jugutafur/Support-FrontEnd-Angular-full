@@ -9,6 +9,7 @@ import { DockerComponent } from './components/docker/docker.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
+import { WordpressComponent } from './components/wordpress/wordpress.component';
 const routes: Routes = [
 
   {
@@ -42,7 +43,11 @@ const routes: Routes = [
   {
     path: 'Analis de Datos',
     component: AnalisDatosComponent
-  }
+  },
+  {
+    path: 'WordPress',
+    component: WordpressComponent
+  },
 
 ]
 

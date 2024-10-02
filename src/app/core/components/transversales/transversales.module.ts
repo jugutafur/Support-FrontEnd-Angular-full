@@ -11,6 +11,7 @@ import { RedesComponent } from './components/redes/redes.component';
 import { CodewarriorComponent } from './components/codewarrior/codewarrior.component';
 import { AnalisDatosComponent } from './components/analis-datos/analis-datos.component';
 import { DockerComponent } from './components/docker/docker.component';
+import { WordpressComponent } from './components/wordpress/wordpress.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DockerComponent } from './components/docker/docker.component';
     RedesComponent,
     CodewarriorComponent,
     AnalisDatosComponent,
-    DockerComponent
+    DockerComponent,
+    WordpressComponent
   ],
   imports: [
     CommonModule,

@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class JavaScriptComponent {
 
   public abrellave: string;
-  public cierrallave: string; 
+  public cierrallave: string;
   public abreDiamante: string;
   public cierraDiamante: string;
   public abreParentesis: string;
   public cierraParentesis: string;
   public abreCuadro: string;
   public cierraCuadro: string;
+  public arroba: string;
 
   constructor() {
     this.abrellave= "{";
@@ -25,5 +26,6 @@ export class JavaScriptComponent {
     this.cierraParentesis= ")";
     this.abreCuadro= "[";
     this.cierraCuadro= "]";
+    this.arroba= "@";
   }
 }
