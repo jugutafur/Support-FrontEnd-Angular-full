@@ -20,7 +20,7 @@
         * la imagenes de Docker son las <strong>plantillas base</strong> desde donde se inicia, ya sea para <strong>Crear nuevas imagenes o para crear contenedores para ejecutar las aplicaciones </strong><br>
         * <strong>Registro Docker (https://hub.docker.com/)</strong> es un repositorio de imagenes de Docker. <br>
         * <strong>Docker Store</strong> es un repositorio para mas coorporativo <br>
-        * Un <strong>Contenedor docker </strong> es el resultado de poner en marcha una iamgen
+        * Un <strong>Contenedor docker </strong> es el resultado de poner en marcha una imagen
       </td>
       <td>
         Diferencias entre Maquina Virtual y Docker <br><br>
@@ -29,7 +29,7 @@
         src="../../../../../../assets/transversales/Docker/Virtualiza.PNG"
         alt="Virtualiza"
         title="Virtualiza"><br><br>
-        * Una Maquina Virtual Ejecuta una copia completa del Sistema Operativo mientras que el Contenedor comparte el <strong>Kernel</strong> del host con otros contenedores
+        * Una Maquina Virtual Ejecuta una copia completa del Sistema Operativo mientras que el Contenedor comparte el <strong>Kernel</strong> del host con otros contenedores. <br><br>Una maquina virtual ... "virtualiza memoria ram, disco duro entre otras cosas" mientras una imagen de docker comparte esos recursos con el host anfirion.
         <img
         src="../../../../../../assets/transversales/Docker/Virtualiza2.PNG"
         alt="Virtualiza2"
@@ -63,7 +63,7 @@
       <td>
         Docker nos permite crear 3 diferentes redes virtuales ya sea para unir o segmentar diferentes Contenedores, de esta manera podemos separar contenedores por seguridad en redes diferente o unirlos por conveniencia, podemos ver las 3 redes con: <br><br>
         <strong>docker network ls</strong><br><br>
-        * brigde //por defecto: Puente entre la interfaz de red que arrancamos y una interfaz de red virtual que se crea en nuestro equipo cuando isntalamos Docker<br>
+        * brigde //por defecto: Puente entre la interfaz de red que arrancamos y una interfaz de red virtual que se crea en nuestro equipo cuando instalamos Docker<br>
         * host //Copia la configuracion de red del host al contenedor que es estamos arrancando con Docker "es la misma"<br>
         * none //Elimina toda la configuracion de red de nuestro contendor y solo tendriamos loopback solo la direccion 127.0.0.1 y no podremos conectar a otro sitio mas <br>
       </td>

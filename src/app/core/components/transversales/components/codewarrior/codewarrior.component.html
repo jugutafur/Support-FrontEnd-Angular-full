@@ -27,7 +27,10 @@
                 <img src="../../../../../../assets/transversales/CodeWarrior/CSP Java.png" alt="CSP Java">
               </td>
               <td>
-                <img src="../../../../../../assets/transversales/CodeWarrior/CSP Javascript.png" alt="CSP Javascript">
+                Javascript
+                <img src="../../../../../../assets/transversales/CodeWarrior/CSP Javascript.png" alt="CSP Javascript"><br><br>
+                React
+                <img src="../../../../../../assets/transversales/CodeWarrior/CSP React.jpeg" alt="CSP React">
               </td>
           </tr>
 
@@ -42,9 +45,9 @@
               <td><strong>(XSS)</strong> Cross site Scripting Protection</td>
               <td>
                 hay tres tipos de XSS <br><br>
-                1. Reflected.<br>
-                2. Persistent.<br>
-                3. DOM-based.<br>
+                1. <strong>Reflected.</strong>//Se realiza un ataque dentro de un email dentro de un dominio conocido para el cliente hay un enlace para recuperar contraseña y dentro de este link en la peticion hay un script malicioso <br>
+                2. <strong>Persistent o Secuencia de Datos almacenada entre sitios</strong> //En este caso se realizar un ataque donde el scritp queda almacenado en la BD y cuando el cliente accede al contenido recibe el ataque<br>
+                3. <strong>DOM-based</strong>.<br>
               </td>
               <td>
                 <img src="../../../../../../assets/transversales/CodeWarrior/Cross site Scripting Protection.png" alt="Cross site Scripting Protection">
@@ -106,63 +109,79 @@
           </tr>
 
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
+              <td>Uso de componentes de Origen no fiable</td>
+              <td>Es emplear dependencias de origines desconocidos que pueden contener vulnerabilidades</td>
               <td></td>
           </tr>
 
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Uso de componentes de vulnerables conocidos</td>
+            <td>Se da por usar componentes desactualizados que pueden contener una vulnerabilidad</td>
             <td></td>
           </tr>
 
           <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-              <td></td>
-              <td></td>
+              <td>redireccionamiento y Reenvios no Validos</td>
+              <td>Son redirects y forwards sin validar: en este caso el atacante es capaz de redirigir al cliente a sitios vulnerables <strong>El problema se debe al uso de entradas de usuario no validas para construir destinos de URL de aplicaciones </strong></td>
               <td></td>
           </tr>
 
           <tr>
+            <td>Detalle Error</td>
+            <td>Esta vulnerabilidad se presenta cuando la aplicacion lanza un error un error ya se por no encontrar un path valido o un archivo existente en este caso se muestra informacion sensible en el detalle del error que un atacante puede usar para realizar un ataque <br><br>
+            En la imagen adjunta podemos identificar que en el detalle del error se muestra el sistema operativo, la version del servidor y la version del codigo, con esta informacion el haker puede realizar un ataque explotando vulnerabiidades conocidas sobre la informacion obtenida <br>
+            </td>
+            <td>
+              <img src="../../../../../../assets/transversales/CodeWarrior/DetalleErro.jpeg" alt="DetalleErro">
+            </td>
+          </tr>
+
+          <tr>
+              <td>Divulgacion de Datos sensibles</td>
+              <td>En este caso una peticion puede devolver informacion sensible que un atacante puede usar para realizar un ataque en este caso se recomienda exponer la menor cantidad de informacion posible o encriptar</td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td>Informacion de Depuracion/ Configuracion de seguridad Erronea</td>
+            <td>En esta caso el atacante realiza un ataque para ver mas detalle de un error, para evitar que la aplicacion explote con esta vulnerabilidad se debe: <br><br>
+            1. configurar con seguridad el acceso a los archivos, colocando archivos en el exterior del directorio web raiz. <br>
+            2. Aplicar restricciones al sistema de archivos, o deshabilitar el listado de directorios <br>
+            3. Nunca retornar el detalle de los errores. <br>
+          </td>
             <td></td>
+          </tr>
+
+          <tr>
+              <td>Inyeccion de codigo</td>
+              <td>Precisamente se trata que un usuario puede ingresar codigo para ver las caracteristicas del equipo, escalar privilegios o modificar data, por eso <strong>Nunca se debe confiar en las entradas de usuarios</strong> <br><br>
+              * la funcion eval() en Javascript no es recomendado ya que tiene muchas vulnerabiidades
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td>Desearilizacion de Datos no Fiables</td>
+            <td>Serializar un dato es tomar un objeto y volverlo mas pequeño y seguro para almacenarlo y Desearilizar es lo opuesto es tomar ese formato seguro y pequeño para poderlo transmitir </td>
             <td></td>
-            <td></td>
+          </tr>
+
+          <tr>
+              <td>Email Header Injeccion</td>
+              <td>En algunas aplicaciones nos permite enviar preguntas sin conocer el destinatario en este caso el haker puede inyectar o agregar su correo en todas las consultas y de esta manera puede preparar un ataque ya sea: <br><br>
+              1. Conocer los demas usuarios. <br>
+              2. Lanzar una campaña por medio de la aplicacion victima. <br>
+              3. Agregar contenido a una respuesta oficial de la pagina. <br>
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+            <td>External Entity Injection (XXE)</td>
+            <td>Un atacante puede agregar contenido XML para obtener informacion sensible</td>
+            <td>
+              <img src="../../../../../../assets/transversales/CodeWarrior/XXE.jpeg" alt="XXE">
+            </td>
           </tr>
 
           <tr>
