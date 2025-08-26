@@ -44,6 +44,19 @@
         <tr>
           <td>Comandos</td>
           <td>
+            para crear el proyecto desde cero: <br>
+            Abrir Terminal o PowerShell<br>
+            <strong>npm create vite@latest</strong><br>
+            Colocar nombre al proyecto. (le puse ejercicio-1)<br>
+            Elegir React.<br>
+            Elegir Javascript + SWC (o Typescript + SWC)<br>
+            En ese punto se crea el proyecto ejercicio-1. Una vez se cree el proyecto, hay que ingresar a la carpeta del proyecto desde la terminal o PowerShell.
+            Este es el comando. <br>
+            cd ejercicio-1<br>
+            Luego, debemos instalar el paquete de node a nuestro proyecto. El comando es el siguiente:<br>
+            <strong>npm install</strong><br>
+            Una vez instalado, ya podemos ejecutar el proyecto con el siguiente comando.<br>
+            npm run dev.<br><br><strong>o tambien puedes con </strong><br><br>
             * npx create-react-app nombre-del-proyecto //Crear proyecto <br>
             * npx create-react-app nombre-del-proyecto --template typescript //Para TypeScript<br>
             * npm start //Starts the development server. <br>
@@ -179,7 +192,7 @@
           <td>Manejo del Estado <br><strong>const {{abreCuadro}} {{cierraCuadro}}= React.useState{{abreParentesis}}{{cierraParentesis}};</strong></td>
           <td>
             * Cada vez que se llama al actualizar del estado <strong>"setXXX"</strong> React.js <strong>RENDERIZA EL COMPONENTE</strong>. <br><br>
-            <strong>*El estado en React.js es INMUTABLE{{abreParentesis}}De manera Directa{{cierraParentesis}} y solo de la forma como esta en la linea 13 por medio de una funcion "actualizadora" constrolada por ReactJS para que esta edite el historial de cambios de los estados podemos editar el estado.</strong><br><br>
+            <strong>*El estado en React.js es INMUTABLE{{abreParentesis}}De manera Directa{{cierraParentesis}} y solo de la forma como esta en la linea 13 por medio de una funcion "actualizadora" controlada por ReactJS para que esta edite el historial de cambios de los estados podemos editar el estado.</strong><br><br>
             En la imagen se muestra el Manejo del Estado donde la linea 13 es :<br><br>
             const [valorQueVaAtomarDespues, funcionQueLlamaInternamente] = React.useState('valor inicial'); <br>
             const [patito, setPatito] = React.useState('juan'); <br><br><br>
