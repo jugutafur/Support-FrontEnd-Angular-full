@@ -41,19 +41,42 @@
     <tr>
       <td>Comandos</td>
       <td>
+        <strong>En la instalacion:</strong> es posible usar Docker desktop, como por CLI ademas podemos usar la termina del WSL para los contenedores, despues de intalar lo anterior el equipo requiere habilitar la virtualizarcion por <strong>BIOS</strong> para esto ingresar a la configuracion de la BIOS y setear esta opcion <br><br>
+        * docker --version //imprimir la version de docker<br>
         * docker history nginx.<br>
         * docker service update --image nginx:1.11 web EOF. <br>
         * docker service create --naem search elasticsearch <br>
         * docker images // ver que imagenes tenemos descagadas <br>
+        * docker ps //ver los contenedores creados<br>
         * docker info // ver el detalle del Docker<br>
+        * docker rmi -f //eliminar imagenes -f "force" <br>
+        * docker build . //crea una imagen <br>
+        * docker build sitioweb:latestjuan .//agrega el tag:name como en la imagen adjunta <br><br>
+        * docker run -it --rm -d -p 8080:80 --name web sitioweb<br>
+        -it = interactivo <br>
+        --rm = remove elimina si hay una verion previa del contenedor <br>
+        -d = que el contenedor se ejecute en un segundo plano <br>
+        -p = indicar que se va a definir el puerto <br>
+        8080:80 //el puerto en que <strong>YO</strong> me voy a comunicar con el contenedor:y el contenedor se va a comunicar con el puerto 80 a la aplicacion 
       </td>
-      <td></td>
+      <td>
+        desde un archivo <strong>Dockerfile</strong> se correo el comando build para generar <strong>docker image</strong> para despues correr el comando run para finalmente crear el <strong>docker container</strong><br><br><br>
+        <img
+        src="../../../../../../assets/transversales/Docker/Flujo para desplegar container.PNG"
+        alt="Flujo para desplegar container"
+        title="Flujo para desplegar container"><br><br>
+
+        <img
+        src="../../../../../../assets/transversales/Docker/Creacion de imagen.PNG"
+        alt="Creacion de imagen"
+        title="Creacion de imagen"><br><br>
+      </td>
     </tr>
 
     <tr>
       <td>tags</td>
       <td>
-        A las iamgenes que generamos en docker se le pueden agregar <strong>tags</strong> es decir marcas o etiquetas
+        A las imagenes que generamos en docker se le pueden agregar <strong>tags</strong> es decir marcas o etiquetas
       </td>
       <td></td>
     </tr>
