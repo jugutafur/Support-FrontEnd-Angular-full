@@ -155,14 +155,42 @@
             </tr>
 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>testing</td>
+                <td>
+                  <strong>agregar plugin de jacoco</strong><br>
+                  plugins {{abrellave}} <br>
+                              id 'java'<br>
+                              id 'jacoco'<br>
+                          {{cierrallave}}<br><br>
+
+                  indicar el umbral de covertura
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/umbralCoverage.PNG"
+                  alt="umbralCoverage"
+                  title="umbralCoverage"><br><br>
+
+                  <img
+                  src="../../../../../assets/arquitectura/Gradle/reportesDeTest.PNG"
+                  alt="reportesDeTest"
+                  title="reportesDeTest">
+                </td>
             </tr>
 
             <tr>
-              <td></td>
-              <td></td>
+              <td>comandos</td>
+              <td>
+                los test que pasaron <br>
+                gradle jacocoTestReport<br>
+                file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/tests/test/index.html<br>
+                <br>
+                <br>
+                covertura<br>
+                gradle clean test jacocoTestReport jacocoTestCoverageVerification<br>
+                file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/jacoco/test/html/index.html<br>
+
+              </td>
               <td></td>
             </tr>
 
