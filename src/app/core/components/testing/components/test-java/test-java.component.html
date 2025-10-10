@@ -12,6 +12,53 @@
       </tr>
     </thead>
     <tbody>
+
+      <tr>
+        <td>comandos <strong>gradle</strong></td>
+        <td>
+          <strong>
+          limpiar cache de gradle <br>
+          gradle cleanTest<br>
+          gradle clean<br>
+          gradle --refresh-dependencies<br>
+          gradle test<br><br>
+          </strong>
+
+          los test que pasaron <br>
+          <strong>gradle jacocoTestReport</strong><br>
+          file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/tests/test/index.html<br>
+          <br>
+          <br>
+          covertura<br>
+          <strong>gradle clean test jacocoTestReport jacocoTestCoverageVerification</strong><br>
+          file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/jacoco/test/html/index.html<br>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Comando en <strong>maven</strong></td>
+        <td>
+          asegurarse que el plugin de jacoco se encuentre
+          y que el plugin de Surefire este configurado
+          <br>
+          <br>
+          los test que pasaron <br>
+          <strong>mvn clean test</strong><br><br>
+
+          si se quiere ejecutar una prueba en especifico <br>
+          <strong>mvn test -Dtest="NombreDeTuClaseDePrueba"</strong><br>
+          <br>
+          covertura <br>
+          <strong>mvn clean package</strong><br>
+          lugar= target/site/jacoco/index.html
+          <br><br>
+          clean: Limpia el directorio target.
+          package: Compila el código, ejecuta las pruebas unitarias con el agente JaCoCo y genera un informe de cobertura.
+        </td>
+        <td></td>
+      </tr>
+
       <tr>
         <td>test</td>
         <td>
@@ -105,28 +152,6 @@
       <tr>
         <td colspan="3"><img src="./../../../../../../assets/transversales/testing-java/ejemplos de requerimientos Funcionales .png" alt="ejemplos"></td>
       </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-              <td>comandos</td>
-              <td>
-                los test que pasaron <br>
-                gradle jacocoTestReport<br>
-                file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/tests/test/index.html<br>
-                <br>
-                <br>
-                covertura<br>
-                gradle clean test jacocoTestReport jacocoTestCoverageVerification<br>
-                file:///F:/ProyectosJava2/Junit/PlatziPlay/build/reports/jacoco/test/html/index.html<br>
-
-              </td>
-              <td></td>
-            </tr>
-
       <tr>
         <td></td>
         <td></td>
