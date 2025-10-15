@@ -247,6 +247,10 @@
             src="../../../../../assets/librerias/React/Efectos.PNG"
             alt="Efectos"
             title="Efectos"><br><br>
+            Forma	                          Cuándo se ejecuta
+            useEffect(() => {...})	        En cada render
+            useEffect(() => {...}, [])	    Solo una vez (al montar el componente)
+            useEffect(() => {...}, [x, y])	Cuando cambia x o y
           </td>
         </tr>
 
